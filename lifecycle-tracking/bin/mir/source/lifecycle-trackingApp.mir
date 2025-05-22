@@ -1,49 +1,49 @@
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
 import Toybox.Application;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
 import Toybox.Lang;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
 import Toybox.System;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; @symbol_classdef = [lifecycle_trackingApp,6,6,27]; @symbol_extends<0> = [Application,6,36,47]; @symbol_extends<1> = [AppBase,6,48,55]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; @symbol_classdef = [lifecycle_trackingApp,6,6,27]; @symbol_extends<0> = [Application,6,36,47]; @symbol_extends<1> = [AppBase,6,48,55]; ]
 class lifecycle_trackingApp extends Application.AppBase {
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
     function initialize() as Void {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_8_26_12_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 9 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_8_26_12_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 9 8 ]
         symbol [ AppBase %tmp.2 9 8 15 ];
         %tmp.2 = getv ? :AppBase;
         symbol [ initialize %tmp.3 9 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 10 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 10 8 ]
         symbol [ System %tmp.4 10 8 14 ];
         %tmp.4 = getm $.Toybox.System;
         symbol [ println %tmp.5 10 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "LIFECYCLE init()";
         invoke %tmp.4 %tmp.5(%tmp.6);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 11 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 11 8 ]
         symbol [ System %tmp.7 11 8 14 ];
         %tmp.7 = getm $.Toybox.System;
         symbol [ println %tmp.8 11 15 22 ];
         %tmp.8 = getv function %tmp.7 :println;
         %tmp.9 = "-------------------------";
         invoke %tmp.7 %tmp.8(%tmp.9);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_8_26_12_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_8_26_12_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 15; @symbol_functiondef = [onStart,15,13,20]; @symbol_param<0> = [state,15,21,26]; @symbol_param<0>_type<0> = [Dictionary,15,30,40]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 15; @symbol_functiondef = [onStart,15,13,20]; @symbol_param<0> = [state,15,21,26]; @symbol_param<0>_type<0> = [Dictionary,15,30,40]; ]
     function onStart(state as Dictionary or Null) as Void {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_15_51_31_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 16 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_15_51_31_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 16 8 ]
         symbol [ AppBase %tmp.2 16 8 15 ];
         %tmp.2 = getv ? :AppBase;
         symbol [ onStart %tmp.3 16 16 23 ];
@@ -51,27 +51,27 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
         %tmp.4 = lgetv %state;
         symbol [ state %tmp.4 16 24 29 ];
         invoke %tmp.2 %tmp.3(%tmp.4);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 17 8 ]
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_stmt:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 17 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_stmt:
         %tmp.5 = lgetv %state;
         symbol [ state %tmp.5 17 12 17 ];
         %tmp.6 = null;
         %tmp.7 = eq %tmp.5 %tmp.6;
-        bf %tmp.7 @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_true:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_26_19_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 18 12 ]
+        bf %tmp.7 @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_true:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_26_19_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 18 12 ]
         symbol [ System %tmp.8 18 12 18 ];
         %tmp.8 = getm $.Toybox.System;
         symbol [ println %tmp.9 18 19 26 ];
         %tmp.9 = getv function %tmp.8 :println;
         %tmp.10 = "Completely fesh start - null state";
         invoke %tmp.8 %tmp.9(%tmp.10);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_26_19_8_stop:
-        goto @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 21 8 ]
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_stmt:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_26_19_8_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_17_8_19_8_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 21 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_stmt:
         %tmp.11 = lgetv %state;
         symbol [ state %tmp.11 21 12 17 ];
         symbol [ get %tmp.12 21 18 21 ];
@@ -79,28 +79,28 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
         %tmp.14 = const :resume;
         symbol [ resume %tmp.14 21 23 29 const ];
         %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
-        bf %tmp.15 @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_else_false;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_true:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_31_23_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 22 12 ]
+        bf %tmp.15 @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_else_false;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_true:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_31_23_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 22 12 ]
         symbol [ System %tmp.16 22 12 18 ];
         %tmp.16 = getm $.Toybox.System;
         symbol [ println %tmp.17 22 19 26 ];
         %tmp.17 = getv function %tmp.16 :println;
         %tmp.18 = "We are RESUMING from suspension";
         invoke %tmp.16 %tmp.17(%tmp.18);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_31_23_8_stop:
-        goto @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_end;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_else_false:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_23_15_26_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 24 12 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_31_23_8_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_else_false:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_23_15_26_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 24 12 ]
         symbol [ System %tmp.19 24 12 18 ];
         %tmp.19 = getm $.Toybox.System;
         symbol [ println %tmp.20 24 19 26 ];
         %tmp.20 = getv function %tmp.19 :println;
         %tmp.21 = "We are new start butsome data";
         invoke %tmp.19 %tmp.20(%tmp.21);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 25 12 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 25 12 ]
         symbol [ System %tmp.22 25 12 18 ];
         %tmp.22 = getm $.Toybox.System;
         symbol [ println %tmp.23 25 19 26 ];
@@ -108,43 +108,43 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
         %tmp.24 = lgetv %state;
         symbol [ state %tmp.24 25 27 32 ];
         invoke %tmp.22 %tmp.23(%tmp.24);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_23_15_26_8_stop:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_end:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 28 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_23_15_26_8_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_21_8_26_8_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 28 8 ]
         symbol [ System %tmp.25 28 8 14 ];
         %tmp.25 = getm $.Toybox.System;
         symbol [ println %tmp.26 28 15 22 ];
         %tmp.26 = getv function %tmp.25 :println;
         %tmp.27 = "   → Preparing to become visible to user";
         invoke %tmp.25 %tmp.26(%tmp.27);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 29 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 29 8 ]
         symbol [ System %tmp.28 29 8 14 ];
         %tmp.28 = getm $.Toybox.System;
         symbol [ println %tmp.29 29 15 22 ];
         %tmp.29 = getv function %tmp.28 :println;
         %tmp.30 = "   → Setting up data structures";
         invoke %tmp.28 %tmp.29(%tmp.30);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 30 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 30 8 ]
         symbol [ System %tmp.31 30 8 14 ];
         %tmp.31 = getm $.Toybox.System;
         symbol [ println %tmp.32 30 15 22 ];
         %tmp.32 = getv function %tmp.31 :println;
         %tmp.33 = "----------------------------------------";
         invoke %tmp.31 %tmp.32(%tmp.33);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_15_51_31_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_15_51_31_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 34; @symbol_functiondef = [onStop,34,13,19]; @symbol_param<0> = [state,34,20,25]; @symbol_param<0>_type<0> = [Dictionary,34,29,39]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 34; @symbol_functiondef = [onStop,34,13,19]; @symbol_param<0> = [state,34,20,25]; @symbol_param<0>_type<0> = [Dictionary,34,29,39]; ]
     function onStop(state as Dictionary or Null) as Void {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_34_50_48_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 35 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_34_50_48_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 35 8 ]
         symbol [ System %tmp.1 35 8 14 ];
         %tmp.1 = getm $.Toybox.System;
         symbol [ println %tmp.2 35 15 22 ];
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = " LIFECYCLE: onStop() - Going home!";
         invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 37 8 ]
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_stmt:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 37 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_stmt:
         %tmp.4 = lgetv %state;
         symbol [ state %tmp.4 37 12 17 ];
         symbol [ get %tmp.5 37 18 21 ];
@@ -152,84 +152,84 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
         %tmp.7 = const :suspend;
         symbol [ suspend %tmp.7 37 23 30 const ];
         %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.7);
-        bf %tmp.8 @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_else_false;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_true:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_33_40_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 38 12 ]
+        bf %tmp.8 @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_else_false;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_true:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_33_40_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 38 12 ]
         symbol [ System %tmp.9 38 12 18 ];
         %tmp.9 = getm $.Toybox.System;
         symbol [ println %tmp.10 38 19 26 ];
         %tmp.10 = getv function %tmp.9 :println;
         %tmp.11 = "   → We're being SUSPENDED - might come back later";
         invoke %tmp.9 %tmp.10(%tmp.11);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 39 12 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 39 12 ]
         symbol [ System %tmp.12 39 12 18 ];
         %tmp.12 = getm $.Toybox.System;
         symbol [ println %tmp.13 39 19 26 ];
         %tmp.13 = getv function %tmp.12 :println;
         %tmp.14 = "   → Saving complete state for quick resume";
         invoke %tmp.12 %tmp.13(%tmp.14);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_33_40_8_stop:
-        goto @_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_end;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_else_false:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_40_15_43_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 41 12 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_33_40_8_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_else_false:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_40_15_43_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 41 12 ]
         symbol [ System %tmp.15 41 12 18 ];
         %tmp.15 = getm $.Toybox.System;
         symbol [ println %tmp.16 41 19 26 ];
         %tmp.16 = getv function %tmp.15 :println;
         %tmp.17 = "   → We're being TERMINATED - full shutdown";
         invoke %tmp.15 %tmp.16(%tmp.17);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 42 12 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 42 12 ]
         symbol [ System %tmp.18 42 12 18 ];
         %tmp.18 = getm $.Toybox.System;
         symbol [ println %tmp.19 42 19 26 ];
         %tmp.19 = getv function %tmp.18 :println;
         %tmp.20 = "   → Cleaning up all resources";
         invoke %tmp.18 %tmp.19(%tmp.20);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_40_15_43_8_stop:
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_end:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 45 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_40_15_43_8_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_37_8_43_8_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 45 8 ]
         symbol [ System %tmp.21 45 8 14 ];
         %tmp.21 = getm $.Toybox.System;
         symbol [ println %tmp.22 45 15 22 ];
         %tmp.22 = getv function %tmp.21 :println;
         %tmp.23 = "   → This is our last chance to save important data!";
         invoke %tmp.21 %tmp.22(%tmp.23);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 46 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 46 8 ]
         symbol [ System %tmp.24 46 8 14 ];
         %tmp.24 = getm $.Toybox.System;
         symbol [ println %tmp.25 46 15 22 ];
         %tmp.25 = getv function %tmp.24 :println;
         %tmp.26 = "----------------------------------------";
         invoke %tmp.24 %tmp.25(%tmp.26);
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_34_50_48_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_34_50_48_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 51; @symbol_functiondef = [getInitialView,51,13,27]; @symbol_return<0> = [Views,51,34,39]; @symbol_return<1> = [Views,51,45,50]; @symbol_return<2> = [InputDelegates,51,52,66]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 51; @symbol_functiondef = [getInitialView,51,13,27]; @symbol_return<0> = [Views,51,34,39]; @symbol_return<1> = [Views,51,45,50]; @symbol_return<2> = [InputDelegates,51,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_51_68_57_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 52 8 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_51_68_57_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 52 8 ]
         symbol [ System %tmp.1 52 8 14 ];
         %tmp.1 = getm $.Toybox.System;
         symbol [ println %tmp.2 52 15 22 ];
         %tmp.2 = getv function %tmp.1 :println;
         %tmp.3 = "   LIFECYCLE: getInitialView() - Setting up the screen!";
         invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 53 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 53 8 ]
         symbol [ System %tmp.4 53 8 14 ];
         %tmp.4 = getm $.Toybox.System;
         symbol [ println %tmp.5 53 15 22 ];
         %tmp.5 = getv function %tmp.4 :println;
         %tmp.6 = "   → Returning the view and input handler";
         invoke %tmp.4 %tmp.5(%tmp.6);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 54 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 54 8 ]
         symbol [ System %tmp.7 54 8 14 ];
         %tmp.7 = getm $.Toybox.System;
         symbol [ println %tmp.8 54 15 22 ];
         %tmp.8 = getv function %tmp.7 :println;
         %tmp.9 = "----------------------------------------";
         invoke %tmp.7 %tmp.8(%tmp.9);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 56 8 ]
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 56 8 ]
         %tmp.10 = newa 2;
         symbol [ lifecycle_trackingView %tmp.14 56 21 43 ];
         %tmp.14 = getv ? :lifecycle_trackingView;
@@ -242,13 +242,13 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
         %tmp.21 = dup %tmp.16;
         %tmp.22 = aputv %tmp.21 1 %tmp.17;
         ret %tmp.22;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_51_68_57_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_51_68_57_4_stop:
     }
 }
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 61; @symbol_functiondef = [getApp,61,9,15]; @symbol_return<0> = [lifecycle_trackingApp,61,21,42]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 61; @symbol_functiondef = [getApp,61,9,15]; @symbol_return<0> = [lifecycle_trackingApp,61,21,42]; ]
 function getApp() as lifecycle_trackingApp {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_61_43_63_0_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc" 62 4 ]
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_61_43_63_0_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" 62 4 ]
     symbol [ Application %tmp.1 62 11 22 ];
     %tmp.1 = getm $.Toybox.Application;
     symbol [ getApp %tmp.2 62 23 29 ];
@@ -257,8 +257,8 @@ _home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_trac
     %tmp.4 = as %tmp.3 lifecycle_trackingApp;
     symbol [ lifecycle_trackingApp %tmp.4 62 35 56 ];
     ret %tmp.4;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingApp_mc_61_43_63_0_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingApp_mc_61_43_63_0_stop:
 }
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 1; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc"; @line = 1; ]
 <init> {
 }

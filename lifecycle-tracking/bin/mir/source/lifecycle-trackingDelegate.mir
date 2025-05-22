@@ -1,56 +1,158 @@
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
 import Toybox.Lang;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 4; @symbol_classdef = [lifecycle_trackingDelegate,4,6,32]; @symbol_extends<0> = [WatchUi,4,41,48]; @symbol_extends<1> = [BehaviorDelegate,4,49,65]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 5; @symbol_classdef = [lifecycle_trackingDelegate,5,6,32]; @symbol_extends<0> = [WatchUi,5,41,48]; @symbol_extends<1> = [BehaviorDelegate,5,49,65]; ]
 class lifecycle_trackingDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 5; ]
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
     function initialize() as Void {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingDelegate_mc_6_26_8_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 7 8 ]
-        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_7_26_13_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 8 8 ]
+        symbol [ BehaviorDelegate %tmp.2 8 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 7 25 35 ];
+        symbol [ initialize %tmp.3 8 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingDelegate_mc_6_26_8_4_stop:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 10 8 ]
+        symbol [ System %tmp.4 10 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 10 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "   DELEGATE: initialize() - Input handler ready!";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 11 8 ]
+        symbol [ System %tmp.7 11 8 14 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ println %tmp.8 11 15 22 ];
+        %tmp.8 = getv function %tmp.7 :println;
+        %tmp.9 = "   → Ready to handle button presses";
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 12 8 ]
+        symbol [ System %tmp.10 12 8 14 ];
+        %tmp.10 = getm $.Toybox.System;
+        symbol [ println %tmp.11 12 15 22 ];
+        %tmp.11 = getv function %tmp.10 :println;
+        %tmp.12 = "----------------------------------------";
+        invoke %tmp.10 %tmp.11(%tmp.12);
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_7_26_13_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 10; @symbol_functiondef = [onMenu,10,13,19]; @symbol_return<0> = [Boolean,10,25,32]; ]
-    function onMenu() as Boolean {
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingDelegate_mc_10_33_13_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 11 8 ]
-        symbol [ WatchUi %tmp.1 11 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.2 11 16 24 ];
-        %tmp.2 = getv function %tmp.1 :pushView;
-        symbol [ Rez %tmp.6 11 29 32 ];
-        %tmp.6 = getv ? :Rez;
-        symbol [ Menus %tmp.7 11 33 38 ];
-        %tmp.7 = getv %tmp.6 :Menus;
-        symbol [ MainMenu %tmp.8 11 39 47 ];
-        %tmp.8 = getv function ? %tmp.7 :MainMenu;
-        %tmp.3 = newc %tmp.8 ();
-        symbol [ lifecycle_trackingMenuDelegate %tmp.12 11 55 85 ];
-        %tmp.12 = getv ? :lifecycle_trackingMenuDelegate;
-        %tmp.9 = newc %tmp.12 ();
-        symbol [ WatchUi %tmp.13 11 89 96 ];
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 16; @symbol_functiondef = [onSelect,16,13,21]; @symbol_return<0> = [Boolean,16,27,34]; ]
+    function onSelect() as Boolean {
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_16_35_25_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 17 8 ]
+        symbol [ System %tmp.1 17 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 17 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "  USER INPUT: Select button pressed!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 18 8 ]
+        symbol [ System %tmp.4 18 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 18 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "   → User interaction detected";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 19 8 ]
+        symbol [ System %tmp.7 19 8 14 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ println %tmp.8 19 15 22 ];
+        %tmp.8 = getv function %tmp.7 :println;
+        %tmp.9 = "   → App is responding to input";
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 20 8 ]
+        symbol [ System %tmp.10 20 8 14 ];
+        %tmp.10 = getm $.Toybox.System;
+        symbol [ println %tmp.11 20 15 22 ];
+        %tmp.11 = getv function %tmp.10 :println;
+        %tmp.12 = "----------------------------------------";
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 23 8 ]
+        symbol [ WatchUi %tmp.13 23 8 15 ];
         %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 11 97 105 ];
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
-[ "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 12 8 ]
+        symbol [ requestUpdate %tmp.14 23 16 29 ];
+        %tmp.14 = getv function %tmp.13 :requestUpdate;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 24 8 ]
         %tmp.15 = true;
         ret %tmp.15;
-_home_kuba_projects_garmin_garmin_basics__lifecycle_tracking_app__lifecycle_tracking_source_lifecycle_trackingDelegate_mc_10_33_13_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_16_35_25_4_stop:
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 27; @symbol_functiondef = [onBack,27,13,19]; @symbol_return<0> = [Boolean,27,25,32]; ]
+    function onBack() as Boolean {
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_27_33_34_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 28 8 ]
+        symbol [ System %tmp.1 28 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 28 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "⬅  USER INPUT: Back button pressed!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 29 8 ]
+        symbol [ System %tmp.4 29 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 29 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "   → User wants to exit or go back";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 30 8 ]
+        symbol [ System %tmp.7 30 8 14 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ println %tmp.8 30 15 22 ];
+        %tmp.8 = getv function %tmp.7 :println;
+        %tmp.9 = "   → This might trigger onHide() and onStop()";
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 31 8 ]
+        symbol [ System %tmp.10 31 8 14 ];
+        %tmp.10 = getm $.Toybox.System;
+        symbol [ println %tmp.11 31 15 22 ];
+        %tmp.11 = getv function %tmp.10 :println;
+        %tmp.12 = "----------------------------------------";
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 33 8 ]
+        %tmp.13 = false;
+        ret %tmp.13;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_27_33_34_4_stop:
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 36; @symbol_functiondef = [onMenu,36,13,19]; @symbol_return<0> = [Boolean,36,25,32]; ]
+    function onMenu() as Boolean {
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_36_33_42_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 37 8 ]
+        symbol [ System %tmp.1 37 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 37 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "  USER INPUT: Menu button pressed!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 38 8 ]
+        symbol [ System %tmp.4 38 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 38 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "   → User wants to see menu options";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 39 8 ]
+        symbol [ System %tmp.7 39 8 14 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ println %tmp.8 39 15 22 ];
+        %tmp.8 = getv function %tmp.7 :println;
+        %tmp.9 = "----------------------------------------";
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" 41 8 ]
+        %tmp.10 = true;
+        ret %tmp.10;
+_Users_kuba_projects_garmin_garmin_basics_lifecycle_tracking_source_lifecycle_trackingDelegate_mc_36_33_42_4_stop:
     }
 }
-[ @file = "/home/kuba/projects/garmin/garmin-basics/ lifecycle-tracking-app /lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 1; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc"; @line = 1; ]
 <init> {
 }

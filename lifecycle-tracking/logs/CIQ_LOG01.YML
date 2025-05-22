@@ -1,0 +1,94 @@
+
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:06:12Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000d7
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:06:20Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000d7
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:06:40Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000d7
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:06:43Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000d7
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:25:10Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000e2
+    File: '/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc'
+    Line: 21
+    Function: onStart
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:25:14Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000e2
+    File: '/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc'
+    Line: 21
+    Function: onStart
+---
+Error: Unexpected Type Error
+Details: 'Failed invoking <symbol>'
+Time: 2025-05-22T21:25:25Z
+Part-Number: 006-B4575-00
+Firmware-Version: '15.31'
+Language-Code: eng
+ConnectIQ-Version: 5.1.0
+Filename: lifecycletracking
+Appname: 'lifecycle-tracking'
+Stack: 
+  - pc: 0x100000e2
+    File: '/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc'
+    Line: 21
+    Function: onStart

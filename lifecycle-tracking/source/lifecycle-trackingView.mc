@@ -109,10 +109,10 @@ class lifecycle_trackingView extends WatchUi.View {
         System.println("----------------------------------------");
     }
 
-    function onTimer() {
+    function onTimer() as Void{
         System.println(" TIMER: Regular update - app is actively working");
         WatchUi.requestUpdate(); // Trigger onUpdate()
     }
-    }
+    
 
 }
