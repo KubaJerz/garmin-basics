@@ -14,15 +14,25 @@ class lifecycle_trackingApp extends Application.AppBase {
     // onStart() is called on application start up
     function onStart(state as Dictionary?) as Void {
         AppBase.onStart(state);
-        if (state == null){
-            System.println("Completely fesh start - null state");
-        }
 
-        if (state.get(:resume)){
-            System.println("We are RESUMING from suspension");
+        if (state == null) {
+            System.println(" Completely fresh start - null state");
         } else {
-            System.println("We are new start butsome data");
-            System.println(state);
+            // Check if we're resuming
+            var isResuming = false;
+            if (state.hasKey(:resume)) {
+                var resumeValue = state.get(:resume);
+                if (resumeValue instanceof Lang.Boolean && resumeValue) {
+                    isResuming = true;
+                }
+            }
+            
+            if (isResuming) {
+                System.println(" We are RESUMING from suspension");
+            } else {
+                System.println(" We are new start but some data");
+                System.println("   → State contents: " + state.toString());
+            }
         }
 
         System.println("   → Preparing to become visible to user");
@@ -34,7 +44,17 @@ class lifecycle_trackingApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
         System.println(" LIFECYCLE: onStop() - Going home!");
         
-        if (state.get(:suspend)) {
+        var isSuspended = false;
+        
+        if (state != null && state.hasKey(:suspend)) {
+            var suspendValue = state.get(:suspend);
+            // Explicitly check if it's a Boolean and true
+            if (suspendValue instanceof Lang.Boolean) {
+                isSuspended = suspendValue as Boolean;
+            }
+        }
+        
+        if (isSuspended) {
             System.println("   → We're being SUSPENDED - might come back later");
             System.println("   → Saving complete state for quick resume");
         } else {

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="1" lineNum="81" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="1" lineNum="82" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="2" lineNum="5" parent="globals/lifecycle_trackingMenuDelegate" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="4" lineNum="6" parent="globals/lifecycle_trackingApp" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="5" lineNum="5" parent="globals/lifecycle_trackingDelegate" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="6" lineNum="6" parent="globals/lifecycle_trackingView" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="7" lineNum="11" parent="globals/lifecycle_trackingMenuDelegate" pc="268435549" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="7" lineNum="12" parent="globals/lifecycle_trackingMenuDelegate" pc="268435551" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="7" lineNum="13" parent="globals/lifecycle_trackingMenuDelegate" pc="268435562" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="7" lineNum="14" parent="globals/lifecycle_trackingMenuDelegate" pc="268435583" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="7" lineNum="15" parent="globals/lifecycle_trackingMenuDelegate" pc="268435594" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="8" lineNum="7" parent="globals/lifecycle_trackingMenuDelegate" pc="268435616" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingMenuDelegate.mc" id="8" lineNum="8" parent="globals/lifecycle_trackingMenuDelegate" pc="268435618" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="15" parent="globals/lifecycle_trackingApp" pc="268435631" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="16" parent="globals/lifecycle_trackingApp" pc="268435634" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="18" parent="globals/lifecycle_trackingApp" pc="268435650" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="19" parent="globals/lifecycle_trackingApp" pc="268435656" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="22" parent="globals/lifecycle_trackingApp" pc="268435677" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="23" parent="globals/lifecycle_trackingApp" pc="268435680" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="24" parent="globals/lifecycle_trackingApp" pc="268435698" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="25" parent="globals/lifecycle_trackingApp" pc="268435715" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="26" parent="globals/lifecycle_trackingApp" pc="268435735" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="30" parent="globals/lifecycle_trackingApp" pc="268435744" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="31" parent="globals/lifecycle_trackingApp" pc="268435749" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="33" parent="globals/lifecycle_trackingApp" pc="268435770" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="34" parent="globals/lifecycle_trackingApp" pc="268435788" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="38" parent="globals/lifecycle_trackingApp" pc="268435815" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="39" parent="globals/lifecycle_trackingApp" pc="268435833" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="9" lineNum="40" parent="globals/lifecycle_trackingApp" pc="268435851" symbol="onStart"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="10" lineNum="71" parent="globals/lifecycle_trackingApp" pc="268435870" symbol="getInitialView"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="10" lineNum="72" parent="globals/lifecycle_trackingApp" pc="268435872" symbol="getInitialView"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="10" lineNum="73" parent="globals/lifecycle_trackingApp" pc="268435890" symbol="getInitialView"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="10" lineNum="74" parent="globals/lifecycle_trackingApp" pc="268435908" symbol="getInitialView"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="10" lineNum="76" parent="globals/lifecycle_trackingApp" pc="268435926" symbol="getInitialView"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="11" lineNum="8" parent="globals/lifecycle_trackingApp" pc="268435981" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="11" lineNum="9" parent="globals/lifecycle_trackingApp" pc="268435983" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="11" lineNum="10" parent="globals/lifecycle_trackingApp" pc="268435995" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="11" lineNum="11" parent="globals/lifecycle_trackingApp" pc="268436013" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="44" parent="globals/lifecycle_trackingApp" pc="268436032" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="45" parent="globals/lifecycle_trackingApp" pc="268436035" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="47" parent="globals/lifecycle_trackingApp" pc="268436053" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="49" parent="globals/lifecycle_trackingApp" pc="268436056" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="50" parent="globals/lifecycle_trackingApp" pc="268436080" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="52" parent="globals/lifecycle_trackingApp" pc="268436097" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="53" parent="globals/lifecycle_trackingApp" pc="268436112" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="57" parent="globals/lifecycle_trackingApp" pc="268436122" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="58" parent="globals/lifecycle_trackingApp" pc="268436127" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="59" parent="globals/lifecycle_trackingApp" pc="268436145" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="61" parent="globals/lifecycle_trackingApp" pc="268436166" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="62" parent="globals/lifecycle_trackingApp" pc="268436184" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="65" parent="globals/lifecycle_trackingApp" pc="268436202" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingApp.mc" id="12" lineNum="66" parent="globals/lifecycle_trackingApp" pc="268436220" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="27" parent="globals/lifecycle_trackingDelegate" pc="268436239" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="28" parent="globals/lifecycle_trackingDelegate" pc="268436241" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="29" parent="globals/lifecycle_trackingDelegate" pc="268436259" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="30" parent="globals/lifecycle_trackingDelegate" pc="268436277" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="31" parent="globals/lifecycle_trackingDelegate" pc="268436295" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="13" lineNum="33" parent="globals/lifecycle_trackingDelegate" pc="268436313" symbol="onBack"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="14" lineNum="36" parent="globals/lifecycle_trackingDelegate" pc="268436315" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="14" lineNum="37" parent="globals/lifecycle_trackingDelegate" pc="268436317" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="14" lineNum="38" parent="globals/lifecycle_trackingDelegate" pc="268436335" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="14" lineNum="39" parent="globals/lifecycle_trackingDelegate" pc="268436353" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="14" lineNum="41" parent="globals/lifecycle_trackingDelegate" pc="268436371" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="15" lineNum="7" parent="globals/lifecycle_trackingDelegate" pc="268436373" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="15" lineNum="8" parent="globals/lifecycle_trackingDelegate" pc="268436375" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="15" lineNum="10" parent="globals/lifecycle_trackingDelegate" pc="268436387" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="15" lineNum="11" parent="globals/lifecycle_trackingDelegate" pc="268436405" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="15" lineNum="12" parent="globals/lifecycle_trackingDelegate" pc="268436423" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="16" parent="globals/lifecycle_trackingDelegate" pc="268436442" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="17" parent="globals/lifecycle_trackingDelegate" pc="268436444" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="18" parent="globals/lifecycle_trackingDelegate" pc="268436462" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="19" parent="globals/lifecycle_trackingDelegate" pc="268436480" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="20" parent="globals/lifecycle_trackingDelegate" pc="268436498" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="23" parent="globals/lifecycle_trackingDelegate" pc="268436516" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingDelegate.mc" id="16" lineNum="24" parent="globals/lifecycle_trackingDelegate" pc="268436527" symbol="onSelect"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="35" parent="globals/lifecycle_trackingView" pc="268436529" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="36" parent="globals/lifecycle_trackingView" pc="268436531" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="37" parent="globals/lifecycle_trackingView" pc="268436549" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="38" parent="globals/lifecycle_trackingView" pc="268436567" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="39" parent="globals/lifecycle_trackingView" pc="268436585" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="40" parent="globals/lifecycle_trackingView" pc="268436603" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="43" parent="globals/lifecycle_trackingView" pc="268436621" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="44" parent="globals/lifecycle_trackingView" pc="268436650" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="46" parent="globals/lifecycle_trackingView" pc="268436681" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="17" lineNum="47" parent="globals/lifecycle_trackingView" pc="268436699" symbol="onShow"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="24" parent="globals/lifecycle_trackingView" pc="268436718" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="25" parent="globals/lifecycle_trackingView" pc="268436720" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="26" parent="globals/lifecycle_trackingView" pc="268436753" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="27" parent="globals/lifecycle_trackingView" pc="268436771" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="28" parent="globals/lifecycle_trackingView" pc="268436811" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="18" lineNum="29" parent="globals/lifecycle_trackingView" pc="268436829" symbol="onLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="12" parent="globals/lifecycle_trackingView" pc="268436848" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="13" parent="globals/lifecycle_trackingView" pc="268436850" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="15" parent="globals/lifecycle_trackingView" pc="268436862" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="16" parent="globals/lifecycle_trackingView" pc="268436880" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="17" parent="globals/lifecycle_trackingView" pc="268436898" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="18" parent="globals/lifecycle_trackingView" pc="268436916" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="19" lineNum="20" parent="globals/lifecycle_trackingView" pc="268436934" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="96" parent="globals/lifecycle_trackingView" pc="268436952" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="97" parent="globals/lifecycle_trackingView" pc="268436954" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="98" parent="globals/lifecycle_trackingView" pc="268436972" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="99" parent="globals/lifecycle_trackingView" pc="268436990" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="100" parent="globals/lifecycle_trackingView" pc="268437008" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="101" parent="globals/lifecycle_trackingView" pc="268437026" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="103" parent="globals/lifecycle_trackingView" pc="268437044" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="104" parent="globals/lifecycle_trackingView" pc="268437053" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="105" parent="globals/lifecycle_trackingView" pc="268437065" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="106" parent="globals/lifecycle_trackingView" pc="268437073" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="20" lineNum="109" parent="globals/lifecycle_trackingView" pc="268437094" symbol="onHide"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="51" parent="globals/lifecycle_trackingView" pc="268437113" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="53" parent="globals/lifecycle_trackingView" pc="268437116" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="54" parent="globals/lifecycle_trackingView" pc="268437132" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="57" parent="globals/lifecycle_trackingView" pc="268437147" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="58" parent="globals/lifecycle_trackingView" pc="268437161" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="59" parent="globals/lifecycle_trackingView" pc="268437191" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="60" parent="globals/lifecycle_trackingView" pc="268437209" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="61" parent="globals/lifecycle_trackingView" pc="268437227" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="62" parent="globals/lifecycle_trackingView" pc="268437245" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="66" parent="globals/lifecycle_trackingView" pc="268437266" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="67" parent="globals/lifecycle_trackingView" pc="268437282" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="70" parent="globals/lifecycle_trackingView" pc="268437290" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="72" parent="globals/lifecycle_trackingView" pc="268437303" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="73" parent="globals/lifecycle_trackingView" pc="268437315" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="77" parent="globals/lifecycle_trackingView" pc="268437375" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="80" parent="globals/lifecycle_trackingView" pc="268437406" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="83" parent="globals/lifecycle_trackingView" pc="268437440" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="86" parent="globals/lifecycle_trackingView" pc="268437477" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="21" lineNum="89" parent="globals/lifecycle_trackingView" pc="268437509" symbol="onUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="22" lineNum="112" parent="globals/lifecycle_trackingView" pc="268437542" symbol="onTimer"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="22" lineNum="113" parent="globals/lifecycle_trackingView" pc="268437544" symbol="onTimer"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/source/lifecycle-trackingView.mc" id="22" lineNum="114" parent="globals/lifecycle_trackingView" pc="268437562" symbol="onTimer"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="14" parent="globals/Rez/Layouts" pc="268437574" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="15" parent="globals/Rez/Layouts" pc="268437585" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="17" parent="globals/Rez/Layouts" pc="268437685" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="18" parent="globals/Rez/Layouts" pc="268437769" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="20" parent="globals/Rez/Layouts" pc="268437801" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="24" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268437816" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="25" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268437828" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="25" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268437830" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="25" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268437842" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/lifecycle-tracking/bin/gen/006-B4575-00/source/Rez.mcgen" id="25" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268437887" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="13" symbol="&lt;globals/lifecycle_trackingView/&lt;&gt;_displayTimer&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="19" method="true" symbol="MainLayout"/>
+        <entry id="10" object="true" symbol="lifecycle_trackingView"/>
+        <entry id="8391788" symbol="suspend"/>
+        <entry id="8391787" symbol="resume"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="21" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="24" symbol="prompt"/>
+        <entry field="true" id="18" symbol="id_monkey"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8" object="true" symbol="lifecycle_trackingDelegate"/>
+        <entry id="9" object="true" symbol="lifecycle_trackingMenuDelegate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="26" symbol="item_2"/>
+        <entry id="25" symbol="item_1"/>
+        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="15" symbol="&lt;globals/lifecycle_trackingView/&lt;&gt;_updateCount&gt;"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="7" object="true" symbol="lifecycle_trackingApp"/>
+        <entry id="20" object="true" symbol="MainMenu"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry field="true" id="14" symbol="&lt;globals/lifecycle_trackingView/&lt;&gt;_startTime&gt;"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="17" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="11" module="true" symbol="Layouts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="16" method="true" symbol="onTimer"/>
+        <entry field="true" id="23" symbol="menu_label_2"/>
+        <entry field="true" id="22" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435615" name="item" stackId="1" startPc="268435549"/>
+        <entry arg="true" endPc="268435869" name="state" stackId="1" startPc="268435631"/>
+        <entry endPc="268435814" name="isResuming" stackId="2" startPc="268435677"/>
+        <entry endPc="268435740" name="resumeValue" stackId="3" startPc="268435698"/>
+        <entry arg="true" endPc="268436238" name="state" stackId="1" startPc="268436032"/>
+        <entry endPc="268436237" name="isSuspended" stackId="2" startPc="268436035"/>
+        <entry endPc="268436118" name="suspendValue" stackId="3" startPc="268436080"/>
+        <entry arg="true" endPc="268436847" name="dc" stackId="1" startPc="268436718"/>
+        <entry arg="true" endPc="268437541" name="dc" stackId="1" startPc="268437113"/>
+        <entry endPc="268437540" name="currentTime" stackId="2" startPc="268437116"/>
+        <entry endPc="268437540" name="timeString" stackId="3" startPc="268437116"/>
+        <entry arg="true" endPc="268437815" name="dc" stackId="1" startPc="268437574"/>
+        <entry endPc="268437815" name="rez_cmp_local_text_1193959466" stackId="2" startPc="268437585"/>
+        <entry endPc="268437815" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268437585"/>
+    </localVars>
+    <deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B4575-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/lifecycle_trackingMenuDelegate" offset="152" parentId="globals" symbolId="lifecycle_trackingMenuDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="205" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/lifecycle_trackingApp" offset="267" parentId="globals" symbolId="lifecycle_trackingApp" type="class"/>
+        <dataEntry label="globals/lifecycle_trackingDelegate" offset="338" parentId="globals" symbolId="lifecycle_trackingDelegate" type="class"/>
+        <dataEntry label="globals/lifecycle_trackingView" offset="409" parentId="globals" symbolId="lifecycle_trackingView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="525" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="569" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="604" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="639" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="701" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="&lt;init&gt;" parent="lifecycle_trackingMenuDelegate" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="Rez" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="lifecycle_trackingApp" startPc="268435513">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="lifecycle_trackingDelegate" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="lifecycle_trackingView" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435615" name="onMenuItem" parent="lifecycle_trackingMenuDelegate" startPc="268435549">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435630" name="initialize" parent="lifecycle_trackingMenuDelegate" startPc="268435616">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435869" name="onStart" parent="lifecycle_trackingApp" startPc="268435631">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435980" name="getInitialView" parent="lifecycle_trackingApp" startPc="268435870">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436031" name="initialize" parent="lifecycle_trackingApp" startPc="268435981">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436238" name="onStop" parent="lifecycle_trackingApp" startPc="268436032">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436314" name="onBack" parent="lifecycle_trackingDelegate" startPc="268436239">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436372" name="onMenu" parent="lifecycle_trackingDelegate" startPc="268436315">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436441" name="initialize" parent="lifecycle_trackingDelegate" startPc="268436373">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436528" name="onSelect" parent="lifecycle_trackingDelegate" startPc="268436442">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436717" name="onShow" parent="lifecycle_trackingView" startPc="268436529">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436847" name="onLayout" parent="lifecycle_trackingView" startPc="268436718">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436951" name="initialize" parent="lifecycle_trackingView" startPc="268436848">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437112" name="onHide" parent="lifecycle_trackingView" startPc="268436952">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437541" name="onUpdate" parent="lifecycle_trackingView" startPc="268437113">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437573" name="onTimer" parent="lifecycle_trackingView" startPc="268437542">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437815" name="MainLayout" parent="Layouts" startPc="268437574">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437827" name="&lt;init&gt;" parent="MainMenu" startPc="268437816">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437932" name="initialize" parent="MainMenu" startPc="268437828">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
