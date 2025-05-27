@@ -1,0 +1,29 @@
+We test what diffrent buttons and motions do to the watch state (NO Background services application) App Version Commit #:4d832d1 "mostly working version"
+
+
+CONCLUSIONS:
+
+	Without background services:
+		- "Select" Button (top right) : Interaction with app (input)
+		- "Screen Tap": Same input as "Select" Button
+		
+		- "Back" Button (bottom right): Does onHide() -> onStop()
+		- "Swipe" (left to right): Does the same as "Back" Button
+
+
+Experiments:
+
+	01 Log File:
+		1. Enter app
+		2. Press screen a few times
+		3. Swipe left -> right
+
+	02 Log File:
+		1. Enter app
+		2. Wait & Let counter self increment
+		3. Press screen once
+		4. Swipe left -> right
+		5. Wait
+		6. Enter app
+		7. Wait & let counter self increment
+		8. Press "Back" Button
