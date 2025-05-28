@@ -1,5 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
+import Toybox.Time;
 
 class basicActiveView extends WatchUi.View {
     private var _timeField = null;
@@ -42,7 +43,14 @@ class basicActiveView extends WatchUi.View {
         if (_timeField != null){
             var dateInfo = Time.Gregorian.info( Time.now(), Time.FORMAT_SHORT );
 
-            _timeField.setText(dateInfo);
+            var timeString = Lang.format("$1$:$2$ $3$/$4$/$5$", [
+                dateInfo.hour,
+                dateInfo.min.format("%02d"),
+                dateInfo.month,
+                dateInfo.day,
+                dateInfo.year
+            ]);
+            _timeField.setText(timeString);
         }
     }
 
