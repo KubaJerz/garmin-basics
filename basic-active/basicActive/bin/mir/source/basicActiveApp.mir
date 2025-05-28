@@ -13,9 +13,9 @@ class basicActiveApp extends Application.AppBase {
     static
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 6; @position = 16; @symbol_vardef = [_recorder,6,16,25]; ]
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 6; @position = 16; @symbol_vardef = [_dataManager,6,16,28]; ]
     private
-    var _recorder = null;
+    var _dataManager = null;
     [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
     function initialize() as Void {
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_8_26_11_4_start:
@@ -25,58 +25,81 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicAc
         symbol [ initialize %tmp.3 9 16 26 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 10 8 ]
+        symbol [ DataCollectionManager %tmp.7 10 27 48 ];
+        %tmp.7 = getv ? :DataCollectionManager;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _dataManager ? 10 8 20 ];
+        putv self :_dataManager %tmp.4;
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_8_26_11_4_stop:
     }
     [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 14; @symbol_functiondef = [onStart,14,13,20]; @symbol_param<0> = [state,14,21,26]; @symbol_param<0>_type<0> = [Dictionary,14,30,40]; ]
     function onStart(state as Dictionary or Null) as Void {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_14_51_18_4_start:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_14_51_19_4_start:
 [ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 15 8 ]
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_17_8_if_stmt:
-        symbol [ _recorder %tmp.2 15 12 21 ];
-        %tmp.2 = getv ? :_recorder;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_18_8_if_stmt:
+        symbol [ _dataManager %tmp.2 15 12 24 ];
+        %tmp.2 = getv ? :_dataManager;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_17_8_if_end;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_17_8_if_true:
-        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_17_8_if_end;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_17_8_if_end:
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_14_51_18_4_stop:
+        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_18_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_18_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_34_18_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 17 12 ]
+        symbol [ _dataManager %tmp.6 17 12 24 ];
+        %tmp.6 = getv ? :_dataManager;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ startDataCollection %tmp.8 17 25 44 ];
+        %tmp.8 = getv function %tmp.7 :startDataCollection;
+        invoke %tmp.7 %tmp.8();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_34_18_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_18_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_15_8_18_8_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_14_51_19_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 21; @symbol_functiondef = [onStop,21,13,19]; @symbol_param<0> = [state,21,20,25]; @symbol_param<0>_type<0> = [Dictionary,21,29,39]; ]
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 22; @symbol_functiondef = [onStop,22,13,19]; @symbol_param<0> = [state,22,20,25]; @symbol_param<0>_type<0> = [Dictionary,22,29,39]; ]
     function onStop(state as Dictionary or Null) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_22_50_25_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 24 8 ]
+        symbol [ _dataManager %tmp.2 24 8 20 ];
+        %tmp.2 = getv ? :_dataManager;
+        symbol [ stopDataCollection %tmp.3 24 21 39 ];
+        %tmp.3 = getv function %tmp.2 :stopDataCollection;
+        invoke %tmp.2 %tmp.3();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_22_50_25_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 26; @symbol_functiondef = [getInitialView,26,13,27]; @symbol_return<0> = [Views,26,34,39]; @symbol_return<1> = [Views,26,45,50]; @symbol_return<2> = [InputDelegates,26,52,66]; ]
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 28; @symbol_functiondef = [getInitialView,28,13,27]; @symbol_return<0> = [Views,28,34,39]; @symbol_return<1> = [Views,28,45,50]; @symbol_return<2> = [InputDelegates,28,52,66]; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_26_68_30_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 29 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_28_68_32_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 31 8 ]
         %tmp.1 = newa 2;
-        symbol [ basicActiveView %tmp.5 29 21 36 ];
+        symbol [ basicActiveView %tmp.5 31 21 36 ];
         %tmp.5 = getv ? :basicActiveView;
         %tmp.2 = newc %tmp.5 ();
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;
-        symbol [ basicActiveDelegate %tmp.11 29 44 63 ];
+        symbol [ basicActiveDelegate %tmp.11 31 44 63 ];
         %tmp.11 = getv ? :basicActiveDelegate;
         %tmp.8 = newc %tmp.11 ();
         %tmp.12 = dup %tmp.7;
         %tmp.13 = aputv %tmp.12 1 %tmp.8;
         ret %tmp.13;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_26_68_30_4_stop:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_28_68_32_4_stop:
     }
 }
-[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 34; @symbol_functiondef = [getApp,34,9,15]; @symbol_return<0> = [basicActiveApp,34,21,35]; ]
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 36; @symbol_functiondef = [getApp,36,9,15]; @symbol_return<0> = [basicActiveApp,36,21,35]; ]
 function getApp() as basicActiveApp {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_34_36_36_0_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 35 4 ]
-    symbol [ Application %tmp.1 35 11 22 ];
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_36_36_38_0_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" 37 4 ]
+    symbol [ Application %tmp.1 37 11 22 ];
     %tmp.1 = getm $.Toybox.Application;
-    symbol [ getApp %tmp.2 35 23 29 ];
+    symbol [ getApp %tmp.2 37 23 29 ];
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 basicActiveApp;
-    symbol [ basicActiveApp %tmp.4 35 35 49 ];
+    symbol [ basicActiveApp %tmp.4 37 35 49 ];
     ret %tmp.4;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_34_36_36_0_stop:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_36_36_38_0_stop:
 }
 [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc"; @line = 1; ]
 <init> {

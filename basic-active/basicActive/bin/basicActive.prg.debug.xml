@@ -4,8 +4,8 @@
     <pcToLineNum>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" id="1" lineNum="6" parent="globals/basicActiveView" pc="268435460" symbol="&lt;init&gt;"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="2" lineNum="5" parent="globals/basicActiveApp" pc="268435472" symbol="&lt;init&gt;"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="3" lineNum="34" parent="globals" pc="268435484" symbol="getApp"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="3" lineNum="35" parent="globals" pc="268435494" symbol="getApp"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="3" lineNum="36" parent="globals" pc="268435484" symbol="getApp"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="3" lineNum="37" parent="globals" pc="268435494" symbol="getApp"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="4" lineNum="4" parent="globals/basicActiveDelegate" pc="268435505" symbol="&lt;init&gt;"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="5" lineNum="7" parent="globals/Rez" pc="268435517" symbol="&lt;init&gt;"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="6" lineNum="5" parent="globals/basicActiveMenuDelegate" pc="268435537" symbol="&lt;init&gt;"/>
@@ -33,99 +33,151 @@
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" id="12" lineNum="39" parent="globals/basicActiveView" pc="268435893" symbol="onUpdate"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="13" lineNum="14" parent="globals/basicActiveApp" pc="268435910" symbol="onStart"/>
         <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="13" lineNum="15" parent="globals/basicActiveApp" pc="268435912" symbol="onStart"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="14" lineNum="26" parent="globals/basicActiveApp" pc="268435925" symbol="getInitialView"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="14" lineNum="29" parent="globals/basicActiveApp" pc="268435927" symbol="getInitialView"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="15" lineNum="8" parent="globals/basicActiveApp" pc="268435982" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="15" lineNum="9" parent="globals/basicActiveApp" pc="268435984" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="16" lineNum="21" parent="globals/basicActiveApp" pc="268435997" symbol="onStop"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="10" parent="globals/basicActiveDelegate" pc="268436000" symbol="onMenu"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="11" parent="globals/basicActiveDelegate" pc="268436002" symbol="onMenu"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="12" parent="globals/basicActiveDelegate" pc="268436071" symbol="onMenu"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="18" lineNum="6" parent="globals/basicActiveDelegate" pc="268436073" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="18" lineNum="7" parent="globals/basicActiveDelegate" pc="268436075" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="11" parent="globals/basicActiveMenuDelegate" pc="268436088" symbol="onMenuItem"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="12" parent="globals/basicActiveMenuDelegate" pc="268436090" symbol="onMenuItem"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="13" parent="globals/basicActiveMenuDelegate" pc="268436101" symbol="onMenuItem"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="14" parent="globals/basicActiveMenuDelegate" pc="268436122" symbol="onMenuItem"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="15" parent="globals/basicActiveMenuDelegate" pc="268436133" symbol="onMenuItem"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="20" lineNum="7" parent="globals/basicActiveMenuDelegate" pc="268436155" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="20" lineNum="8" parent="globals/basicActiveMenuDelegate" pc="268436157" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="21" lineNum="13" parent="globals/Rez/Layouts" pc="268436170" symbol="MainLayout"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="21" lineNum="14" parent="globals/Rez/Layouts" pc="268436181" symbol="MainLayout"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="21" lineNum="16" parent="globals/Rez/Layouts" pc="268436297" symbol="MainLayout"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="22" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268436307" symbol="&lt;init&gt;"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268436319" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268436321" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268436333" symbol="initialize"/>
-        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="23" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268436378" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="13" lineNum="17" parent="globals/basicActiveApp" pc="268435921" symbol="onStart"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="14" lineNum="28" parent="globals/basicActiveApp" pc="268435937" symbol="getInitialView"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="14" lineNum="31" parent="globals/basicActiveApp" pc="268435939" symbol="getInitialView"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="15" lineNum="8" parent="globals/basicActiveApp" pc="268435994" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="15" lineNum="9" parent="globals/basicActiveApp" pc="268435996" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="15" lineNum="10" parent="globals/basicActiveApp" pc="268436008" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="16" lineNum="22" parent="globals/basicActiveApp" pc="268436038" symbol="onStop"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="16" lineNum="24" parent="globals/basicActiveApp" pc="268436040" symbol="onStop"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="10" parent="globals/basicActiveDelegate" pc="268436053" symbol="onMenu"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="11" parent="globals/basicActiveDelegate" pc="268436055" symbol="onMenu"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="17" lineNum="12" parent="globals/basicActiveDelegate" pc="268436124" symbol="onMenu"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="18" lineNum="6" parent="globals/basicActiveDelegate" pc="268436126" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="18" lineNum="7" parent="globals/basicActiveDelegate" pc="268436128" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="11" parent="globals/basicActiveMenuDelegate" pc="268436141" symbol="onMenuItem"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="12" parent="globals/basicActiveMenuDelegate" pc="268436143" symbol="onMenuItem"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="13" parent="globals/basicActiveMenuDelegate" pc="268436154" symbol="onMenuItem"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="14" parent="globals/basicActiveMenuDelegate" pc="268436175" symbol="onMenuItem"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="19" lineNum="15" parent="globals/basicActiveMenuDelegate" pc="268436186" symbol="onMenuItem"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="20" lineNum="7" parent="globals/basicActiveMenuDelegate" pc="268436208" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="20" lineNum="8" parent="globals/basicActiveMenuDelegate" pc="268436210" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="21" lineNum="78" parent="globals/DataCollectionManager" pc="268436223" symbol="isRecording"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="21" lineNum="79" parent="globals/DataCollectionManager" pc="268436225" symbol="isRecording"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="15" parent="globals/DataCollectionManager" pc="268436231" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="16" parent="globals/DataCollectionManager" pc="268436234" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="17" parent="globals/DataCollectionManager" pc="268436242" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="18" parent="globals/DataCollectionManager" pc="268436283" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="23" parent="globals/DataCollectionManager" pc="268436287" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="28" parent="globals/DataCollectionManager" pc="268436328" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="30" parent="globals/DataCollectionManager" pc="268436353" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="37" parent="globals/DataCollectionManager" pc="268436434" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="40" parent="globals/DataCollectionManager" pc="268436444" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="48" parent="globals/DataCollectionManager" pc="268436494" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="49" parent="globals/DataCollectionManager" pc="268436506" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="50" parent="globals/DataCollectionManager" pc="268436520" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="51" parent="globals/DataCollectionManager" pc="268436524" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="22" lineNum="52" parent="globals/DataCollectionManager" pc="268436550" symbol="startDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="56" parent="globals/DataCollectionManager" pc="268436574" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="57" parent="globals/DataCollectionManager" pc="268436577" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="58" parent="globals/DataCollectionManager" pc="268436595" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="62" parent="globals/DataCollectionManager" pc="268436599" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="63" parent="globals/DataCollectionManager" pc="268436611" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="64" parent="globals/DataCollectionManager" pc="268436623" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="66" parent="globals/DataCollectionManager" pc="268436637" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="23" lineNum="67" parent="globals/DataCollectionManager" pc="268436641" symbol="stopDataCollection"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="25" lineNum="71" parent="globals/DataCollectionManager" pc="268436680" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="25" lineNum="73" parent="globals/DataCollectionManager" pc="268436682" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="25" lineNum="74" parent="globals/DataCollectionManager" pc="268436690" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="25" lineNum="75" parent="globals/DataCollectionManager" pc="268436698" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="26" lineNum="13" parent="globals/Rez/Layouts" pc="268436707" symbol="MainLayout"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="26" lineNum="14" parent="globals/Rez/Layouts" pc="268436718" symbol="MainLayout"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="26" lineNum="16" parent="globals/Rez/Layouts" pc="268436834" symbol="MainLayout"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="27" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268436844" symbol="&lt;init&gt;"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="28" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268436856" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="28" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268436858" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="28" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268436870" symbol="initialize"/>
+        <entry filename="/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="28" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268436915" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
+        <entry field="true" id="20" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_logger&gt;"/>
+        <entry id="8390184" symbol="sensorLogger"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="5" module="true" symbol="globals/Rez/Menus"/>
-        <entry id="18" method="true" symbol="MainLayout"/>
-        <entry id="10" object="true" symbol="basicActiveView"/>
-        <entry id="7" object="true" symbol="basicActiveApp"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="25" method="true" symbol="MainLayout"/>
+        <entry id="11" object="true" symbol="basicActiveView"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="8" object="true" symbol="basicActiveApp"/>
+        <entry id="8390135" symbol="enableAccelerometer"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="20" symbol="AppName"/>
-        <entry field="true" id="11" symbol="&lt;globals/basicActiveView/&lt;&gt;_timeField&gt;"/>
+        <entry field="true" id="27" symbol="AppName"/>
+        <entry field="true" id="12" symbol="&lt;globals/basicActiveView/&lt;&gt;_timeField&gt;"/>
         <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="18" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
         <entry id="8389080" method="true" symbol="onMenu"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="23" symbol="prompt"/>
+        <entry field="true" id="30" symbol="prompt"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry id="25" symbol="item_2"/>
-        <entry id="24" symbol="item_1"/>
-        <entry id="16" module="true" symbol="Menus"/>
+        <entry id="32" symbol="item_2"/>
+        <entry id="31" symbol="item_1"/>
+        <entry id="17" module="true" symbol="Menus"/>
+        <entry field="true" id="19" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_isRecording&gt;"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="7" object="true" symbol="DataCollectionManager"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
-        <entry field="true" id="12" symbol="&lt;globals/basicActiveView/&lt;&gt;_timer&gt;"/>
+        <entry field="true" id="13" symbol="&lt;globals/basicActiveView/&lt;&gt;_timer&gt;"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="19" object="true" symbol="MainMenu"/>
+        <entry id="26" object="true" symbol="MainMenu"/>
+        <entry id="22" method="true" symbol="startDataCollection"/>
+        <entry id="23" method="true" symbol="stopDataCollection"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry id="8388645" module="true" symbol="Time"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry field="true" id="14" symbol="&lt;globals/basicActiveApp/&lt;&gt;_recorder&gt;"/>
+        <entry field="true" id="15" symbol="&lt;globals/basicActiveApp/&lt;&gt;_dataManager&gt;"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="17" symbol="LauncherIcon"/>
+        <entry id="8388881" method="true" symbol="isRecording"/>
+        <entry field="true" id="24" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8390175" module="true" symbol="SensorLogging"/>
         <entry id="8389350" module="true" symbol="globals"/>
-        <entry id="13" method="true" symbol="updateUI"/>
+        <entry id="14" method="true" symbol="updateUI"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388892" symbol="name"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="8" object="true" symbol="basicActiveDelegate"/>
+        <entry id="9" object="true" symbol="basicActiveDelegate"/>
         <entry id="8388646" module="true" object="true" symbol="Timer"/>
-        <entry id="15" module="true" symbol="Layouts"/>
-        <entry id="9" object="true" symbol="basicActiveMenuDelegate"/>
+        <entry id="16" module="true" symbol="Layouts"/>
+        <entry field="true" id="21" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_session&gt;"/>
+        <entry id="10" object="true" symbol="basicActiveMenuDelegate"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="22" symbol="menu_label_2"/>
-        <entry field="true" id="21" symbol="menu_label_1"/>
+        <entry field="true" id="29" symbol="menu_label_2"/>
+        <entry field="true" id="28" symbol="menu_label_1"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435691" name="dc" stackId="1" startPc="268435656"/>
         <entry endPc="268435836" name="dateInfo" stackId="1" startPc="268435704"/>
         <entry endPc="268435836" name="timeString" stackId="2" startPc="268435704"/>
         <entry arg="true" endPc="268435909" name="dc" stackId="1" startPc="268435891"/>
-        <entry arg="true" endPc="268435924" name="state" stackId="1" startPc="268435910"/>
-        <entry arg="true" endPc="268436154" name="item" stackId="1" startPc="268436088"/>
-        <entry arg="true" endPc="268436306" name="dc" stackId="1" startPc="268436170"/>
-        <entry endPc="268436306" name="rez_cmp_local_text_timeText" stackId="2" startPc="268436181"/>
+        <entry arg="true" endPc="268435936" name="state" stackId="1" startPc="268435910"/>
+        <entry arg="true" endPc="268436052" name="state" stackId="1" startPc="268436038"/>
+        <entry arg="true" endPc="268436207" name="item" stackId="1" startPc="268436141"/>
+        <entry endPc="268436513" name="dateInfo" stackId="1" startPc="268436287"/>
+        <entry endPc="268436513" name="timeString" stackId="2" startPc="268436287"/>
+        <entry endPc="268436513" name="sessionName" stackId="3" startPc="268436287"/>
+        <entry endPc="268436567" name="ex" stackId="4" startPc="268436520"/>
+        <entry endPc="268436673" name="ex" stackId="1" startPc="268436637"/>
+        <entry arg="true" endPc="268436706" name="exception" stackId="1" startPc="268436680"/>
+        <entry arg="true" endPc="268436843" name="dc" stackId="1" startPc="268436707"/>
+        <entry endPc="268436843" name="rez_cmp_local_text_timeText" stackId="2" startPc="268436718"/>
     </localVars>
     <deviceInfo deviceVersion="973370c5a9d96fc81efa2ce7024844f7f8431e75" partNumber="006-B4575-00"/>
     <annotations>
@@ -137,16 +189,17 @@
     </annotations>
     <dataEntryOffsetMappings>
         <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/basicActiveView" offset="152" parentId="globals" symbolId="basicActiveView" type="class"/>
-        <dataEntry label="globals/basicActiveApp" offset="259" parentId="globals" symbolId="basicActiveApp" type="class"/>
-        <dataEntry label="globals/basicActiveDelegate" offset="339" parentId="globals" symbolId="basicActiveDelegate" type="class"/>
-        <dataEntry label="globals/Rez" offset="392" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/basicActiveMenuDelegate" offset="454" parentId="globals" symbolId="basicActiveMenuDelegate" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="507" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="542" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="577" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="612" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="674" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/basicActiveView" offset="161" parentId="globals" symbolId="basicActiveView" type="class"/>
+        <dataEntry label="globals/basicActiveApp" offset="268" parentId="globals" symbolId="basicActiveApp" type="class"/>
+        <dataEntry label="globals/basicActiveDelegate" offset="348" parentId="globals" symbolId="basicActiveDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="401" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/basicActiveMenuDelegate" offset="463" parentId="globals" symbolId="basicActiveMenuDelegate" type="class"/>
+        <dataEntry label="globals/DataCollectionManager" offset="516" parentId="globals" symbolId="DataCollectionManager" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="623" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="658" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="693" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="728" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="790" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="basicActiveView" startPc="268435460">
@@ -165,6 +218,9 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="basicActiveMenuDelegate" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="DataCollectionManager">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435655" name="onShow" parent="basicActiveView" startPc="268435549">
@@ -187,24 +243,24 @@
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435924" name="onStart" parent="basicActiveApp" startPc="268435910">
+        <functionEntry accessMode="public" endPc="268435936" name="onStart" parent="basicActiveApp" startPc="268435910">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435981" name="getInitialView" parent="basicActiveApp" startPc="268435925">
+        <functionEntry accessMode="public" endPc="268435993" name="getInitialView" parent="basicActiveApp" startPc="268435937">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435996" name="initialize" parent="basicActiveApp" startPc="268435982">
+        <functionEntry accessMode="public" endPc="268436037" name="initialize" parent="basicActiveApp" startPc="268435994">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435999" name="onStop" parent="basicActiveApp" startPc="268435997">
+        <functionEntry accessMode="public" endPc="268436052" name="onStop" parent="basicActiveApp" startPc="268436038">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436072" name="onMenu" parent="basicActiveDelegate" startPc="268436000">
+        <functionEntry accessMode="public" endPc="268436125" name="onMenu" parent="basicActiveDelegate" startPc="268436053">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436087" name="initialize" parent="basicActiveDelegate" startPc="268436073">
+        <functionEntry accessMode="public" endPc="268436140" name="initialize" parent="basicActiveDelegate" startPc="268436126">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -219,21 +275,37 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436154" name="onMenuItem" parent="basicActiveMenuDelegate" startPc="268436088">
+        <functionEntry accessMode="public" endPc="268436207" name="onMenuItem" parent="basicActiveMenuDelegate" startPc="268436141">
             <param id="item"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436169" name="initialize" parent="basicActiveMenuDelegate" startPc="268436155">
+        <functionEntry accessMode="public" endPc="268436222" name="initialize" parent="basicActiveMenuDelegate" startPc="268436208">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436306" name="MainLayout" parent="Layouts" startPc="268436170">
+        <functionEntry accessMode="public" endPc="268436230" name="isRecording" parent="DataCollectionManager" startPc="268436223">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436573" name="startDataCollection" parent="DataCollectionManager" startPc="268436231">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436679" name="stopDataCollection" parent="DataCollectionManager" startPc="268436574">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DataCollectionManager">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436706" name="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;" parent="DataCollectionManager" startPc="268436680">
+            <param id="exception"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436843" name="MainLayout" parent="Layouts" startPc="268436707">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436318" name="&lt;init&gt;" parent="MainMenu" startPc="268436307">
+        <functionEntry accessMode="public" endPc="268436855" name="&lt;init&gt;" parent="MainMenu" startPc="268436844">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436423" name="initialize" parent="MainMenu" startPc="268436319">
+        <functionEntry accessMode="public" endPc="268436960" name="initialize" parent="MainMenu" startPc="268436856">
             <documentation/>
         </functionEntry>
     </functions>
