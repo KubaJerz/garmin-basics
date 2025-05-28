@@ -1,9 +1,12 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Time;
+import Toybox.Timer;
 
 class basicActiveView extends WatchUi.View {
     private var _timeField = null;
+    private var _timer = null;
+    private const TIMER_INTERVAL = 1000;
 
     function initialize() {
         View.initialize();
@@ -20,6 +23,10 @@ class basicActiveView extends WatchUi.View {
     // loading resources into memory.
     function onShow() as Void {
         _timeField = View.findDrawableById("timeText");
+        if (_timer == null){
+            _timer = new Timer.Timer();
+            _timer.start(method(:updateUI), TIMER_INTERVAL, true); // repeat = true
+        }
 
         updateUI();
     }
@@ -27,7 +34,7 @@ class basicActiveView extends WatchUi.View {
     // Update the view
     function onUpdate(dc as Dc) as Void {
         // Call the parent onUpdate function to redraw the layout
-        updateUI();
+        // updateUI();
 
         View.onUpdate(dc);
     }
@@ -36,6 +43,10 @@ class basicActiveView extends WatchUi.View {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
+        if (_timer != null) {
+            _timer.stop();
+            _timer = null;
+        }
     }
 
     function updateUI() as Void {
@@ -51,6 +62,7 @@ class basicActiveView extends WatchUi.View {
                 dateInfo.year
             ]);
             _timeField.setText(timeString);
+            WatchUi.requestUpdate();
         }
     }
 
