@@ -21,7 +21,8 @@ class DataCollectionManager {
         try {
             // make sensor logger with proper sensors
             _logger = new SensorLogging.SensorLogger({
-            :enableAccelerometer => true
+                :accelerometer => {:enabled => true}, //, :sampleRate => 10},
+                :gyroscope => {:enabled => true} //, :sampleRate => 10}
             });
 
             // make a unique name for our FIT session
