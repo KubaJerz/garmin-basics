@@ -2,11 +2,13 @@ import Toybox.ActivityRecording;
 import Toybox.SensorLogging;
 import Toybox.System;
 import Toybox.Time;
+import Toybox.Position;
 
 class DataCollectionManager {
     private var _logger = null;
     private var _session = null;
     private var _isRecording = false;
+    private var _gpsEnabled = false;
     private const PREFIX = "BASIC_RECORDER_";
 
     function initialize() {
@@ -19,6 +21,10 @@ class DataCollectionManager {
         }
 
         try {
+
+            //Turn on the GPS
+            _enableGPS();
+
             // make sensor logger with proper sensors
             _logger = new SensorLogging.SensorLogger({
                 :accelerometer => {:enabled => true}, //, :sampleRate => 10},
@@ -60,6 +66,10 @@ class DataCollectionManager {
         }
 
         try {
+            //Turn off the GPS
+            _disableGPS();
+
+
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
             _isRecording = false;
@@ -78,6 +88,65 @@ class DataCollectionManager {
 
     function isRecording() {
         return _isRecording;
+    }
+    
+
+    private function _enableGPS() {
+        if (_gpsEnabled) {
+            return ; //Return back since already one
+        }
+
+        try {
+            // Configure GPS for optimal data collection
+            var gpsOptions = {
+                :acquisitionType => Position.LOCATION_CONTINUOUS,
+                :mode => Position.POSITIONING_MODE_NORMAL
+            };
+
+            // check which GPS mode is aviailabe and use the best one
+            if (_supportsMultiBandGPS()) {
+                gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5;
+            } else if (_supportsMultiGNSS()) {
+                gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1;
+            }
+
+            Position.enableLocationEvents(gpsOptions, null);
+            _gpsEnabled = true;
+            System.println("GPS tracking enabled");
+            
+        } catch (ex) {
+            System.println("Failed to enable GPS: "+ ex.getErrorMessage() );
+            throw ex;
+        }
+
+    }
+
+    private function _disableGPS(){
+        if (!_gpsEnabled) {
+            return; // already off so will return
+        }
+
+        try {
+            Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
+            _gpsEnabled = false;
+            System.println("GPS tracking disabled");
+            
+        } catch (ex) {
+            System.println("Error disabling GPS: " + ex.getErrorMessage());
+        }
+        
+    }
+
+    private function _supportsMultiBandGPS() {
+        return (Position has :CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5) &&
+               (Position has :hasConfigurationSupport) &&
+               Position.hasConfigurationSupport(Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5);
+    }
+
+    private function _supportsMultiGNSS() {
+        return (Position has :CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1) &&
+               (Position has :hasConfigurationSupport) &&
+               Position.hasConfigurationSupport(Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1);
     }
 
 }
