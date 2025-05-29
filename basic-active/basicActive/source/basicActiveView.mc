@@ -6,10 +6,12 @@ import Toybox.Timer;
 class basicActiveView extends WatchUi.View {
     private var _timeField = null;
     private var _timer = null;
+    private var _dataManager = null;
     private const TIMER_INTERVAL = 1000;
 
-    function initialize() {
+    function initialize(dataManager) {
         View.initialize();
+        _dataManager = dataManager;
     }
 
     // Load your resources here
@@ -35,8 +37,11 @@ class basicActiveView extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
         // Call the parent onUpdate function to redraw the layout
         // updateUI();
-
         View.onUpdate(dc);
+
+
+        _drawGPSStatusDot(dc);
+
     }
 
     // Called when this View is removed from the screen. Save the
@@ -63,6 +68,48 @@ class basicActiveView extends WatchUi.View {
             ]);
             _timeField.setText(timeString);
             WatchUi.requestUpdate();
+        }
+    }
+
+    private function _drawGPSStatusDot(dc) {
+        if (_dataManager == null) {
+            return;
+        }
+
+
+        var gpsStatus = _dataManager.getGPSStatus();
+        var dotColor = _getGPSColor(gpsStatus);
+        
+        var screenWidth = dc.getWidth();
+        var screenHeight = dc.getHeight();
+        
+        // Draw in absolute center
+        var centerX = screenWidth / 5;
+        var centerY = screenHeight / 5;
+        
+        // Make it big and obvious
+        var dotSize = 6;
+        
+        dc.setColor(dotColor, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(centerX, centerY, dotSize);
+        
+        // // Optional: Add border for better visibility
+        // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        // dc.setPenWidth(1);
+        // dc.drawCircle(dotX, dotY, dotSize);
+    }
+
+    private function _getGPSColor(gpsStatus) {
+        if (gpsStatus.find("Good") != null) {
+            return Graphics.COLOR_GREEN;      // Good signal
+        } else if (gpsStatus.find("Usable") != null) {
+            return Graphics.COLOR_YELLOW;     // Usable signal  
+        } else if (gpsStatus.find("Poor") != null) {
+            return Graphics.COLOR_ORANGE;     // Poor signal
+        } else if (gpsStatus.find("Searching") != null) {
+            return Graphics.COLOR_RED;     // Searching (orange-ish)
+        } else {
+            return Graphics.COLOR_RED;        // No GPS/Error
         }
     }
 

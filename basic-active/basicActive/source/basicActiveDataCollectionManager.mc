@@ -10,6 +10,7 @@ class DataCollectionManager {
     private var _isRecording = false;
     private var _gpsEnabled = false;
     private const PREFIX = "BASIC_RECORDER_";
+    private var _gpsStatus = "No GPS data";
 
     function initialize() {
     }
@@ -110,7 +111,7 @@ class DataCollectionManager {
                 gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1;
             }
 
-            Position.enableLocationEvents(gpsOptions, null);
+            Position.enableLocationEvents(gpsOptions, method(:onGPSUpdate));
             _gpsEnabled = true;
             System.println("GPS tracking enabled");
             
@@ -129,6 +130,7 @@ class DataCollectionManager {
         try {
             Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
             _gpsEnabled = false;
+            _gpsStatus = "GPS Disabled";
             System.println("GPS tracking disabled");
             
         } catch (ex) {
@@ -147,6 +149,32 @@ class DataCollectionManager {
         return (Position has :CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1) &&
                (Position has :hasConfigurationSupport) &&
                Position.hasConfigurationSupport(Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1);
+    }
+
+    function onGPSUpdate(info as Position.Info) as Void {
+
+        // Update GPS status based on quality
+        switch (info.accuracy) {
+            case Position.QUALITY_GOOD:
+                _gpsStatus = "GPS: Good signal";
+                break;
+            case Position.QUALITY_USABLE:
+                _gpsStatus = "GPS: Usable signal";
+                break;
+            case Position.QUALITY_POOR:
+                _gpsStatus = "GPS: Poor signal";
+                break;
+            case Position.QUALITY_LAST_KNOWN:
+                _gpsStatus = "GPS: Using last known position";
+                break;
+            default:
+                _gpsStatus = "GPS: Searching...";
+        }
+
+      }
+
+    function getGPSStatus() {
+        return _gpsStatus;
     }
 
 }
