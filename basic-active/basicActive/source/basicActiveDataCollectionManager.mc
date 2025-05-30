@@ -5,12 +5,24 @@ import Toybox.Time;
 import Toybox.Position;
 
 class DataCollectionManager {
+
+    enum GPSStatusType {
+        GPS_GOOD,
+        GPS_USABLE, 
+        GPS_POOR,
+        GPS_SEARCHING,
+        GPS_DISABLED,
+        GPS_NO_DATA
+    }
+
+
     private var _logger = null;
     private var _session = null;
     private var _isRecording = false;
     private var _gpsEnabled = false;
+    private var _gpsStatusType = GPSStatusType.GPS_NO_DATA;
+
     private const PREFIX = "BASIC_RECORDER_";
-    private var _gpsStatus = "No GPS data";
 
     function initialize() {
     }
@@ -152,29 +164,25 @@ class DataCollectionManager {
     }
 
     function onGPSUpdate(info as Position.Info) as Void {
-
-        // Update GPS status based on quality
         switch (info.accuracy) {
             case Position.QUALITY_GOOD:
-                _gpsStatus = "GPS: Good signal";
+                _gpsStatusType = GPSStatusType.GPS_GOOD;
                 break;
             case Position.QUALITY_USABLE:
-                _gpsStatus = "GPS: Usable signal";
+                _gpsStatusType = GPSStatusType.GPS_USABLE;
                 break;
             case Position.QUALITY_POOR:
-                _gpsStatus = "GPS: Poor signal";
+                _gpsStatusType = GPSStatusType.GPS_POOR;
                 break;
             case Position.QUALITY_LAST_KNOWN:
-                _gpsStatus = "GPS: Using last known position";
+                _gpsStatusType = GPSStatusType.GPS_SEARCHING;
                 break;
             default:
-                _gpsStatus = "GPS: Searching...";
+                _gpsStatusType = GPSStatusType.GPS_SEARCHING;
         }
 
-      }
-
-    function getGPSStatus() {
-        return _gpsStatus;
+    function getGPSStatusType() {
+        return _gpsStatusType;
     }
 
 }
