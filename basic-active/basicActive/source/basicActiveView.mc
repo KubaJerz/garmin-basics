@@ -38,6 +38,7 @@ class basicActiveView extends WatchUi.View {
             _timer.start(method(:updateUI), TIMER_INTERVAL, true); // repeat = true
         }
 
+        _updateBatteryDisplay();
         updateUI();
     }
 
