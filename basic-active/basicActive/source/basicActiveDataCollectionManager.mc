@@ -23,8 +23,8 @@ class DataCollectionManager {
 
         try {
 
-            //Turn on the GPS
-            _enableGPS();
+            
+            _enableGPS();    //Turn on the GPS
 
             // make sensor logger with proper sensors
             _logger = new SensorLogging.SensorLogger({
@@ -32,8 +32,8 @@ class DataCollectionManager {
                 :gyroscope => {:enabled => true} //, :sampleRate => 10}
             });
 
-            // make a unique name for our FIT session
-            var dateInfo = Time.Gregorian.info( Time.now(), Time.FORMAT_SHORT );
+            
+            var dateInfo = Time.Gregorian.info( Time.now(), Time.FORMAT_SHORT );    // make a unique name for our FIT session
 
             var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
                 dateInfo.hour,
@@ -51,10 +51,14 @@ class DataCollectionManager {
                 :sensorLogger => _logger
 
             });
+            
+            _batteryTracker = new BatteryTracker(_session);      // init battery tracking AFTER session has been init
 
-            //start the FIT session
-            _session.start();
+
+            _session.start();             //start the FIT session
             _isRecording = true;
+
+            updateBatteryTracking();        // Log start battery level
         } catch (ex) {
             System.println("Error starting data collection: " + ex.getErrorMessage());
             _handleStartupError(ex);
@@ -67,11 +71,12 @@ class DataCollectionManager {
         }
 
         try {
-            //Turn off the GPS
-            _disableGPS();
+            _disableGPS();         //Turn off the GPS
 
+            // Log final battery level before stopping
+            updateBatteryTracking();
 
-            _session.stop(); // stop the session "pause"
+            _session.stop(); // "pause" the session 
             _session.save(); // end the session and save FIT file
             _isRecording = false;
             
@@ -81,10 +86,19 @@ class DataCollectionManager {
     }
 
     private function _handleStartupError(exception) {
-        // clean error handling 
+        // error handling 
         _isRecording = false;
         _logger = null;
         _session = null;
+        _gpsEnabled = false;
+        _batteryTracker = null;
+        _gpsStatus = "No GPS data";
+    }
+
+    function updateBatteryTracking() {
+        if (_batteryTracker != null && _isRecording) {
+            _batteryTracker.updateBatteryLevel();
+        }
     }
 
     function isRecording() {
