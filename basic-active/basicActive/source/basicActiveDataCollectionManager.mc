@@ -3,37 +3,56 @@ import Toybox.SensorLogging;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.Position;
+import Toybox.Timer;
 
+/**
+ * DataCollectionManager handles the overall data collection process.
+ * It coordinates sensors, GPS, and battery monitoring, following the 
+ * Facade pattern by providing a simplified interface to these subsystems.
+ */
 class DataCollectionManager {
     private var _logger = null;
     private var _session = null;
     private var _isRecording = false;
+
     private var _gpsEnabled = false;
-    private const PREFIX = "BASIC_RECORDER_";
     private var _gpsStatus = "No GPS data";
 
+    private var _batteryTracker = null;
+    private var _batteryLevel = 0;
+    private var _batteryTimer = null;
+
+    private const BATTERY_LOG_INTERVAL = 60000; // Log battery every 60 seconds
+    private const PREFIX = "BASIC_RECORDER_";
+
+
     function initialize() {
+        
     }
+
+    function _timerCallback() as Void{
+        _updateBatteryLevel();
+    }
+
 
     function startDataCollection() {
         if (_isRecording) {
-            System.println("Already recording... will continue, happend at time: " + Time.now().value().toString());
+            System.println("Already recording... will continue, happened at time: " + Time.now().value().toString());
             return;
         }
 
         try {
+            // Turn on the GPS
+            _enableGPS();
 
-            
-            _enableGPS();    //Turn on the GPS
-
-            // make sensor logger with proper sensors
+            // Make sensor logger with proper sensors
             _logger = new SensorLogging.SensorLogger({
-                :accelerometer => {:enabled => true}, //, :sampleRate => 10},
-                :gyroscope => {:enabled => true} //, :sampleRate => 10}
+                :accelerometer => {:enabled => true},
+                :gyroscope => {:enabled => true}
             });
 
-            
-            var dateInfo = Time.Gregorian.info( Time.now(), Time.FORMAT_SHORT );    // make a unique name for our FIT session
+            // Make a unique name for our FIT session
+            var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 
             var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
                 dateInfo.hour,
@@ -44,61 +63,87 @@ class DataCollectionManager {
             ]);
             var sessionName = PREFIX + timeString;
 
-            // make the FIT session
+            // Make the FIT session
             _session = ActivityRecording.createSession({
                 :name => sessionName,
                 :sport => Activity.SPORT_GENERIC,
                 :sensorLogger => _logger
-
             });
-            
-            _batteryTracker = new BatteryTracker(_session);      // init battery tracking AFTER session has been init
 
+            // Initialize battery tracker with the session
+            _batteryTracker = new BatteryTracker(_session);
 
-            _session.start();             //start the FIT session
+            _batteryTimer = new Timer.Timer();
+            _batteryTimer.start(method(:_timerCallback), BATTERY_LOG_INTERVAL, true);
+
+            // Start the FIT session
+            _session.start();
             _isRecording = true;
-
-            updateBatteryTracking();        // Log start battery level
+            
+            // Record initial battery level
+            _updateBatteryLevel();
         } catch (ex) {
             System.println("Error starting data collection: " + ex.getErrorMessage());
             _handleStartupError(ex);
         }
     }
 
-        function stopDataCollection() {
+
+    function stopDataCollection() {
         if (!_isRecording || _session == null) {
             return;
         }
 
         try {
-            _disableGPS();         //Turn off the GPS
+            // Record final battery level before stopping
+            _updateBatteryLevel();
+            
+            // Turn off the GPS
+            _disableGPS();
 
-            // Log final battery level before stopping
-            updateBatteryTracking();
-
-            _session.stop(); // "pause" the session 
+            _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
             _isRecording = false;
+            _batteryTracker = null;
             
         } catch (ex) {
             System.println("Error stopping data collection: " + ex.getErrorMessage());
         }
     }
+    
+
+    function onStop() {
+        // Cleanup when app stops
+        if (_batteryTimer != null) {
+            _batteryTimer.stop();
+            _batteryTimer = null;
+        }
+        
+        // Make sure we stop data collection
+        stopDataCollection();
+    }
+
+
+    private function _updateBatteryLevel() {
+        var stats = System.getSystemStats();
+        if (stats != null && stats.battery != null) {
+            _batteryLevel = stats.battery;
+            
+            // Record to FIT if we're recording
+            _batteryTracker.recordBatteryLevel(_batteryLevel);
+        }
+    }
+
+    function getBatteryLevel() {
+        return _batteryLevel;
+    }
 
     private function _handleStartupError(exception) {
-        // error handling 
+        // Clean error handling 
         _isRecording = false;
         _logger = null;
         _session = null;
-        _gpsEnabled = false;
         _batteryTracker = null;
-        _gpsStatus = "No GPS data";
-    }
-
-    function updateBatteryTracking() {
-        if (_batteryTracker != null && _isRecording) {
-            _batteryTracker.updateBatteryLevel();
-        }
     }
 
     function isRecording() {
@@ -108,7 +153,7 @@ class DataCollectionManager {
 
     private function _enableGPS() {
         if (_gpsEnabled) {
-            return ; //Return back since already one
+            return; // Return back since already on
         }
 
         try {
@@ -118,7 +163,7 @@ class DataCollectionManager {
                 :mode => Position.POSITIONING_MODE_NORMAL
             };
 
-            // check which GPS mode is aviailabe and use the best one
+            // Check which GPS mode is available and use the best one
             if (_supportsMultiBandGPS()) {
                 gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5;
             } else if (_supportsMultiGNSS()) {
@@ -130,15 +175,14 @@ class DataCollectionManager {
             System.println("GPS tracking enabled");
             
         } catch (ex) {
-            System.println("Failed to enable GPS: "+ ex.getErrorMessage() );
+            System.println("Failed to enable GPS: "+ ex.getErrorMessage());
             throw ex;
         }
-
     }
 
-    private function _disableGPS(){
+    private function _disableGPS() {
         if (!_gpsEnabled) {
-            return; // already off so will return
+            return; // Already off so will return
         }
 
         try {
@@ -150,7 +194,6 @@ class DataCollectionManager {
         } catch (ex) {
             System.println("Error disabling GPS: " + ex.getErrorMessage());
         }
-        
     }
 
     private function _supportsMultiBandGPS() {
@@ -166,7 +209,6 @@ class DataCollectionManager {
     }
 
     function onGPSUpdate(info as Position.Info) as Void {
-
         // Update GPS status based on quality
         switch (info.accuracy) {
             case Position.QUALITY_GOOD:
@@ -184,11 +226,9 @@ class DataCollectionManager {
             default:
                 _gpsStatus = "GPS: Searching...";
         }
-
-      }
+    }
 
     function getGPSStatus() {
         return _gpsStatus;
     }
-
 }

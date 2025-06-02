@@ -1,8 +1,17 @@
 <strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <string id="AppName">basicActive</string>
-
+    
+    <!-- FIT Contribution strings -->
+    <string id="BatteryLevelChart">Battery Level</string>
+    <string id="BatteryLabel">Battery</string>
+    <string id="BatteryUnits">%</string>
+    
     <string id="prompt">Click the menu button</string>
 
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>
+
+    <!-- UI strings -->
+    <!-- <string id="StartRecording">Start Recording</string>
+    <string id="StopRecording">Stop Recording</string> -->
 </strings>

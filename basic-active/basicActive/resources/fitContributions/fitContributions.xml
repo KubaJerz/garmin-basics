@@ -1,3 +1,3 @@
-<fitContributions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <fitField id="0" displayInChart="true" sortOrder="0" precision="1"chartTitle="Battery Level" dataLabel="Battery" unitLabel="%" fillColor="#00FF00" />
+<fitContributions>
+    <fitField id="0" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.BatteryLevelChart" dataLabel="@Strings.BatteryLabel" unitLabel="@Strings.BatteryUnits" fillColor="#00FF00" />
 </fitContributions>

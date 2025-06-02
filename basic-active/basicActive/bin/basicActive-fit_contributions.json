@@ -1,0 +1,21 @@
+{
+  "datafields" : [ {
+    "id" : 0,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "BatteryLevelChart",
+    "label-key" : "BatteryLabel",
+    "unit-label-key" : "BatteryUnits",
+    "sort-order" : 0,
+    "precision" : 1,
+    "fill-color" : "rgba(0, 255, 0, 1.0)"
+  } ],
+  "strings" : {
+    "default" : {
+      "BatteryLevelChart" : "Battery Level",
+      "BatteryLabel" : "Battery",
+      "BatteryUnits" : "%"
+    }
+  }
+}

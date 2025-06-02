@@ -13,7 +13,9 @@ module Rez {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
             var rez_cmp_local_text_timeText = new WatchUi.Text({:identifier=>"timeText", :color=>Graphics.COLOR_WHITE, :locX=>(280 * 0.5), :locY=>((280 - dc.getFontHeight(Graphics.FONT_TINY)) * 0.5), :text=>"TIME", :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_TINY});
 
-            return [rez_cmp_local_text_timeText] as Array<WatchUi.Drawable>;
+            var rez_cmp_local_text_batteryText = new WatchUi.Text({:identifier=>"batteryText", :color=>Graphics.COLOR_WHITE, :locX=>(280 * 0.5), :locY=>(280 * (20 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_TINY});
+
+            return [rez_cmp_local_text_timeText, rez_cmp_local_text_batteryText] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
@@ -28,8 +30,11 @@ module Rez {
     } // Menus
 
     module Strings {
+        (:initialized) var BatteryUnits as ResourceId;
+        (:initialized) var BatteryLabel as ResourceId;
         (:initialized) var menu_label_1 as ResourceId;
         (:initialized) var menu_label_2 as ResourceId;
+        (:initialized) var BatteryLevelChart as ResourceId;
         (:initialized) var prompt as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings
