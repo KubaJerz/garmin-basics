@@ -24,6 +24,8 @@
         -->
         <iq:permissions>
             <iq:uses-permission id="Fit"/>
+            <iq:uses-permission id="FitContributor"/>
+            <iq:uses-permission id="Positioning"/>
             <iq:uses-permission id="Sensor"/>
             <iq:uses-permission id="SensorLogging"/>
         </iq:permissions>
@@ -32,6 +34,7 @@
             palette to edit your compatible language list.
         -->
         <iq:languages>
+            <iq:language>eng</iq:language>
             <iq:language>eng</iq:language>
         </iq:languages>
         <!--
