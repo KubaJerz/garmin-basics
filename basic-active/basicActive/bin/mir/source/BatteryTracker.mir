@@ -1,27 +1,27 @@
-[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 29; @symbol_importdef<0> = [Toybox,29,7,13]; @symbol_importdef<1> = [System,29,14,20]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 29; @symbol_importdef<0> = [Toybox,29,7,13]; @symbol_importdef<1> = [System,29,14,20]; ]
 import Toybox.System;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 30; @symbol_importdef<0> = [Toybox,30,7,13]; @symbol_importdef<1> = [FitContributor,30,14,28]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 30; @symbol_importdef<0> = [Toybox,30,7,13]; @symbol_importdef<1> = [FitContributor,30,14,28]; ]
 import Toybox.FitContributor;
-[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; @symbol_classdef = [BatteryTracker,37,6,20]; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; @symbol_classdef = [BatteryTracker,37,6,20]; ]
 class BatteryTracker {
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; ]
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 37; ]
     static
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 38; @position = 16; @symbol_vardef = [_batteryField,38,16,29]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 38; @position = 16; @symbol_vardef = [_batteryField,38,16,29]; ]
     private
     var _batteryField;
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 39; @position = 18; @symbol_constdef = [BATTERY_FIELD_ID,39,18,34]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 39; @position = 18; @symbol_constdef = [BATTERY_FIELD_ID,39,18,34]; ]
     private
     const BATTERY_FIELD_ID = 0;
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 45; @symbol_functiondef = [initialize,45,20,30]; @symbol_param<0> = [session,45,31,38]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 45; @symbol_functiondef = [initialize,45,20,30]; @symbol_param<0> = [session,45,31,38]; ]
     public
     function initialize(session) as Void {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_45_40_55_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 46 8 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_45_40_55_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 46 8 ]
         %tmp.1 = lgetv %session;
         symbol [ session %tmp.1 46 24 31 ];
         symbol [ createField %tmp.2 46 32 43 ];
@@ -50,32 +50,32 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_Battery
         %tmp.20 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5, %tmp.7, %tmp.19);
         symbol [ _batteryField ? 46 8 21 ];
         putv self :_batteryField %tmp.20;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_45_40_55_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_45_40_55_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 61; @symbol_functiondef = [recordBatteryLevel,61,20,38]; @symbol_param<0> = [batteryLevel,61,39,51]; ]
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 61; @symbol_functiondef = [recordBatteryLevel,61,20,38]; @symbol_param<0> = [batteryLevel,61,39,51]; ]
     public
     function recordBatteryLevel(batteryLevel) {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_61_53_65_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 62 8 ]
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_stmt:
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_12_62_53_begin:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_61_53_65_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 62 8 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_stmt:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_12_62_53_begin:
         symbol [ _batteryField %tmp.2 62 12 25 ];
         %tmp.2 = getv ? :_batteryField;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_true:
+        bf %tmp.4 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_true:
         %tmp.5 = lgetv %batteryLevel;
         symbol [ batteryLevel %tmp.5 62 37 49 ];
         %tmp.6 = null;
         %tmp.7 = ne %tmp.5 %tmp.6;
         push %tmp.7;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_end:
-        %tmp.8 = phi [%tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_12_62_53_begin] [%tmp.7 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_true] [%tmp.8 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_end];
-        bf %tmp.8 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_true:
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_59_64_8_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 63 12 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_end:
+        %tmp.8 = phi [%tmp.4 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_12_62_53_begin] [%tmp.7 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_true] [%tmp.8 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_37_62_53_end];
+        bf %tmp.8 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_true:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_59_64_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" 63 12 ]
         symbol [ _batteryField %tmp.10 63 12 25 ];
         %tmp.10 = getv ? :_batteryField;
         %tmp.11 = as %tmp.10 { (!Null) };
@@ -85,12 +85,12 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_Battery
         symbol [ batteryLevel %tmp.13 63 34 46 ];
         %tmp.14 = as %tmp.13 { (!Null) };
         invoke %tmp.11 %tmp.12(%tmp.14);
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_59_64_8_stop:
-        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end:
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_61_53_65_4_stop:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_59_64_8_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_62_8_64_8_if_end:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_BatteryTracker_mc_61_53_65_4_stop:
     }
 }
-[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 29; ]
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc"; @line = 29; ]
 <init> {
 }

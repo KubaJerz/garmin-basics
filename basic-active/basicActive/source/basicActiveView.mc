@@ -11,7 +11,7 @@ class basicActiveView extends WatchUi.View {
     private var _dataManager = null;
     private const TIMER_INTERVAL = 1000;
 
-    private const BATTERY_DISPLAY_INTERVAL = 100;        // Refresh battery display every 100 seconds
+    private const BATTERY_DISPLAY_INTERVAL = 10;        // Refresh battery display every 10 seconds
     private var _timerCounter = 0;
 
     function initialize(dataManager) {
@@ -74,6 +74,7 @@ class basicActiveView extends WatchUi.View {
         if (_timerCounter >= BATTERY_DISPLAY_INTERVAL) {
             _timerCounter = 0;
             _updateBatteryDisplay();
+            
         }
         
         // Request UI refresh
@@ -118,39 +119,12 @@ class basicActiveView extends WatchUi.View {
         var centerX = screenWidth / 5;
         var centerY = screenHeight / 5;
         
-        // Make it big and obvious
         var dotSize = 6;
         
         dc.setColor(dotColor, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(centerX, centerY, dotSize);
-        
-        // // Optional: Add border for better visibility
-        // dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        // dc.setPenWidth(1);
-        // dc.drawCircle(dotX, dotY, dotSize);
     }
 
-    // private function _drawBatteryLevel(dc) {
-    //     if (_dataManager == null) {
-    //         return;
-    //     }
-        
-    //     // // Only draw if not using a layout field
-    //     // if (_batteryField == null) {
-    //     //     var batteryLevel = _dataManager.getBatteryLevel();
-    //     //     var screenWidth = dc.getWidth();
-    //     //     // var screenHeight = dc.getHeight();
-            
-    //     //     // Position it in the top right corner
-    //     //     var textX = screenWidth - 45;
-    //     //     var textY = 15;
-            
-    //     //     // Choose color based on battery level
-            
-    //     //     dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-    //     //     dc.drawText(textX, textY, Graphics.FONT_TINY, batteryLevel.format("%d") + "%", Graphics.TEXT_JUSTIFY_RIGHT);
-    //     // }
-    // }
 
 
     private function _getGPSColor(gpsStatus) {
@@ -159,9 +133,9 @@ class basicActiveView extends WatchUi.View {
         } else if (gpsStatus.find("Usable") != null) {
             return Graphics.COLOR_YELLOW;     // Usable signal  
         } else if (gpsStatus.find("Poor") != null) {
-            return Graphics.COLOR_ORANGE;     // Poor signal
+            return Graphics.COLOR_YELLOW;     // Poor signal
         } else if (gpsStatus.find("Searching") != null) {
-            return Graphics.COLOR_RED;     // Searching (orange-ish)
+            return Graphics.COLOR_ORANGE;     // Searching (orange-ish)
         } else {
             return Graphics.COLOR_RED;        // No GPS/Error
         }

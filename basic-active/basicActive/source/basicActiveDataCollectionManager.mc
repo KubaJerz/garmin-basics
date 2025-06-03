@@ -16,24 +16,42 @@ class DataCollectionManager {
     private var _isRecording = false;
 
     private var _gpsEnabled = false;
+    private var _gpsStatusTimer = null;
     private var _gpsStatus = "No GPS data";
 
     private var _batteryTracker = null;
     private var _batteryLevel = 0;
     private var _batteryTimer = null;
 
-    private const BATTERY_LOG_INTERVAL = 60000; // Log battery every 60 seconds
+    private const GPS_STATUS_CHECK_INTERVAL = 6000; // Check every 6 seconds
+    private const BATTERY_LOG_INTERVAL = 6000; // Log battery every 6 seconds
     private const PREFIX = "BASIC_RECORDER_";
 
 
     function initialize() {
-        
+        _startGPSStatusMonitoring();
     }
 
     function _timerCallback() as Void{
         _updateBatteryLevel();
     }
 
+    private function _startGPSStatusMonitoring() {
+        if (_gpsStatusTimer == null) {
+            _gpsStatusTimer = new Timer.Timer();
+            _gpsStatusTimer.start(method(:_checkGPSStatus), GPS_STATUS_CHECK_INTERVAL, true);
+        }
+    }
+
+    public function _checkGPSStatus() as Void {
+        // Get current GPS/location status without enabling full GPS
+        var locationInfo = Position.getInfo();
+        if (locationInfo != null) {
+            onGPSUpdate(locationInfo);
+        } else {
+            _gpsStatus = "GPS: No signal";
+        }
+    }
 
     function startDataCollection() {
         if (_isRecording) {
@@ -119,6 +137,12 @@ class DataCollectionManager {
             _batteryTimer = null;
         }
         
+            
+        if (_gpsStatusTimer != null) {
+            _gpsStatusTimer.stop();
+            _gpsStatusTimer = null;
+        }
+
         // Make sure we stop data collection
         stopDataCollection();
     }
