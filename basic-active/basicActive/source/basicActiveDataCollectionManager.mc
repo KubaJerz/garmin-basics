@@ -4,6 +4,7 @@ import Toybox.System;
 import Toybox.Time;
 import Toybox.Position;
 import Toybox.Timer;
+import Toybox.Lang;
 
 /**
  * DataCollectionManager handles the overall data collection process.
@@ -16,41 +17,38 @@ class DataCollectionManager {
     private var _isRecording = false;
 
     private var _gpsEnabled = false;
-    private var _gpsStatusTimer = null;
     private var _gpsStatus = "No GPS data";
 
     private var _batteryTracker = null;
     private var _batteryLevel = 0;
-    private var _batteryTimer = null;
 
-    private const GPS_STATUS_CHECK_INTERVAL = 6000; // Check every 6 seconds
-    private const BATTERY_LOG_INTERVAL = 6000; // Log battery every 6 seconds
+    private var _logTimer = null;
+
+    private const LOG_INTERVAL = 6000; // Log battery every 6 seconds
     private const PREFIX = "BASIC_RECORDER_";
 
 
     function initialize() {
-        _startGPSStatusMonitoring();
     }
 
     function _timerCallback() as Void{
         _updateBatteryLevel();
+        _checkGPSStatus();
     }
 
-    private function _startGPSStatusMonitoring() {
-        if (_gpsStatusTimer == null) {
-            _gpsStatusTimer = new Timer.Timer();
-            _gpsStatusTimer.start(method(:_checkGPSStatus), GPS_STATUS_CHECK_INTERVAL, true);
-        }
-    }
+    private function _makeSessionName() as String {
+        // Make a unique name for our FIT session
+        var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 
-    public function _checkGPSStatus() as Void {
-        // Get current GPS/location status without enabling full GPS
-        var locationInfo = Position.getInfo();
-        if (locationInfo != null) {
-            onGPSUpdate(locationInfo);
-        } else {
-            _gpsStatus = "GPS: No signal";
-        }
+        var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
+            dateInfo.hour,
+            dateInfo.min.format("%02d"),
+            dateInfo.month,
+            dateInfo.day,
+            dateInfo.year
+            ]);
+
+        return   PREFIX + timeString;
     }
 
     function startDataCollection() {
@@ -69,17 +67,7 @@ class DataCollectionManager {
                 :gyroscope => {:enabled => true}
             });
 
-            // Make a unique name for our FIT session
-            var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-
-            var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
-                dateInfo.hour,
-                dateInfo.min.format("%02d"),
-                dateInfo.month,
-                dateInfo.day,
-                dateInfo.year
-            ]);
-            var sessionName = PREFIX + timeString;
+            var sessionName = _makeSessionName();
 
             // Make the FIT session
             _session = ActivityRecording.createSession({
@@ -91,8 +79,8 @@ class DataCollectionManager {
             // Initialize battery tracker with the session
             _batteryTracker = new BatteryTracker(_session);
 
-            _batteryTimer = new Timer.Timer();
-            _batteryTimer.start(method(:_timerCallback), BATTERY_LOG_INTERVAL, true);
+            _logTimer = new Timer.Timer();
+            _logTimer.start(method(:_timerCallback), LOG_INTERVAL, true);
 
             // Start the FIT session
             _session.start();
@@ -132,34 +120,13 @@ class DataCollectionManager {
 
     function onStop() {
         // Cleanup when app stops
-        if (_batteryTimer != null) {
-            _batteryTimer.stop();
-            _batteryTimer = null;
-        }
-        
-            
-        if (_gpsStatusTimer != null) {
-            _gpsStatusTimer.stop();
-            _gpsStatusTimer = null;
+        if (_timerCallback() != null) {
+            _logTimer.stop();
+            _logTimer = null;
         }
 
         // Make sure we stop data collection
         stopDataCollection();
-    }
-
-
-    private function _updateBatteryLevel() {
-        var stats = System.getSystemStats();
-        if (stats != null && stats.battery != null) {
-            _batteryLevel = stats.battery;
-            
-            // Record to FIT if we're recording
-            _batteryTracker.recordBatteryLevel(_batteryLevel);
-        }
-    }
-
-    function getBatteryLevel() {
-        return _batteryLevel;
     }
 
     private function _handleStartupError(exception) {
@@ -170,10 +137,25 @@ class DataCollectionManager {
         _batteryTracker = null;
     }
 
-    function isRecording() {
-        return _isRecording;
+    private function _updateBatteryLevel() as Void{
+        var stats = System.getSystemStats();
+        if (stats != null && stats.battery != null) {
+            _batteryLevel = stats.battery;
+            // Record to FIT if we're recording
+            _batteryTracker.recordBatteryLevel(_batteryLevel);
+        }
     }
-    
+
+    private function _checkGPSStatus() as Void {
+        // Get current GPS/location status without enabling full GPS
+        var locationInfo = Position.getInfo();
+        if (locationInfo != null) {
+            onGPSUpdate(locationInfo);
+        } else {
+            _gpsStatus = "GPS: No signal";
+        }
+    }
+
 
     private function _enableGPS() {
         if (_gpsEnabled) {
@@ -250,6 +232,15 @@ class DataCollectionManager {
             default:
                 _gpsStatus = "GPS: Searching...";
         }
+    }
+
+    function getBatteryLevel() {
+        return _batteryLevel;
+    }
+
+
+    function isRecording() {
+        return _isRecording;
     }
 
     function getGPSStatus() {
