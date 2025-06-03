@@ -74,198 +74,241 @@
         <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="19" lineNum="10" parent="globals/basicActiveApp" pc="268436403" symbol="initialize"/>
         <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="20" lineNum="22" parent="globals/basicActiveApp" pc="268436433" symbol="onStop"/>
         <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveApp.mc" id="20" lineNum="24" parent="globals/basicActiveApp" pc="268436435" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="34" parent="globals/BatteryTracker" pc="268436448" symbol="recordBatteryLevel"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="35" parent="globals/BatteryTracker" pc="268436450" symbol="recordBatteryLevel"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="36" parent="globals/BatteryTracker" pc="268436465" symbol="recordBatteryLevel"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="18" parent="globals/BatteryTracker" pc="268436485" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="19" parent="globals/BatteryTracker" pc="268436487" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="23" lineNum="10" parent="globals/basicActiveDelegate" pc="268436536" symbol="onMenu"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="23" lineNum="11" parent="globals/basicActiveDelegate" pc="268436538" symbol="onMenu"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="23" lineNum="12" parent="globals/basicActiveDelegate" pc="268436607" symbol="onMenu"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="24" lineNum="6" parent="globals/basicActiveDelegate" pc="268436609" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="24" lineNum="7" parent="globals/basicActiveDelegate" pc="268436611" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="25" lineNum="127" parent="globals/GPSManager" pc="268436624" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="25" lineNum="128" parent="globals/GPSManager" pc="268436626" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="26" lineNum="65" parent="globals/GPSManager" pc="268436677" symbol="getStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="26" lineNum="66" parent="globals/GPSManager" pc="268436679" symbol="getStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="86" parent="globals/GPSManager" pc="268436685" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="88" parent="globals/GPSManager" pc="268436687" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="89" parent="globals/GPSManager" pc="268436693" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="92" parent="globals/GPSManager" pc="268436709" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="95" parent="globals/GPSManager" pc="268436725" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="98" parent="globals/GPSManager" pc="268436741" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="101" parent="globals/GPSManager" pc="268436757" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="90" parent="globals/GPSManager" pc="268436760" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="91" parent="globals/GPSManager" pc="268436772" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="93" parent="globals/GPSManager" pc="268436775" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="94" parent="globals/GPSManager" pc="268436787" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="96" parent="globals/GPSManager" pc="268436790" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="97" parent="globals/GPSManager" pc="268436802" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="99" parent="globals/GPSManager" pc="268436805" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="100" parent="globals/GPSManager" pc="268436817" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="27" lineNum="102" parent="globals/GPSManager" pc="268436820" symbol="onGPSUpdate"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="28" lineNum="120" parent="globals/GPSManager" pc="268436834" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="28" lineNum="121" parent="globals/GPSManager" pc="268436836" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="28" lineNum="122" parent="globals/GPSManager" pc="268436845" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="28" lineNum="123" parent="globals/GPSManager" pc="268436874" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="29" lineNum="73" parent="globals/GPSManager" pc="268436909" symbol="checkStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="29" lineNum="74" parent="globals/GPSManager" pc="268436912" symbol="checkStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="29" lineNum="75" parent="globals/GPSManager" pc="268436924" symbol="checkStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="29" lineNum="76" parent="globals/GPSManager" pc="268436930" symbol="checkStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="29" lineNum="78" parent="globals/GPSManager" pc="268436944" symbol="checkStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="30" lineNum="109" parent="globals/GPSManager" pc="268436957" symbol="cleanup"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="30" lineNum="110" parent="globals/GPSManager" pc="268436959" symbol="cleanup"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="30" lineNum="111" parent="globals/GPSManager" pc="268436968" symbol="cleanup"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="30" lineNum="112" parent="globals/GPSManager" pc="268436980" symbol="cleanup"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="30" lineNum="114" parent="globals/GPSManager" pc="268436991" symbol="cleanup"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="31" lineNum="133" parent="globals/GPSManager" pc="268436999" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="31" lineNum="134" parent="globals/GPSManager" pc="268437001" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="20" parent="globals/GPSManager" pc="268437052" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="21" parent="globals/GPSManager" pc="268437055" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="22" parent="globals/GPSManager" pc="268437063" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="27" parent="globals/GPSManager" pc="268437067" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="33" parent="globals/GPSManager" pc="268437089" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="34" parent="globals/GPSManager" pc="268437098" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="35" parent="globals/GPSManager" pc="268437111" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="36" parent="globals/GPSManager" pc="268437120" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="39" parent="globals/GPSManager" pc="268437133" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="40" parent="globals/GPSManager" pc="268437161" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="41" parent="globals/GPSManager" pc="268437169" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="43" parent="globals/GPSManager" pc="268437193" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="44" parent="globals/GPSManager" pc="268437197" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="32" lineNum="45" parent="globals/GPSManager" pc="268437223" symbol="enable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="49" parent="globals/GPSManager" pc="268437239" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="50" parent="globals/GPSManager" pc="268437242" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="51" parent="globals/GPSManager" pc="268437251" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="55" parent="globals/GPSManager" pc="268437255" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="56" parent="globals/GPSManager" pc="268437271" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="57" parent="globals/GPSManager" pc="268437279" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="58" parent="globals/GPSManager" pc="268437291" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="60" parent="globals/GPSManager" pc="268437315" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="61" parent="globals/GPSManager" pc="268437319" symbol="disable"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="34" lineNum="16" parent="globals/GPSManager" pc="268437358" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="34" lineNum="17" parent="globals/GPSManager" pc="268437360" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="35" lineNum="11" parent="globals/basicActiveMenuDelegate" pc="268437368" symbol="onMenuItem"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="35" lineNum="12" parent="globals/basicActiveMenuDelegate" pc="268437370" symbol="onMenuItem"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="35" lineNum="13" parent="globals/basicActiveMenuDelegate" pc="268437381" symbol="onMenuItem"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="35" lineNum="14" parent="globals/basicActiveMenuDelegate" pc="268437402" symbol="onMenuItem"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="35" lineNum="15" parent="globals/basicActiveMenuDelegate" pc="268437413" symbol="onMenuItem"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="36" lineNum="7" parent="globals/basicActiveMenuDelegate" pc="268437435" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="36" lineNum="8" parent="globals/basicActiveMenuDelegate" pc="268437437" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="169" parent="globals/DataCollectionManager" pc="268437450" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="170" parent="globals/DataCollectionManager" pc="268437453" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="171" parent="globals/DataCollectionManager" pc="268437465" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="172" parent="globals/DataCollectionManager" pc="268437482" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="174" parent="globals/DataCollectionManager" pc="268437496" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="37" lineNum="175" parent="globals/DataCollectionManager" pc="268437505" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="101" parent="globals/DataCollectionManager" pc="268437531" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="102" parent="globals/DataCollectionManager" pc="268437533" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="103" parent="globals/DataCollectionManager" pc="268437567" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="104" parent="globals/DataCollectionManager" pc="268437596" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="106" parent="globals/DataCollectionManager" pc="268437627" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="107" parent="globals/DataCollectionManager" pc="268437639" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="38" lineNum="108" parent="globals/DataCollectionManager" pc="268437647" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="39" lineNum="197" parent="globals/DataCollectionManager" pc="268437655" symbol="getGPSStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="39" lineNum="198" parent="globals/DataCollectionManager" pc="268437657" symbol="getGPSStatus"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="40" lineNum="63" parent="globals/DataCollectionManager" pc="268437686" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="40" lineNum="64" parent="globals/DataCollectionManager" pc="268437688" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="41" lineNum="190" parent="globals/DataCollectionManager" pc="268437759" symbol="isRecording"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="41" lineNum="191" parent="globals/DataCollectionManager" pc="268437761" symbol="isRecording"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="42" parent="globals/DataCollectionManager" pc="268437767" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="43" parent="globals/DataCollectionManager" pc="268437770" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="44" parent="globals/DataCollectionManager" pc="268437778" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="45" parent="globals/DataCollectionManager" pc="268437819" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="49" parent="globals/DataCollectionManager" pc="268437823" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="50" parent="globals/DataCollectionManager" pc="268437835" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="51" parent="globals/DataCollectionManager" pc="268437842" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="52" parent="globals/DataCollectionManager" pc="268437849" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="54" parent="globals/DataCollectionManager" pc="268437862" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="55" parent="globals/DataCollectionManager" pc="268437866" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="42" lineNum="56" parent="globals/DataCollectionManager" pc="268437892" symbol="startDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="114" parent="globals/DataCollectionManager" pc="268437916" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="115" parent="globals/DataCollectionManager" pc="268437919" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="116" parent="globals/DataCollectionManager" pc="268437937" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="121" parent="globals/DataCollectionManager" pc="268437941" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="124" parent="globals/DataCollectionManager" pc="268437948" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="126" parent="globals/DataCollectionManager" pc="268437960" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="127" parent="globals/DataCollectionManager" pc="268437972" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="128" parent="globals/DataCollectionManager" pc="268437984" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="129" parent="globals/DataCollectionManager" pc="268437992" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="131" parent="globals/DataCollectionManager" pc="268438006" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="43" lineNum="132" parent="globals/DataCollectionManager" pc="268438010" symbol="stopDataCollection"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="44" lineNum="183" parent="globals/DataCollectionManager" pc="268438049" symbol="getBatteryLevel"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="44" lineNum="184" parent="globals/DataCollectionManager" pc="268438051" symbol="getBatteryLevel"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="35" parent="globals/DataCollectionManager" pc="268438057" symbol="_timerCallback"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="36" parent="globals/DataCollectionManager" pc="268438059" symbol="_timerCallback"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="86" parent="globals/DataCollectionManager" pc="268438067" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="87" parent="globals/DataCollectionManager" pc="268438070" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="88" parent="globals/DataCollectionManager" pc="268438095" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="95" parent="globals/DataCollectionManager" pc="268438176" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="47" lineNum="28" parent="globals/DataCollectionManager" pc="268438185" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="47" lineNum="29" parent="globals/DataCollectionManager" pc="268438187" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="158" parent="globals/DataCollectionManager" pc="268438217" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="160" parent="globals/DataCollectionManager" pc="268438219" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="161" parent="globals/DataCollectionManager" pc="268438227" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="162" parent="globals/DataCollectionManager" pc="268438235" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="163" parent="globals/DataCollectionManager" pc="268438243" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="49" lineNum="73" parent="globals/DataCollectionManager" pc="268438252" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="49" lineNum="74" parent="globals/DataCollectionManager" pc="268438255" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="49" lineNum="76" parent="globals/DataCollectionManager" pc="268438263" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="139" parent="globals/DataCollectionManager" pc="268438314" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="141" parent="globals/DataCollectionManager" pc="268438316" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="142" parent="globals/DataCollectionManager" pc="268438325" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="143" parent="globals/DataCollectionManager" pc="268438337" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="147" parent="globals/DataCollectionManager" pc="268438348" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="148" parent="globals/DataCollectionManager" pc="268438357" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="152" parent="globals/DataCollectionManager" pc="268438372" symbol="onStop"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="51" lineNum="13" parent="globals/Rez/Layouts" pc="268438380" symbol="MainLayout"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="51" lineNum="14" parent="globals/Rez/Layouts" pc="268438391" symbol="MainLayout"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="51" lineNum="16" parent="globals/Rez/Layouts" pc="268438507" symbol="MainLayout"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="51" lineNum="18" parent="globals/Rez/Layouts" pc="268438607" symbol="MainLayout"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="52" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268438622" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="53" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268438634" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="53" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268438636" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="53" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268438648" symbol="initialize"/>
-        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="53" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268438693" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="118" parent="globals/BatteryManager" pc="268436448" symbol="updateLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="119" parent="globals/BatteryManager" pc="268436450" symbol="updateLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="120" parent="globals/BatteryManager" pc="268436458" symbol="updateLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="21" lineNum="122" parent="globals/BatteryManager" pc="268436468" symbol="updateLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="158" parent="globals/BatteryManager" pc="268436476" symbol="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="159" parent="globals/BatteryManager" pc="268436479" symbol="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="160" parent="globals/BatteryManager" pc="268436491" symbol="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="22" lineNum="161" parent="globals/BatteryManager" pc="268436508" symbol="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="23" lineNum="103" parent="globals/BatteryManager" pc="268436526" symbol="getCurrentLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="23" lineNum="104" parent="globals/BatteryManager" pc="268436528" symbol="getCurrentLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="24" lineNum="146" parent="globals/BatteryManager" pc="268436534" symbol="_updateAndRecordBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="24" lineNum="147" parent="globals/BatteryManager" pc="268436536" symbol="_updateAndRecordBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="24" lineNum="150" parent="globals/BatteryManager" pc="268436543" symbol="_updateAndRecordBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="24" lineNum="151" parent="globals/BatteryManager" pc="268436569" symbol="_updateAndRecordBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="25" lineNum="129" parent="globals/BatteryManager" pc="268436592" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="25" lineNum="130" parent="globals/BatteryManager" pc="268436594" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="33" parent="globals/BatteryManager" pc="268436602" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="34" parent="globals/BatteryManager" pc="268436605" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="35" parent="globals/BatteryManager" pc="268436613" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="38" parent="globals/BatteryManager" pc="268436617" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="39" parent="globals/BatteryManager" pc="268436623" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="44" parent="globals/BatteryManager" pc="268436654" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="55" parent="globals/BatteryManager" pc="268436702" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="56" parent="globals/BatteryManager" pc="268436709" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="59" parent="globals/BatteryManager" pc="268436717" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="61" parent="globals/BatteryManager" pc="268436724" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="63" parent="globals/BatteryManager" pc="268436748" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="64" parent="globals/BatteryManager" pc="268436752" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="26" lineNum="65" parent="globals/BatteryManager" pc="268436778" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="72" parent="globals/BatteryManager" pc="268436794" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="73" parent="globals/BatteryManager" pc="268436797" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="74" parent="globals/BatteryManager" pc="268436806" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="79" parent="globals/BatteryManager" pc="268436810" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="80" parent="globals/BatteryManager" pc="268436819" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="84" parent="globals/BatteryManager" pc="268436829" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="85" parent="globals/BatteryManager" pc="268436838" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="86" parent="globals/BatteryManager" pc="268436850" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="89" parent="globals/BatteryManager" pc="268436861" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="90" parent="globals/BatteryManager" pc="268436869" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="92" parent="globals/BatteryManager" pc="268436877" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="94" parent="globals/BatteryManager" pc="268436901" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="27" lineNum="95" parent="globals/BatteryManager" pc="268436905" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="28" lineNum="111" parent="globals/BatteryManager" pc="268436944" symbol="isEnabled"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="28" lineNum="112" parent="globals/BatteryManager" pc="268436946" symbol="isEnabled"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="29" lineNum="25" parent="globals/BatteryManager" pc="268436952" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="29" lineNum="26" parent="globals/BatteryManager" pc="268436954" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="30" lineNum="136" parent="globals/BatteryManager" pc="268436962" symbol="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="30" lineNum="137" parent="globals/BatteryManager" pc="268436964" symbol="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="30" lineNum="138" parent="globals/BatteryManager" pc="268436973" symbol="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/BatteryTracker.mc" id="30" lineNum="139" parent="globals/BatteryManager" pc="268437002" symbol="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="31" lineNum="10" parent="globals/basicActiveDelegate" pc="268437038" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="31" lineNum="11" parent="globals/basicActiveDelegate" pc="268437040" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="31" lineNum="12" parent="globals/basicActiveDelegate" pc="268437109" symbol="onMenu"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="32" lineNum="6" parent="globals/basicActiveDelegate" pc="268437111" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" id="32" lineNum="7" parent="globals/basicActiveDelegate" pc="268437113" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="127" parent="globals/GPSManager" pc="268437126" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="33" lineNum="128" parent="globals/GPSManager" pc="268437128" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="34" lineNum="65" parent="globals/GPSManager" pc="268437179" symbol="getStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="34" lineNum="66" parent="globals/GPSManager" pc="268437181" symbol="getStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="86" parent="globals/GPSManager" pc="268437187" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="88" parent="globals/GPSManager" pc="268437189" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="89" parent="globals/GPSManager" pc="268437195" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="92" parent="globals/GPSManager" pc="268437211" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="95" parent="globals/GPSManager" pc="268437227" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="98" parent="globals/GPSManager" pc="268437243" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="101" parent="globals/GPSManager" pc="268437259" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="90" parent="globals/GPSManager" pc="268437262" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="91" parent="globals/GPSManager" pc="268437274" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="93" parent="globals/GPSManager" pc="268437277" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="94" parent="globals/GPSManager" pc="268437289" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="96" parent="globals/GPSManager" pc="268437292" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="97" parent="globals/GPSManager" pc="268437304" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="99" parent="globals/GPSManager" pc="268437307" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="100" parent="globals/GPSManager" pc="268437319" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="35" lineNum="102" parent="globals/GPSManager" pc="268437322" symbol="onGPSUpdate"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="36" lineNum="120" parent="globals/GPSManager" pc="268437336" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="36" lineNum="121" parent="globals/GPSManager" pc="268437338" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="36" lineNum="122" parent="globals/GPSManager" pc="268437347" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="36" lineNum="123" parent="globals/GPSManager" pc="268437376" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="37" lineNum="73" parent="globals/GPSManager" pc="268437412" symbol="checkStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="37" lineNum="74" parent="globals/GPSManager" pc="268437415" symbol="checkStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="37" lineNum="75" parent="globals/GPSManager" pc="268437427" symbol="checkStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="37" lineNum="76" parent="globals/GPSManager" pc="268437433" symbol="checkStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="37" lineNum="78" parent="globals/GPSManager" pc="268437447" symbol="checkStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="38" lineNum="109" parent="globals/GPSManager" pc="268437460" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="38" lineNum="110" parent="globals/GPSManager" pc="268437462" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="38" lineNum="111" parent="globals/GPSManager" pc="268437471" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="38" lineNum="112" parent="globals/GPSManager" pc="268437483" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="38" lineNum="114" parent="globals/GPSManager" pc="268437494" symbol="cleanup"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="39" lineNum="133" parent="globals/GPSManager" pc="268437502" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="39" lineNum="134" parent="globals/GPSManager" pc="268437504" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="20" parent="globals/GPSManager" pc="268437555" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="21" parent="globals/GPSManager" pc="268437558" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="22" parent="globals/GPSManager" pc="268437566" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="27" parent="globals/GPSManager" pc="268437570" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="33" parent="globals/GPSManager" pc="268437592" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="34" parent="globals/GPSManager" pc="268437601" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="35" parent="globals/GPSManager" pc="268437614" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="36" parent="globals/GPSManager" pc="268437623" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="39" parent="globals/GPSManager" pc="268437636" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="40" parent="globals/GPSManager" pc="268437664" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="41" parent="globals/GPSManager" pc="268437672" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="43" parent="globals/GPSManager" pc="268437696" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="44" parent="globals/GPSManager" pc="268437700" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="40" lineNum="45" parent="globals/GPSManager" pc="268437726" symbol="enable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="49" parent="globals/GPSManager" pc="268437742" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="50" parent="globals/GPSManager" pc="268437745" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="51" parent="globals/GPSManager" pc="268437754" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="55" parent="globals/GPSManager" pc="268437758" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="56" parent="globals/GPSManager" pc="268437774" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="57" parent="globals/GPSManager" pc="268437782" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="58" parent="globals/GPSManager" pc="268437794" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="60" parent="globals/GPSManager" pc="268437818" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="41" lineNum="61" parent="globals/GPSManager" pc="268437822" symbol="disable"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="42" lineNum="16" parent="globals/GPSManager" pc="268437861" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc" id="42" lineNum="17" parent="globals/GPSManager" pc="268437863" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="43" lineNum="11" parent="globals/basicActiveMenuDelegate" pc="268437871" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="43" lineNum="12" parent="globals/basicActiveMenuDelegate" pc="268437873" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="43" lineNum="13" parent="globals/basicActiveMenuDelegate" pc="268437884" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="43" lineNum="14" parent="globals/basicActiveMenuDelegate" pc="268437905" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="43" lineNum="15" parent="globals/basicActiveMenuDelegate" pc="268437916" symbol="onMenuItem"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="44" lineNum="7" parent="globals/basicActiveMenuDelegate" pc="268437938" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveMenuDelegate.mc" id="44" lineNum="8" parent="globals/basicActiveMenuDelegate" pc="268437940" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="88" parent="globals/DataCollectionManager" pc="268437953" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="90" parent="globals/DataCollectionManager" pc="268437955" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="91" parent="globals/DataCollectionManager" pc="268437967" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="94" parent="globals/DataCollectionManager" pc="268437975" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="96" parent="globals/DataCollectionManager" pc="268437994" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="45" lineNum="99" parent="globals/DataCollectionManager" pc="268438006" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="180" parent="globals/DataCollectionManager" pc="268438025" symbol="getGPSStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="46" lineNum="181" parent="globals/DataCollectionManager" pc="268438027" symbol="getGPSStatus"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="47" lineNum="50" parent="globals/DataCollectionManager" pc="268438056" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="47" lineNum="51" parent="globals/DataCollectionManager" pc="268438058" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="187" parent="globals/DataCollectionManager" pc="268438129" symbol="isBatteryMonitoringEnabled"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="48" lineNum="188" parent="globals/DataCollectionManager" pc="268438131" symbol="isBatteryMonitoringEnabled"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="49" lineNum="173" parent="globals/DataCollectionManager" pc="268438155" symbol="isRecording"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="49" lineNum="174" parent="globals/DataCollectionManager" pc="268438157" symbol="isRecording"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="30" parent="globals/DataCollectionManager" pc="268438163" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="31" parent="globals/DataCollectionManager" pc="268438166" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="32" parent="globals/DataCollectionManager" pc="268438174" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="33" parent="globals/DataCollectionManager" pc="268438215" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="37" parent="globals/DataCollectionManager" pc="268438219" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="38" parent="globals/DataCollectionManager" pc="268438226" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="39" parent="globals/DataCollectionManager" pc="268438233" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="41" parent="globals/DataCollectionManager" pc="268438246" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="42" parent="globals/DataCollectionManager" pc="268438250" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="50" lineNum="43" parent="globals/DataCollectionManager" pc="268438276" symbol="startDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="105" parent="globals/DataCollectionManager" pc="268438300" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="106" parent="globals/DataCollectionManager" pc="268438303" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="107" parent="globals/DataCollectionManager" pc="268438321" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="112" parent="globals/DataCollectionManager" pc="268438325" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="115" parent="globals/DataCollectionManager" pc="268438337" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="117" parent="globals/DataCollectionManager" pc="268438349" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="118" parent="globals/DataCollectionManager" pc="268438361" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="119" parent="globals/DataCollectionManager" pc="268438373" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="121" parent="globals/DataCollectionManager" pc="268438381" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="123" parent="globals/DataCollectionManager" pc="268438405" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="51" lineNum="124" parent="globals/DataCollectionManager" pc="268438409" symbol="stopDataCollection"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="52" lineNum="166" parent="globals/DataCollectionManager" pc="268438448" symbol="getBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="52" lineNum="167" parent="globals/DataCollectionManager" pc="268438450" symbol="getBatteryLevel"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="53" lineNum="73" parent="globals/DataCollectionManager" pc="268438475" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="53" lineNum="74" parent="globals/DataCollectionManager" pc="268438478" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="53" lineNum="75" parent="globals/DataCollectionManager" pc="268438503" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="53" lineNum="82" parent="globals/DataCollectionManager" pc="268438584" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="54" lineNum="22" parent="globals/DataCollectionManager" pc="268438593" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="54" lineNum="23" parent="globals/DataCollectionManager" pc="268438595" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="54" lineNum="24" parent="globals/DataCollectionManager" pc="268438624" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="148" parent="globals/DataCollectionManager" pc="268438654" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="150" parent="globals/DataCollectionManager" pc="268438656" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="151" parent="globals/DataCollectionManager" pc="268438664" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="152" parent="globals/DataCollectionManager" pc="268438672" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="155" parent="globals/DataCollectionManager" pc="268438680" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="156" parent="globals/DataCollectionManager" pc="268438689" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="158" parent="globals/DataCollectionManager" pc="268438704" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="55" lineNum="159" parent="globals/DataCollectionManager" pc="268438713" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="56" lineNum="60" parent="globals/DataCollectionManager" pc="268438729" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="56" lineNum="61" parent="globals/DataCollectionManager" pc="268438732" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="56" lineNum="63" parent="globals/DataCollectionManager" pc="268438740" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="131" parent="globals/DataCollectionManager" pc="268438791" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="133" parent="globals/DataCollectionManager" pc="268438793" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="134" parent="globals/DataCollectionManager" pc="268438802" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="137" parent="globals/DataCollectionManager" pc="268438817" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="138" parent="globals/DataCollectionManager" pc="268438826" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDataCollectionManager.mc" id="57" lineNum="142" parent="globals/DataCollectionManager" pc="268438841" symbol="onStop"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="58" lineNum="13" parent="globals/Rez/Layouts" pc="268438849" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="58" lineNum="14" parent="globals/Rez/Layouts" pc="268438860" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="58" lineNum="16" parent="globals/Rez/Layouts" pc="268438976" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="58" lineNum="18" parent="globals/Rez/Layouts" pc="268439076" symbol="MainLayout"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="59" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268439091" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="60" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268439103" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="60" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268439105" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="60" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268439117" symbol="initialize"/>
+        <entry filename="/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/bin/gen/006-B4575-00/source/Rez.mcgen" id="60" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268439162" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="22" method="true" symbol="&lt;globals/basicActiveView/&lt;&gt;_updateTimeDisplay&gt;"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry id="8389346" symbol="text"/>
-        <entry field="true" id="50" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_logger&gt;"/>
-        <entry id="56" method="true" symbol="getGPSStatus"/>
+        <entry field="true" id="55" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_logger&gt;"/>
+        <entry id="29" method="true" symbol="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;"/>
+        <entry id="59" method="true" symbol="getGPSStatus"/>
         <entry id="8390184" symbol="sensorLogger"/>
-        <entry id="47" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
+        <entry id="53" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="5" module="true" symbol="globals/Rez/Menus"/>
         <entry id="8389849" symbol="units"/>
         <entry id="8391715" symbol="acquisitionType"/>
         <entry id="8388638" module="true" symbol="ActivityRecording"/>
-        <entry id="60" method="true" symbol="MainLayout"/>
+        <entry id="64" method="true" symbol="MainLayout"/>
         <entry id="13" object="true" symbol="basicActiveView"/>
-        <entry field="true" id="29" symbol="&lt;globals/GPSManager/&lt;&gt;_enabled&gt;"/>
+        <entry field="true" id="39" symbol="&lt;globals/GPSManager/&lt;&gt;_enabled&gt;"/>
         <entry field="true" id="8392040" symbol="CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1"/>
-        <entry field="true" id="31" symbol="&lt;globals/GPSManager/&lt;&gt;_status&gt;"/>
+        <entry field="true" id="41" symbol="&lt;globals/GPSManager/&lt;&gt;_status&gt;"/>
         <entry field="true" id="8388890" symbol="sport"/>
         <entry id="10" object="true" symbol="basicActiveApp"/>
-        <entry field="true" id="41" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_batteryLevel&gt;"/>
+        <entry field="true" id="27" symbol="&lt;globals/BatteryManager/&lt;&gt;_isEnabled&gt;"/>
+        <entry id="35" method="true" symbol="getCurrentLevel"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry field="true" id="15" symbol="&lt;globals/basicActiveView/&lt;&gt;_dataManager&gt;"/>
+        <entry field="true" id="25" symbol="&lt;globals/BatteryManager/&lt;&gt;_batteryField&gt;"/>
         <entry id="8392043" symbol="configuration"/>
-        <entry id="39" method="true" symbol="getStatus"/>
+        <entry id="46" method="true" symbol="getStatus"/>
         <entry field="true" id="20" symbol="&lt;globals/basicActiveView/&lt;&gt;_timerCounter&gt;"/>
-        <entry field="true" id="62" symbol="AppName"/>
+        <entry field="true" id="66" symbol="AppName"/>
         <entry field="true" id="18" symbol="&lt;globals/basicActiveView/&lt;&gt;_timeField&gt;"/>
         <entry id="6" module="true" symbol="globals/Rez/Strings"/>
-        <entry id="46" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
+        <entry id="52" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;"/>
         <entry id="8389080" method="true" symbol="onMenu"/>
-        <entry id="38" method="true" symbol="enable"/>
-        <entry field="true" id="45" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_gpsManager&gt;"/>
+        <entry id="34" method="true" symbol="enable"/>
+        <entry field="true" id="51" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_gpsManager&gt;"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry id="52" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
-        <entry field="true" id="68" symbol="prompt"/>
-        <entry id="36" method="true" symbol="cleanup"/>
+        <entry id="57" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;"/>
+        <entry field="true" id="72" symbol="prompt"/>
+        <entry id="32" method="true" symbol="cleanup"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
@@ -273,16 +316,17 @@
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
         <entry id="8392044" method="true" symbol="hasConfigurationSupport"/>
-        <entry id="70" symbol="item_2"/>
-        <entry id="69" symbol="item_1"/>
-        <entry id="28" module="true" symbol="Menus"/>
-        <entry field="true" id="48" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_isRecording&gt;"/>
+        <entry id="74" symbol="item_2"/>
+        <entry id="73" symbol="item_1"/>
+        <entry id="38" module="true" symbol="Menus"/>
+        <entry field="true" id="54" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_isRecording&gt;"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
-        <entry id="53" method="true" symbol="_timerCallback"/>
+        <entry id="36" method="true" symbol="updateLevel"/>
         <entry id="8" object="true" symbol="DataCollectionManager"/>
-        <entry id="33" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
+        <entry id="43" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="26" symbol="&lt;globals/BatteryManager/&lt;&gt;_currentLevel&gt;"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
         <entry field="true" id="19" symbol="&lt;globals/basicActiveView/&lt;&gt;_timer&gt;"/>
@@ -290,65 +334,65 @@
         <entry id="8391852" symbol="gyroscope"/>
         <entry id="8390648" symbol="accelerometer"/>
         <entry field="true" id="8390041" method="true" symbol="mode"/>
-        <entry id="35" method="true" symbol="checkStatus"/>
+        <entry id="45" method="true" symbol="checkStatus"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry field="true" id="65" symbol="BatteryUnits"/>
-        <entry field="true" id="32" symbol="&lt;globals/GPSManager/&lt;&gt;_statusTimer&gt;"/>
-        <entry id="61" object="true" symbol="MainMenu"/>
-        <entry id="54" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;"/>
-        <entry field="true" id="64" symbol="BatteryLevelChart"/>
-        <entry id="57" method="true" symbol="startDataCollection"/>
+        <entry field="true" id="69" symbol="BatteryUnits"/>
+        <entry field="true" id="42" symbol="&lt;globals/GPSManager/&lt;&gt;_statusTimer&gt;"/>
+        <entry id="65" object="true" symbol="MainMenu"/>
+        <entry field="true" id="68" symbol="BatteryLevelChart"/>
+        <entry id="61" method="true" symbol="startDataCollection"/>
         <entry field="true" id="8390438" symbol="enabled"/>
-        <entry id="58" method="true" symbol="stopDataCollection"/>
+        <entry id="62" method="true" symbol="stopDataCollection"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry field="true" id="14" symbol="&lt;globals/basicActiveView/&lt;&gt;_batteryField&gt;"/>
         <entry id="8388645" module="true" symbol="Time"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
         <entry field="true" id="24" symbol="&lt;globals/basicActiveApp/&lt;&gt;_dataManager&gt;"/>
-        <entry id="30" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry id="40" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;"/>
+        <entry field="true" id="28" symbol="&lt;globals/BatteryManager/&lt;&gt;_monitoringTimer&gt;"/>
+        <entry id="60" method="true" symbol="isBatteryMonitoringEnabled"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8388881" method="true" symbol="isRecording"/>
-        <entry field="true" id="59" symbol="LauncherIcon"/>
-        <entry id="44" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
+        <entry id="31" method="true" symbol="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;"/>
+        <entry field="true" id="63" symbol="LauncherIcon"/>
+        <entry id="50" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;"/>
         <entry id="8388610" symbol="statics"/>
         <entry field="true" id="8392041" symbol="CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5"/>
         <entry id="17" method="true" symbol="&lt;globals/basicActiveView/&lt;&gt;_getGPSColor&gt;"/>
         <entry id="8389123" method="true" symbol="onShow"/>
-        <entry id="26" method="true" symbol="recordBatteryLevel"/>
         <entry id="8390175" module="true" symbol="SensorLogging"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="23" method="true" symbol="updateUI"/>
+        <entry id="7" object="true" symbol="BatteryManager"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="30" method="true" symbol="_updateAndRecordBatteryLevel"/>
+        <entry id="8390404" method="true" symbol="isEnabled"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry id="8389780" module="true" symbol="FitContributor"/>
+        <entry field="true" id="48" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_batteryManager&gt;"/>
         <entry field="true" id="8388892" symbol="name"/>
-        <entry field="true" id="63" symbol="BatteryLabel"/>
+        <entry field="true" id="67" symbol="BatteryLabel"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry id="8389847" symbol="mesgType"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="43" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
+        <entry id="49" method="true" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;"/>
         <entry id="11" object="true" symbol="basicActiveDelegate"/>
-        <entry field="true" id="42" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_batteryTracker&gt;"/>
         <entry id="8388646" module="true" object="true" symbol="Timer"/>
-        <entry id="27" module="true" symbol="Layouts"/>
-        <entry field="true" id="25" symbol="&lt;globals/BatteryTracker/&lt;&gt;_batteryField&gt;"/>
+        <entry id="37" module="true" symbol="Layouts"/>
         <entry id="8388642" module="true" symbol="Position"/>
-        <entry id="37" method="true" symbol="disable"/>
+        <entry id="33" method="true" symbol="disable"/>
         <entry id="21" method="true" symbol="&lt;globals/basicActiveView/&lt;&gt;_updateBatteryDisplay&gt;"/>
-        <entry id="34" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
-        <entry field="true" id="51" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_session&gt;"/>
-        <entry id="55" method="true" symbol="getBatteryLevel"/>
-        <entry id="7" object="true" symbol="BatteryTracker"/>
+        <entry id="44" method="true" symbol="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;"/>
+        <entry field="true" id="56" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_session&gt;"/>
+        <entry id="58" method="true" symbol="getBatteryLevel"/>
         <entry id="12" object="true" symbol="basicActiveMenuDelegate"/>
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry id="40" method="true" symbol="onGPSUpdate"/>
-        <entry field="true" id="49" symbol="&lt;globals/DataCollectionManager/&lt;&gt;_logTimer&gt;"/>
-        <entry field="true" id="67" symbol="menu_label_2"/>
-        <entry field="true" id="66" symbol="menu_label_1"/>
+        <entry id="47" method="true" symbol="onGPSUpdate"/>
+        <entry field="true" id="71" symbol="menu_label_2"/>
+        <entry field="true" id="70" symbol="menu_label_1"/>
     </symbolTable>
     <localVars>
         <entry endPc="268435682" name="dateInfo" stackId="1" startPc="268435561"/>
@@ -365,24 +409,25 @@
         <entry arg="true" endPc="268436299" name="dc" stackId="1" startPc="268436270"/>
         <entry arg="true" endPc="268436326" name="state" stackId="1" startPc="268436300"/>
         <entry arg="true" endPc="268436447" name="state" stackId="1" startPc="268436433"/>
-        <entry arg="true" endPc="268436484" name="batteryLevel" stackId="1" startPc="268436448"/>
-        <entry arg="true" endPc="268436535" name="session" stackId="1" startPc="268436485"/>
-        <entry arg="true" endPc="268436833" name="info" stackId="1" startPc="268436685"/>
-        <entry endPc="268436955" name="locationInfo" stackId="1" startPc="268436912"/>
-        <entry endPc="268437186" name="gpsOptions" stackId="1" startPc="268437067"/>
-        <entry endPc="268437232" name="ex" stackId="2" startPc="268437193"/>
-        <entry endPc="268437351" name="ex" stackId="1" startPc="268437315"/>
-        <entry arg="true" endPc="268437434" name="item" stackId="1" startPc="268437368"/>
-        <entry endPc="268437529" name="stats" stackId="1" startPc="268437453"/>
-        <entry endPc="268437909" name="ex" stackId="1" startPc="268437862"/>
-        <entry endPc="268438042" name="ex" stackId="1" startPc="268438006"/>
-        <entry endPc="268438184" name="dateInfo" stackId="1" startPc="268438070"/>
-        <entry endPc="268438184" name="timeString" stackId="2" startPc="268438070"/>
-        <entry arg="true" endPc="268438251" name="exception" stackId="1" startPc="268438217"/>
-        <entry endPc="268438312" name="sessionName" stackId="1" startPc="268438255"/>
-        <entry arg="true" endPc="268438621" name="dc" stackId="1" startPc="268438380"/>
-        <entry endPc="268438621" name="rez_cmp_local_text_timeText" stackId="2" startPc="268438391"/>
-        <entry endPc="268438621" name="rez_cmp_local_text_batteryText" stackId="3" startPc="268438391"/>
+        <entry endPc="268436524" name="stats" stackId="1" startPc="268436479"/>
+        <entry arg="true" endPc="268436793" name="session" stackId="1" startPc="268436602"/>
+        <entry endPc="268436787" name="ex" stackId="2" startPc="268436748"/>
+        <entry endPc="268436937" name="ex" stackId="1" startPc="268436901"/>
+        <entry arg="true" endPc="268437335" name="info" stackId="1" startPc="268437187"/>
+        <entry endPc="268437458" name="locationInfo" stackId="1" startPc="268437415"/>
+        <entry endPc="268437689" name="gpsOptions" stackId="1" startPc="268437570"/>
+        <entry endPc="268437735" name="ex" stackId="2" startPc="268437696"/>
+        <entry endPc="268437854" name="ex" stackId="1" startPc="268437818"/>
+        <entry arg="true" endPc="268437937" name="item" stackId="1" startPc="268437871"/>
+        <entry endPc="268438293" name="ex" stackId="1" startPc="268438246"/>
+        <entry endPc="268438441" name="ex" stackId="1" startPc="268438405"/>
+        <entry endPc="268438592" name="dateInfo" stackId="1" startPc="268438478"/>
+        <entry endPc="268438592" name="timeString" stackId="2" startPc="268438478"/>
+        <entry arg="true" endPc="268438728" name="exception" stackId="1" startPc="268438654"/>
+        <entry endPc="268438789" name="sessionName" stackId="1" startPc="268438732"/>
+        <entry arg="true" endPc="268439090" name="dc" stackId="1" startPc="268438849"/>
+        <entry endPc="268439090" name="rez_cmp_local_text_timeText" stackId="2" startPc="268438860"/>
+        <entry endPc="268439090" name="rez_cmp_local_text_batteryText" stackId="3" startPc="268438860"/>
     </localVars>
     <deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B4575-00"/>
     <annotations>
@@ -399,17 +444,17 @@
         <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
         <dataEntry label="globals/basicActiveView" offset="179" parentId="globals" symbolId="basicActiveView" type="class"/>
         <dataEntry label="globals/basicActiveApp" offset="349" parentId="globals" symbolId="basicActiveApp" type="class"/>
-        <dataEntry label="globals/BatteryTracker" offset="429" parentId="globals" symbolId="BatteryTracker" type="class"/>
-        <dataEntry label="globals/basicActiveDelegate" offset="491" parentId="globals" symbolId="basicActiveDelegate" type="class"/>
-        <dataEntry label="globals/Rez" offset="544" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/GPSManager" offset="606" parentId="globals" symbolId="GPSManager" type="class"/>
-        <dataEntry label="globals/basicActiveMenuDelegate" offset="758" parentId="globals" symbolId="basicActiveMenuDelegate" type="class"/>
-        <dataEntry label="globals/DataCollectionManager" offset="811" parentId="globals" symbolId="DataCollectionManager" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="1035" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="1070" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="1105" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="1140" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="1229" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/BatteryManager" offset="429" parentId="globals" symbolId="BatteryManager" type="class"/>
+        <dataEntry label="globals/basicActiveDelegate" offset="590" parentId="globals" symbolId="basicActiveDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="643" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/GPSManager" offset="705" parentId="globals" symbolId="GPSManager" type="class"/>
+        <dataEntry label="globals/basicActiveMenuDelegate" offset="857" parentId="globals" symbolId="basicActiveMenuDelegate" type="class"/>
+        <dataEntry label="globals/DataCollectionManager" offset="910" parentId="globals" symbolId="DataCollectionManager" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1107" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1142" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1177" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1212" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="1301" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="basicActiveView" startPc="268435460">
@@ -421,7 +466,7 @@
         <functionEntry accessMode="public" endPc="268435504" name="getApp" startPc="268435484">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" name="&lt;init&gt;" parent="BatteryTracker">
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="BatteryManager">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435516" name="&lt;init&gt;" parent="basicActiveDelegate" startPc="268435505">
@@ -488,18 +533,41 @@
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436484" name="recordBatteryLevel" parent="BatteryTracker" startPc="268436448">
-            <param id="batteryLevel"/>
+        <functionEntry accessMode="public" endPc="268436475" name="updateLevel" parent="BatteryManager" startPc="268436448">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436535" name="initialize" parent="BatteryTracker" startPc="268436485">
+        <functionEntry accessMode="private" endPc="268436525" name="&lt;globals/BatteryManager/&lt;&gt;_updateBatteryLevel&gt;" parent="BatteryManager" startPc="268436476">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436533" name="getCurrentLevel" parent="BatteryManager" startPc="268436526">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436591" name="_updateAndRecordBatteryLevel" parent="BatteryManager" startPc="268436534">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436601" name="cleanup" parent="BatteryManager" startPc="268436592">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436793" name="enable" parent="BatteryManager" startPc="268436602">
             <param id="session"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436608" name="onMenu" parent="basicActiveDelegate" startPc="268436536">
+        <functionEntry accessMode="public" endPc="268436943" name="disable" parent="BatteryManager" startPc="268436794">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436623" name="initialize" parent="basicActiveDelegate" startPc="268436609">
+        <functionEntry accessMode="public" endPc="268436951" name="isEnabled" parent="BatteryManager" startPc="268436944">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436961" name="initialize" parent="BatteryManager" startPc="268436952">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437037" name="&lt;globals/BatteryManager/&lt;&gt;_startBatteryMonitoring&gt;" parent="BatteryManager" startPc="268436962">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437110" name="onMenu" parent="basicActiveDelegate" startPc="268437038">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437125" name="initialize" parent="basicActiveDelegate" startPc="268437111">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -514,95 +582,92 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436676" name="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;" parent="GPSManager" startPc="268436624">
+        <functionEntry accessMode="private" endPc="268437178" name="&lt;globals/GPSManager/&lt;&gt;_supportsMultiBandGPS&gt;" parent="GPSManager" startPc="268437126">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436684" name="getStatus" parent="GPSManager" startPc="268436677">
+        <functionEntry accessMode="public" endPc="268437186" name="getStatus" parent="GPSManager" startPc="268437179">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436833" name="onGPSUpdate" parent="GPSManager" startPc="268436685">
+        <functionEntry accessMode="public" endPc="268437335" name="onGPSUpdate" parent="GPSManager" startPc="268437187">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268436908" name="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;" parent="GPSManager" startPc="268436834">
+        <functionEntry accessMode="private" endPc="268437411" name="&lt;globals/GPSManager/&lt;&gt;_startStatusMonitoring&gt;" parent="GPSManager" startPc="268437336">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436956" name="checkStatus" parent="GPSManager" startPc="268436909">
+        <functionEntry accessMode="public" endPc="268437459" name="checkStatus" parent="GPSManager" startPc="268437412">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436998" name="cleanup" parent="GPSManager" startPc="268436957">
+        <functionEntry accessMode="public" endPc="268437501" name="cleanup" parent="GPSManager" startPc="268437460">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437051" name="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;" parent="GPSManager" startPc="268436999">
+        <functionEntry accessMode="private" endPc="268437554" name="&lt;globals/GPSManager/&lt;&gt;_supportsMultiGNSS&gt;" parent="GPSManager" startPc="268437502">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437238" name="enable" parent="GPSManager" startPc="268437052">
+        <functionEntry accessMode="public" endPc="268437741" name="enable" parent="GPSManager" startPc="268437555">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437357" name="disable" parent="GPSManager" startPc="268437239">
+        <functionEntry accessMode="public" endPc="268437860" name="disable" parent="GPSManager" startPc="268437742">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437367" name="initialize" parent="GPSManager" startPc="268437358">
+        <functionEntry accessMode="public" endPc="268437870" name="initialize" parent="GPSManager" startPc="268437861">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437434" name="onMenuItem" parent="basicActiveMenuDelegate" startPc="268437368">
+        <functionEntry accessMode="public" endPc="268437937" name="onMenuItem" parent="basicActiveMenuDelegate" startPc="268437871">
             <param id="item"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437449" name="initialize" parent="basicActiveMenuDelegate" startPc="268437435">
+        <functionEntry accessMode="public" endPc="268437952" name="initialize" parent="basicActiveMenuDelegate" startPc="268437938">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437530" name="&lt;globals/DataCollectionManager/&lt;&gt;_updateBatteryLevel&gt;" parent="DataCollectionManager" startPc="268437450">
+        <functionEntry accessMode="private" endPc="268438024" name="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;" parent="DataCollectionManager" startPc="268437953">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437654" name="&lt;globals/DataCollectionManager/&lt;&gt;_startRecording&gt;" parent="DataCollectionManager" startPc="268437531">
+        <functionEntry accessMode="public" endPc="268438055" name="getGPSStatus" parent="DataCollectionManager" startPc="268438025">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437685" name="getGPSStatus" parent="DataCollectionManager" startPc="268437655">
+        <functionEntry accessMode="private" endPc="268438128" name="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;" parent="DataCollectionManager" startPc="268438056">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268437758" name="&lt;globals/DataCollectionManager/&lt;&gt;_initializeSensorLogger&gt;" parent="DataCollectionManager" startPc="268437686">
+        <functionEntry accessMode="public" endPc="268438154" name="isBatteryMonitoringEnabled" parent="DataCollectionManager" startPc="268438129">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437766" name="isRecording" parent="DataCollectionManager" startPc="268437759">
+        <functionEntry accessMode="public" endPc="268438162" name="isRecording" parent="DataCollectionManager" startPc="268438155">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437915" name="startDataCollection" parent="DataCollectionManager" startPc="268437767">
+        <functionEntry accessMode="public" endPc="268438299" name="startDataCollection" parent="DataCollectionManager" startPc="268438163">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438048" name="stopDataCollection" parent="DataCollectionManager" startPc="268437916">
+        <functionEntry accessMode="public" endPc="268438447" name="stopDataCollection" parent="DataCollectionManager" startPc="268438300">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438056" name="getBatteryLevel" parent="DataCollectionManager" startPc="268438049">
+        <functionEntry accessMode="public" endPc="268438474" name="getBatteryLevel" parent="DataCollectionManager" startPc="268438448">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438066" name="_timerCallback" parent="DataCollectionManager" startPc="268438057">
+        <functionEntry accessMode="private" endPc="268438592" name="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;" parent="DataCollectionManager" startPc="268438475">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438184" name="&lt;globals/DataCollectionManager/&lt;&gt;_generateSessionName&gt;" parent="DataCollectionManager" startPc="268438067">
+        <functionEntry accessMode="public" endPc="268438653" name="initialize" parent="DataCollectionManager" startPc="268438593">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438216" name="initialize" parent="DataCollectionManager" startPc="268438185">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="private" endPc="268438251" name="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;" parent="DataCollectionManager" startPc="268438217">
+        <functionEntry accessMode="private" endPc="268438728" name="&lt;globals/DataCollectionManager/&lt;&gt;_handleStartupError&gt;" parent="DataCollectionManager" startPc="268438654">
             <param id="exception"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="private" endPc="268438313" name="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;" parent="DataCollectionManager" startPc="268438252">
+        <functionEntry accessMode="private" endPc="268438790" name="&lt;globals/DataCollectionManager/&lt;&gt;_createFitSession&gt;" parent="DataCollectionManager" startPc="268438729">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438379" name="onStop" parent="DataCollectionManager" startPc="268438314">
+        <functionEntry accessMode="public" endPc="268438848" name="onStop" parent="DataCollectionManager" startPc="268438791">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438621" name="MainLayout" parent="Layouts" startPc="268438380">
+        <functionEntry accessMode="public" endPc="268439090" name="MainLayout" parent="Layouts" startPc="268438849">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438633" name="&lt;init&gt;" parent="MainMenu" startPc="268438622">
+        <functionEntry accessMode="public" endPc="268439102" name="&lt;init&gt;" parent="MainMenu" startPc="268439091">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438738" name="initialize" parent="MainMenu" startPc="268438634">
+        <functionEntry accessMode="public" endPc="268439207" name="initialize" parent="MainMenu" startPc="268439103">
             <documentation/>
         </functionEntry>
     </functions>

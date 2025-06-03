@@ -24,7 +24,7 @@ class GPSManager {
     var _statusTimer = null;
     [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc"; @line = 14; @position = 18; @symbol_constdef = [GPS_STATUS_CHECK_INTERVAL,14,18,43]; ]
     private
-    const GPS_STATUS_CHECK_INTERVAL = 6000;
+    const GPS_STATUS_CHECK_INTERVAL = 60000;
     [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/GPSManager.mc"; @line = 16; @symbol_functiondef = [initialize,16,20,30]; ]
     public
     function initialize() as Void {

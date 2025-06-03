@@ -11,7 +11,7 @@ class GPSManager {
     private var _status = "No GPS data";
     private var _statusTimer = null;
     
-    private const GPS_STATUS_CHECK_INTERVAL = 6000;
+    private const GPS_STATUS_CHECK_INTERVAL = 60000; // Update every 60 seconds
     
     public function initialize() {
         _startStatusMonitoring();

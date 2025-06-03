@@ -2,7 +2,6 @@ import Toybox.ActivityRecording;
 import Toybox.SensorLogging;
 import Toybox.System;
 import Toybox.Time;
-import Toybox.Timer;
 import Toybox.Lang;
 
 /**
@@ -16,24 +15,13 @@ class DataCollectionManager {
     private var _isRecording = false;
 
     private var _gpsManager = null;
-
-    private var _batteryTracker = null;
-    private var _batteryLevel = 0;
-
-    private var _logTimer = null;
-    private const LOG_INTERVAL = 6000; // Log battery every 6 seconds
+    private var _batteryManager = null;
 
     private const PREFIX = "BASIC_RECORDER_";
 
     function initialize() {
         _gpsManager = new GPSManager();
-    }
-
-    /**
-     * Timer callback that handles periodic data updates
-     */
-    function _timerCallback() as Void {
-        _updateBatteryLevel();
+        _batteryManager = new BatteryManager();
     }
 
     /**
@@ -46,7 +34,6 @@ class DataCollectionManager {
         }
 
         try {
-            _gpsManager.enable();
             _initializeSensorLogger();
             _createFitSession();
             _startRecording();
@@ -99,13 +86,17 @@ class DataCollectionManager {
      * Start the recording session and initialize tracking
      */
     private function _startRecording() {
-        _batteryTracker = new BatteryTracker(_session);
-        _logTimer = new Timer.Timer();
-        _logTimer.start(method(:_timerCallback), LOG_INTERVAL, true);
-        
+        // Start the FIT session first
         _session.start();
         _isRecording = true;
-        _updateBatteryLevel();
+        
+        // Enable battery monitoring
+        _batteryManager.enable(_session);
+        // Enable gps monitoring
+        _gpsManager.enable();
+        
+
+        System.println("Data collection started successfully");
     }
 
     /**
@@ -117,8 +108,8 @@ class DataCollectionManager {
         }
 
         try {
-            // Record final battery level before stopping
-            _updateBatteryLevel();
+            // Disable battery monitoring (records final level)
+            _batteryManager.disable();
             
             // Turn off the GPS
             _gpsManager.disable();
@@ -126,7 +117,8 @@ class DataCollectionManager {
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
             _isRecording = false;
-            _batteryTracker = null;
+            
+            System.println("Data collection stopped and saved");
             
         } catch (ex) {
             System.println("Error stopping data collection: " + ex.getErrorMessage());
@@ -137,13 +129,11 @@ class DataCollectionManager {
      * Clean up resources when app stops
      */
     function onStop() {
-        // Cleanup battery logging timer
-        if (_logTimer != null) {
-            _logTimer.stop();
-            _logTimer = null;
+        // Cleanup managers
+        if (_batteryManager != null) {
+            _batteryManager.cleanup();
         }
-
-        // Cleanup GPS manager
+        
         if (_gpsManager != null) {
             _gpsManager.cleanup();
         }
@@ -160,20 +150,13 @@ class DataCollectionManager {
         _isRecording = false;
         _logger = null;
         _session = null;
-        _batteryTracker = null;
-    }
-
-    /**
-     * Update and record current battery level
-     */
-    private function _updateBatteryLevel() as Void {
-        var stats = System.getSystemStats();
-        if (stats != null && stats.battery != null) {
-            _batteryLevel = stats.battery;
-            // Record to FIT if we're recording
-            if (_batteryTracker != null) {
-                _batteryTracker.recordBatteryLevel(_batteryLevel);
-            }
+        
+        // Make sure managers are cleaned up
+        if (_batteryManager != null) {
+            _batteryManager.cleanup();
+        }
+        if (_gpsManager != null) {
+            _gpsManager.cleanup();
         }
     }
 
@@ -181,7 +164,7 @@ class DataCollectionManager {
      * Get current battery level
      */
     function getBatteryLevel() {
-        return _batteryLevel;
+        return _batteryManager != null ? _batteryManager.getCurrentLevel() : 0;
     }
 
     /**
@@ -196,5 +179,12 @@ class DataCollectionManager {
      */
     function getGPSStatus() {
         return _gpsManager != null ? _gpsManager.getStatus() : "GPS Manager not initialized";
+    }
+    
+    /**
+     * Get battery monitoring status
+     */
+    function isBatteryMonitoringEnabled() {
+        return _batteryManager != null && _batteryManager.isEnabled();
     }
 }
