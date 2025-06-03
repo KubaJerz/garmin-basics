@@ -82,10 +82,12 @@ _Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicA
         %tmp.9 = aputv %tmp.8 0 %tmp.2;
         symbol [ basicActiveDelegate %tmp.13 31 56 75 ];
         %tmp.13 = getv ? :basicActiveDelegate;
-        %tmp.10 = newc %tmp.13 ();
-        %tmp.14 = dup %tmp.9;
-        %tmp.15 = aputv %tmp.14 1 %tmp.10;
-        ret %tmp.15;
+        symbol [ _dataManager %tmp.15 31 76 88 ];
+        %tmp.15 = getv ? :_dataManager;
+        %tmp.10 = newc %tmp.13 (%tmp.15);
+        %tmp.16 = dup %tmp.9;
+        %tmp.17 = aputv %tmp.16 1 %tmp.10;
+        ret %tmp.17;
 _Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveApp_mc_28_68_32_4_stop:
     }
 }

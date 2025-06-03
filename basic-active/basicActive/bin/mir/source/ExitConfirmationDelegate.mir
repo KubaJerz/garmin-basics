@@ -1,0 +1,203 @@
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 8; @symbol_classdef = [ExitConfirmationDelegate,8,6,30]; @symbol_extends<0> = [WatchUi,8,39,46]; @symbol_extends<1> = [ConfirmationDelegate,8,47,67]; ]
+class ExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 9; @position = 16; @symbol_vardef = [_dataManager,9,16,28]; ]
+    private
+    var _dataManager;
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 15; @symbol_functiondef = [initialize,15,20,30]; @symbol_param<0> = [dataManager,15,31,42]; ]
+    public
+    function initialize(dataManager) as Void {
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_15_44_18_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 16 8 ]
+        symbol [ ConfirmationDelegate %tmp.2 16 8 28 ];
+        %tmp.2 = getv ? :ConfirmationDelegate;
+        symbol [ initialize %tmp.3 16 29 39 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 17 8 ]
+        %tmp.4 = lgetv %dataManager;
+        symbol [ dataManager %tmp.4 17 23 34 ];
+        symbol [ _dataManager ? 17 8 20 ];
+        putv self :_dataManager %tmp.4;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_15_44_18_4_stop:
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 25; @symbol_functiondef = [onResponse,25,20,30]; @symbol_param<0> = [response,25,31,39]; ]
+    public
+    function onResponse(response) {
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_25_41_34_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 26 8 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_stmt:
+        %tmp.1 = lgetv %response;
+        symbol [ response %tmp.1 26 12 20 ];
+        symbol [ WatchUi %tmp.2 26 24 31 ];
+        %tmp.2 = getm $.Toybox.WatchUi;
+        symbol [ CONFIRM_YES %tmp.3 26 32 43 ];
+        %tmp.3 = getv %tmp.2 :CONFIRM_YES;
+        %tmp.4 = eq %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_else_false;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_true:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_45_29_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 28 12 ]
+        %tmp.5 = self;
+        symbol [ _handleExit %tmp.6 28 12 23 ];
+        %tmp.6 = getv function %tmp.5 :_handleExit;
+        invoke %tmp.5 %tmp.6();
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_45_29_8_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_else_false:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_29_15_32_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 31 12 ]
+        symbol [ WatchUi %tmp.7 31 12 19 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.8 31 20 27 ];
+        %tmp.8 = getv function %tmp.7 :popView;
+        symbol [ WatchUi %tmp.9 31 28 35 ];
+        %tmp.9 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.10 31 36 46 ];
+        %tmp.10 = getv %tmp.9 :SLIDE_DOWN;
+        invoke %tmp.7 %tmp.8(%tmp.10);
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_29_15_32_8_stop:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_26_8_32_8_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 33 8 ]
+        %tmp.11 = true;
+        ret %tmp.11;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_25_41_34_4_stop:
+    }
+    [ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 39; @symbol_functiondef = [_handleExit,39,21,32]; ]
+    private
+    function _handleExit() {
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_39_35_61_4_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 40 8 ]
+        try @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_beginTry @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_endTry @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_catch @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_beginTry:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_12_56_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 42 12 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_stmt:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_16_42_65_begin:
+        symbol [ _dataManager %tmp.2 42 16 28 ];
+        %tmp.2 = getv ? :_dataManager;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_40_42_65_true:
+        symbol [ _dataManager %tmp.6 42 40 52 ];
+        %tmp.6 = getv ? :_dataManager;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ isRecording %tmp.8 42 53 64 ];
+        %tmp.8 = getv function %tmp.7 :isRecording;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        push %tmp.9;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_40_42_65_end:
+        %tmp.10 = phi [%tmp.4 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_16_42_65_begin] [%tmp.9 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_40_42_65_true] [%tmp.10 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_40_42_65_end];
+        bf %tmp.10 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_true:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_68_45_12_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 43 16 ]
+        symbol [ System %tmp.11 43 16 22 ];
+        %tmp.11 = getm $.Toybox.System;
+        symbol [ println %tmp.12 43 23 30 ];
+        %tmp.12 = getv function %tmp.11 :println;
+        %tmp.13 = "Stopping data collection before exit...";
+        invoke %tmp.11 %tmp.12(%tmp.13);
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 44 16 ]
+        symbol [ _dataManager %tmp.15 44 16 28 ];
+        %tmp.15 = getv ? :_dataManager;
+        symbol [ stopDataCollection %tmp.16 44 29 47 ];
+        %tmp.16 = getv function %tmp.15 :stopDataCollection;
+        invoke %tmp.15 %tmp.16();
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_68_45_12_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_42_12_45_12_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 48 12 ]
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_12_50_12_if_stmt:
+        symbol [ _dataManager %tmp.18 48 16 28 ];
+        %tmp.18 = getv ? :_dataManager;
+        %tmp.19 = null;
+        %tmp.20 = ne %tmp.18 %tmp.19;
+        bf %tmp.20 @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_12_50_12_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_12_50_12_if_true:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_38_50_12_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 49 16 ]
+        symbol [ _dataManager %tmp.22 49 16 28 ];
+        %tmp.22 = getv ? :_dataManager;
+        %tmp.23 = as %tmp.22 { (!Null) };
+        symbol [ onStop %tmp.24 49 29 35 ];
+        %tmp.24 = getv function %tmp.23 :onStop;
+        invoke %tmp.23 %tmp.24();
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_38_50_12_stop:
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_12_50_12_if_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_48_12_50_12_if_end:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 53 12 ]
+        symbol [ System %tmp.25 53 12 18 ];
+        %tmp.25 = getm $.Toybox.System;
+        symbol [ println %tmp.26 53 19 26 ];
+        %tmp.26 = getv function %tmp.25 :println;
+        %tmp.27 = "Exiting application";
+        invoke %tmp.25 %tmp.26(%tmp.27);
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 54 12 ]
+        symbol [ System %tmp.28 54 12 18 ];
+        %tmp.28 = getm $.Toybox.System;
+        symbol [ exit %tmp.29 54 19 23 ];
+        %tmp.29 = getv function %tmp.28 :exit;
+        invoke %tmp.28 %tmp.29();
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_12_56_8_stop:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_endTry:
+        jsr @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally;
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_catch:
+        %tmp.30 = exception;
+        push %tmp.30;
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 56 10 ]
+        [ "_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_catch" "_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_10_60_8_end" ]
+        %ex.1 = local;
+        symbol [ ex %ex.1 56 17 19 ];
+        %tmp.31 = dup %tmp.30;
+        lputv %ex.1 %tmp.31;
+        symbol [ ex %ex.1 56 17 19 ];
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_21_60_8_start:
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 57 12 ]
+        symbol [ System %tmp.32 57 12 18 ];
+        %tmp.32 = getm $.Toybox.System;
+        symbol [ println %tmp.33 57 19 26 ];
+        %tmp.33 = getv function %tmp.32 :println;
+        %tmp.34 = "Error during exit: ";
+        %tmp.35 = lgetv %ex.1;
+        symbol [ ex %tmp.35 57 51 53 ];
+        symbol [ getErrorMessage %tmp.36 57 54 69 ];
+        %tmp.36 = getv function %tmp.35 :getErrorMessage;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = add %tmp.34 %tmp.37;
+        invoke %tmp.32 %tmp.33(%tmp.38);
+[ "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc" 59 12 ]
+        symbol [ System %tmp.39 59 12 18 ];
+        %tmp.39 = getm $.Toybox.System;
+        symbol [ exit %tmp.40 59 19 23 ];
+        %tmp.40 = getv function %tmp.39 :exit;
+        invoke %tmp.39 %tmp.40();
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_21_60_8_stop:
+        jsr @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally;
+        pop;
+        goto @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_end;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_10_60_8_end:
+        try @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_catch @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_10_60_8_end @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_56_10_60_8_end @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally;
+        jsr @_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally;
+        throw %tmp.30;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_finally:
+        jsrret;
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_40_8_60_8_end:
+_Users_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_ExitConfirmationDelegate_mc_39_35_61_4_stop:
+    }
+}
+[ @file = "/Users/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/ExitConfirmationDelegate.mc"; @line = 1; ]
+<init> {
+}

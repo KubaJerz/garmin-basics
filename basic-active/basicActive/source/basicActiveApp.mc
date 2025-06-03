@@ -28,7 +28,7 @@ class basicActiveApp extends Application.AppBase {
     function getInitialView() as [Views] or [Views, InputDelegates] {
         // return [ new basicActiveView(), new basicActiveDelegate(_recorder) ];
 
-        return [ new basicActiveView(_dataManager), new basicActiveDelegate() ];
+        return [ new basicActiveView(_dataManager), new basicActiveDelegate(_dataManager) ];
     }
 
 }
