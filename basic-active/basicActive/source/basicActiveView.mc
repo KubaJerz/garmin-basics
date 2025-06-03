@@ -4,6 +4,11 @@ import Toybox.Time;
 import Toybox.Timer;
 
 class basicActiveView extends WatchUi.View {
+    // UI Layout constants
+    private const GPS_DOT_X_RATIO = 5;
+    private const GPS_DOT_Y_RATIO = 5;
+    private const GPS_DOT_SIZE = 6;
+
     private var _timeField = null;
     private var _batteryField = null;
     
@@ -106,20 +111,13 @@ class basicActiveView extends WatchUi.View {
             return;
         }
 
-
         var gpsStatus = _dataManager.getGPSStatus();
         var dotColor = _getGPSColor(gpsStatus);
-        
-        var screenWidth = dc.getWidth();
-        var screenHeight = dc.getHeight();
-        
-        var centerX = screenWidth / 5;
-        var centerY = screenHeight / 5;
-        
-        var dotSize = 6;
+        var centerX = dc.getWidth() / GPS_DOT_X_RATIO;
+        var centerY = dc.getHeight() / GPS_DOT_Y_RATIO;
         
         dc.setColor(dotColor, Graphics.COLOR_TRANSPARENT);
-        dc.fillCircle(centerX, centerY, dotSize);
+        dc.fillCircle(centerX, centerY, GPS_DOT_SIZE);
     }
 
 

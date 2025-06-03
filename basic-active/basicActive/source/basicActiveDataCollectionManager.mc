@@ -23,8 +23,8 @@ class DataCollectionManager {
     private var _batteryLevel = 0;
 
     private var _logTimer = null;
-
     private const LOG_INTERVAL = 6000; // Log battery every 6 seconds
+
     private const PREFIX = "BASIC_RECORDER_";
 
 
@@ -36,21 +36,6 @@ class DataCollectionManager {
         _checkGPSStatus();
     }
 
-    private function _makeSessionName() as String {
-        // Make a unique name for our FIT session
-        var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-
-        var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
-            dateInfo.hour,
-            dateInfo.min.format("%02d"),
-            dateInfo.month,
-            dateInfo.day,
-            dateInfo.year
-            ]);
-
-        return   PREFIX + timeString;
-    }
-
     function startDataCollection() {
         if (_isRecording) {
             System.println("Already recording... will continue, happened at time: " + Time.now().value().toString());
@@ -58,40 +43,56 @@ class DataCollectionManager {
         }
 
         try {
-            // Turn on the GPS
+
             _enableGPS();
+            _initializeSensorLogger();
+            _createFitSession();
+            _startRecording();
 
-            // Make sensor logger with proper sensors
-            _logger = new SensorLogging.SensorLogger({
-                :accelerometer => {:enabled => true},
-                :gyroscope => {:enabled => true}
-            });
-
-            var sessionName = _makeSessionName();
-
-            // Make the FIT session
-            _session = ActivityRecording.createSession({
-                :name => sessionName,
-                :sport => Activity.SPORT_GENERIC,
-                :sensorLogger => _logger
-            });
-
-            // Initialize battery tracker with the session
-            _batteryTracker = new BatteryTracker(_session);
-
-            _logTimer = new Timer.Timer();
-            _logTimer.start(method(:_timerCallback), LOG_INTERVAL, true);
-
-            // Start the FIT session
-            _session.start();
-            _isRecording = true;
-            
-            // Record initial battery level
-            _updateBatteryLevel();
         } catch (ex) {
             System.println("Error starting data collection: " + ex.getErrorMessage());
             _handleStartupError(ex);
         }
+    }
+
+
+    private function _initializeSensorLogger() {
+        _logger = new SensorLogging.SensorLogger({
+            :accelerometer => {:enabled => true},
+            :gyroscope => {:enabled => true}
+        });
+    }
+
+    private function _createFitSession() {
+        var sessionName = _generateSessionName();
+        
+        _session = ActivityRecording.createSession({
+            :name => sessionName,
+            :sport => Activity.SPORT_GENERIC,
+            :sensorLogger => _logger
+        });
+    }
+
+    private function _generateSessionName() {
+        var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
+            dateInfo.hour,
+            dateInfo.min.format("%02d"),
+            dateInfo.month,
+            dateInfo.day,
+            dateInfo.year
+        ]);
+        return PREFIX + timeString;
+    }
+
+    private function _startRecording() {
+        _batteryTracker = new BatteryTracker(_session);
+        _logTimer = new Timer.Timer();
+        _logTimer.start(method(:_timerCallback), LOG_INTERVAL, true);
+        
+        _session.start();
+        _isRecording = true;
+        _updateBatteryLevel();
     }
 
 
