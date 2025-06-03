@@ -2,7 +2,6 @@ import Toybox.ActivityRecording;
 import Toybox.SensorLogging;
 import Toybox.System;
 import Toybox.Time;
-import Toybox.Position;
 import Toybox.Timer;
 import Toybox.Lang;
 
@@ -16,8 +15,7 @@ class DataCollectionManager {
     private var _session = null;
     private var _isRecording = false;
 
-    private var _gpsEnabled = false;
-    private var _gpsStatus = "No GPS data";
+    private var _gpsManager = null;
 
     private var _batteryTracker = null;
     private var _batteryLevel = 0;
@@ -27,15 +25,20 @@ class DataCollectionManager {
 
     private const PREFIX = "BASIC_RECORDER_";
 
-
     function initialize() {
+        _gpsManager = new GPSManager();
     }
 
-    function _timerCallback() as Void{
+    /**
+     * Timer callback that handles periodic data updates
+     */
+    function _timerCallback() as Void {
         _updateBatteryLevel();
-        _checkGPSStatus();
     }
 
+    /**
+     * Start the data collection process
+     */
     function startDataCollection() {
         if (_isRecording) {
             System.println("Already recording... will continue, happened at time: " + Time.now().value().toString());
@@ -43,8 +46,7 @@ class DataCollectionManager {
         }
 
         try {
-
-            _enableGPS();
+            _gpsManager.enable();
             _initializeSensorLogger();
             _createFitSession();
             _startRecording();
@@ -55,7 +57,9 @@ class DataCollectionManager {
         }
     }
 
-
+    /**
+     * Initialize the sensor logger with accelerometer and gyroscope
+     */
     private function _initializeSensorLogger() {
         _logger = new SensorLogging.SensorLogger({
             :accelerometer => {:enabled => true},
@@ -63,6 +67,9 @@ class DataCollectionManager {
         });
     }
 
+    /**
+     * Create the FIT recording session
+     */
     private function _createFitSession() {
         var sessionName = _generateSessionName();
         
@@ -73,6 +80,9 @@ class DataCollectionManager {
         });
     }
 
+    /**
+     * Generate a unique session name with timestamp
+     */
     private function _generateSessionName() {
         var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var timeString = Lang.format("$1$_$2$_$3$_$4$_$5$", [
@@ -85,6 +95,9 @@ class DataCollectionManager {
         return PREFIX + timeString;
     }
 
+    /**
+     * Start the recording session and initialize tracking
+     */
     private function _startRecording() {
         _batteryTracker = new BatteryTracker(_session);
         _logTimer = new Timer.Timer();
@@ -95,7 +108,9 @@ class DataCollectionManager {
         _updateBatteryLevel();
     }
 
-
+    /**
+     * Stop data collection and save the session
+     */
     function stopDataCollection() {
         if (!_isRecording || _session == null) {
             return;
@@ -106,7 +121,7 @@ class DataCollectionManager {
             _updateBatteryLevel();
             
             // Turn off the GPS
-            _disableGPS();
+            _gpsManager.disable();
 
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
@@ -118,18 +133,28 @@ class DataCollectionManager {
         }
     }
     
-
+    /**
+     * Clean up resources when app stops
+     */
     function onStop() {
-        // Cleanup when app stops
-        if (_timerCallback() != null) {
+        // Cleanup battery logging timer
+        if (_logTimer != null) {
             _logTimer.stop();
             _logTimer = null;
+        }
+
+        // Cleanup GPS manager
+        if (_gpsManager != null) {
+            _gpsManager.cleanup();
         }
 
         // Make sure we stop data collection
         stopDataCollection();
     }
 
+    /**
+     * Handle errors during startup
+     */
     private function _handleStartupError(exception) {
         // Clean error handling 
         _isRecording = false;
@@ -138,113 +163,38 @@ class DataCollectionManager {
         _batteryTracker = null;
     }
 
-    private function _updateBatteryLevel() as Void{
+    /**
+     * Update and record current battery level
+     */
+    private function _updateBatteryLevel() as Void {
         var stats = System.getSystemStats();
         if (stats != null && stats.battery != null) {
             _batteryLevel = stats.battery;
             // Record to FIT if we're recording
-            _batteryTracker.recordBatteryLevel(_batteryLevel);
-        }
-    }
-
-    private function _checkGPSStatus() as Void {
-        // Get current GPS/location status without enabling full GPS
-        var locationInfo = Position.getInfo();
-        if (locationInfo != null) {
-            onGPSUpdate(locationInfo);
-        } else {
-            _gpsStatus = "GPS: No signal";
-        }
-    }
-
-
-    private function _enableGPS() {
-        if (_gpsEnabled) {
-            return; // Return back since already on
-        }
-
-        try {
-            // Configure GPS for optimal data collection
-            var gpsOptions = {
-                :acquisitionType => Position.LOCATION_CONTINUOUS,
-                :mode => Position.POSITIONING_MODE_NORMAL
-            };
-
-            // Check which GPS mode is available and use the best one
-            if (_supportsMultiBandGPS()) {
-                gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5;
-            } else if (_supportsMultiGNSS()) {
-                gpsOptions[:configuration] = Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1;
+            if (_batteryTracker != null) {
+                _batteryTracker.recordBatteryLevel(_batteryLevel);
             }
-
-            Position.enableLocationEvents(gpsOptions, method(:onGPSUpdate));
-            _gpsEnabled = true;
-            System.println("GPS tracking enabled");
-            
-        } catch (ex) {
-            System.println("Failed to enable GPS: "+ ex.getErrorMessage());
-            throw ex;
         }
     }
 
-    private function _disableGPS() {
-        if (!_gpsEnabled) {
-            return; // Already off so will return
-        }
-
-        try {
-            Position.enableLocationEvents(Position.LOCATION_DISABLE, null);
-            _gpsEnabled = false;
-            _gpsStatus = "GPS Disabled";
-            System.println("GPS tracking disabled");
-            
-        } catch (ex) {
-            System.println("Error disabling GPS: " + ex.getErrorMessage());
-        }
-    }
-
-    private function _supportsMultiBandGPS() {
-        return (Position has :CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5) &&
-               (Position has :hasConfigurationSupport) &&
-               Position.hasConfigurationSupport(Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1_L5);
-    }
-
-    private function _supportsMultiGNSS() {
-        return (Position has :CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1) &&
-               (Position has :hasConfigurationSupport) &&
-               Position.hasConfigurationSupport(Position.CONFIGURATION_GPS_GLONASS_GALILEO_BEIDOU_L1);
-    }
-
-    function onGPSUpdate(info as Position.Info) as Void {
-        // Update GPS status based on quality
-        switch (info.accuracy) {
-            case Position.QUALITY_GOOD:
-                _gpsStatus = "GPS: Good signal";
-                break;
-            case Position.QUALITY_USABLE:
-                _gpsStatus = "GPS: Usable signal";
-                break;
-            case Position.QUALITY_POOR:
-                _gpsStatus = "GPS: Poor signal";
-                break;
-            case Position.QUALITY_LAST_KNOWN:
-                _gpsStatus = "GPS: Using last known position";
-                break;
-            default:
-                _gpsStatus = "GPS: Searching...";
-        }
-    }
-
+    /**
+     * Get current battery level
+     */
     function getBatteryLevel() {
         return _batteryLevel;
     }
 
-
+    /**
+     * Check if currently recording data
+     */
     function isRecording() {
         return _isRecording;
     }
 
+    /**
+     * Get current GPS status
+     */
     function getGPSStatus() {
-        return _gpsStatus;
+        return _gpsManager != null ? _gpsManager.getStatus() : "GPS Manager not initialized";
     }
 }
