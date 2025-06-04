@@ -14,50 +14,44 @@ class basicActiveView extends WatchUi.View {
     
     private var _timer = null;
     private var _dataManager = null;
-    private const TIMER_INTERVAL = 1000;
+    private const TIMER_INTERVAL = 1000; // 1 second base interval
 
-    private const BATTERY_DISPLAY_INTERVAL = 10;        // Refresh battery display every 10 seconds
-    private var _timerCounter = 0;
+    // Update intervals (in seconds)
+    private const BATTERY_DISPLAY_INTERVAL = 10;
+    private const GPS_STATUS_INTERVAL = 60;
+    private const BATTERY_MONITOR_INTERVAL = 60;
+    
+    private var _secondsCounter = 0;
 
     function initialize(dataManager) {
         View.initialize();
         _dataManager = dataManager;
+        if (_timer == null) {
+            _timer = new Timer.Timer();
+        }
     }
 
-    // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
-
     }
 
-    // Called when this View is brought to the foreground. Restore
-    // the state of this View and prepare it to be shown. This includes
-    // loading resources into memory.
     function onShow() as Void {
         _timeField = View.findDrawableById("timeText");
         _batteryField = View.findDrawableById("batteryText");
 
 
-        if (_timer == null){
-            _timer = new Timer.Timer();
-            _timer.start(method(:updateUI), TIMER_INTERVAL, true); // repeat = true
-        }
+        _timer.start(method(:updateAll), TIMER_INTERVAL, true);
+
 
         _updateBatteryDisplay();
-        updateUI();
+        updateAll();
     }
 
-    // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
-
         _drawGPSStatusDot(dc);
     }
 
-    // Called when this View is removed from the screen. Save the
-    // state of this View here. This includes freeing resources from
-    // memory.
     function onHide() as Void {
         if (_timer != null) {
             _timer.stop();
@@ -65,23 +59,60 @@ class basicActiveView extends WatchUi.View {
         }
     }
 
-    function updateUI() as Void {
-
-        _timerCounter++;
+    /**
+     * Master update function called every second
+     * Delegates to appropriate update methods based on intervals
+     */
+    public function updateAll() as Void {
+        _secondsCounter++;
         
-        // Update time every time
+        // Always update time (every second)
         _updateTimeDisplay();
         
-        // Update battery display less frequently to optimize performance
-        if (_timerCounter >= BATTERY_DISPLAY_INTERVAL) {
-            _timerCounter = 0;
+        // Update battery display every 10 seconds
+        if (_secondsCounter % BATTERY_DISPLAY_INTERVAL == 0) {
             _updateBatteryDisplay();
-            
         }
         
-        // Request UI refresh
+        // Update GPS status every 60 seconds
+        if (_secondsCounter % GPS_STATUS_INTERVAL == 0) {
+            if (_dataManager != null) {
+                _dataManager.updateGPSStatus();
+            }
+        }
+        
+        // Update battery monitoring every 60 seconds
+        if (_secondsCounter % BATTERY_MONITOR_INTERVAL == 0) {
+            if (_dataManager != null) {
+                _dataManager.updateBatteryMonitoring();
+            }
+        }
+        
+        // Reset counter to prevent overflow (every 12 hours)
+        if (_secondsCounter >= 43200) {
+            _secondsCounter = 0;
+        }
+        
         WatchUi.requestUpdate();
     }
+
+    // function updateUI() as Void {
+
+    //     _timerCounter++;
+        
+    //     // Update time every time
+    //     _updateTimeDisplay();
+        
+    //     // Update battery display less frequently to optimize performance
+    //     if (_timerCounter >= BATTERY_DISPLAY_INTERVAL) {
+    //         _timerCounter = 0;
+    //         _updateBatteryDisplay();
+            
+    //     }
+        
+    //     // Request UI refresh
+    //     WatchUi.requestUpdate();
+    // }
 
     private function _updateTimeDisplay() {
         if (_timeField != null) {

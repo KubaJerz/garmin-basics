@@ -9,12 +9,8 @@ import Toybox.System;
 class GPSManager {
     private var _enabled = false;
     private var _status = "No GPS data";
-    private var _statusTimer = null;
-    
-    private const GPS_STATUS_CHECK_INTERVAL = 60000; // Update every 60 seconds
-    
+        
     public function initialize() {
-        _startStatusMonitoring();
     }
     
     public function enable() {
@@ -66,6 +62,11 @@ class GPSManager {
         return _status;
     }
     
+    public function updateStatus() as Void {
+        if (_enabled) {
+            checkStatus();
+        }
+    }
     // /**
     //  * Check GPS status by getting current location info
     //  * This method is called every GPS_STATUS_CHECK_INTERVAL to update color of the dot
@@ -107,21 +108,7 @@ class GPSManager {
      * Clean up GPS resources and timers
      */
     public function cleanup() {
-        if (_statusTimer != null) {
-            _statusTimer.stop();
-            _statusTimer = null;
-        }
         disable();
-    }
-    
-    /**
-     * Start monitoring GPS status with periodic checks
-     */
-    private function _startStatusMonitoring() {
-        if (_statusTimer == null) {
-            _statusTimer = new Timer.Timer();
-            _statusTimer.start(method(:checkStatus), GPS_STATUS_CHECK_INTERVAL, true);
-        }
     }
 
     private function _supportsMultiBandGPS() {

@@ -14,10 +14,8 @@ class BatteryManager {
     private var _batteryField = null;
     private var _currentLevel = 0;
     private var _isEnabled = false;
-    private var _monitoringTimer = null;
     
     private const BATTERY_FIELD_ID = 0;
-    private const BATTERY_UPDATE_INTERVAL = 60000; // Update every 60 seconds
     
     /**
      * Initialize the battery manager
@@ -51,8 +49,6 @@ class BatteryManager {
                 }
             );
             
-            // Start periodic battery monitoring
-            _startBatteryMonitoring();
             _isEnabled = true;
             
             // Record initial battery level
@@ -78,12 +74,6 @@ class BatteryManager {
             // Record final battery level before disabling
             if (_batteryField != null) {
                 _updateAndRecordBatteryLevel();
-            }
-            
-            // Stop monitoring timer
-            if (_monitoringTimer != null) {
-                _monitoringTimer.stop();
-                _monitoringTimer = null;
             }
             
             _batteryField = null;
@@ -128,16 +118,6 @@ class BatteryManager {
      */
     public function cleanup() {
         disable();
-    }
-    
-    /**
-     * Start periodic battery level monitoring
-     */
-    private function _startBatteryMonitoring() {
-        if (_monitoringTimer == null) {
-            _monitoringTimer = new Timer.Timer();
-            _monitoringTimer.start(method(:_updateAndRecordBatteryLevel), BATTERY_UPDATE_INTERVAL, true);
-        }
     }
     
     /**
