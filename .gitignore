@@ -1,2 +1,5 @@
 builds/
 .DS_Store
+
+*.mir
+*.prg*
