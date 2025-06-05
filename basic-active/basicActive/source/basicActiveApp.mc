@@ -12,8 +12,8 @@ class basicActiveApp extends Application.AppBase {
     private var _dataManager = null;
     private var _rotationTimer = null;
     
-    // 0.5 hours in milliseconds
-    private const SESSION_DURATION_MS = 0.5 * 60 * 60 * 1000;
+    // 3 hours in milliseconds
+    private const SESSION_DURATION_MS = 3 * 60 * 60 * 1000;
 
     function initialize() {
         AppBase.initialize();

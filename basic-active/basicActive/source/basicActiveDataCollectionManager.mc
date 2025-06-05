@@ -109,7 +109,6 @@ class DataCollectionManager {
             // Disable battery monitoring (records final level)
             _batteryManager.disable();
             
-            // Turn off the GPS
 
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
@@ -152,15 +151,6 @@ class DataCollectionManager {
     }
 
     /**
-    * Update GPS status (called by view timer)
-    */
-    function updateGPSStatus() {
-        if (_gpsManager != null) {
-            _gpsManager.updateStatus();
-        }
-    }
-
-    /**
     * Update battery monitoring (called by view timer)
     */
     function updateBatteryMonitoring() {
@@ -183,10 +173,6 @@ class DataCollectionManager {
         return _isRecording;
     }
 
-    /**
-     * Get current GPS status
-     */
-    
     /**
      * Get battery monitoring status
      */

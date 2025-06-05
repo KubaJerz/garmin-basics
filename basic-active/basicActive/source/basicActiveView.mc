@@ -18,7 +18,6 @@ class basicActiveView extends WatchUi.View {
 
     // Update intervals (in seconds)
     private const BATTERY_DISPLAY_INTERVAL = 10;
-    private const GPS_STATUS_INTERVAL = 60;
     private const BATTERY_MONITOR_INTERVAL = 60;
     
     private var _secondsCounter = 0;
@@ -74,12 +73,6 @@ class basicActiveView extends WatchUi.View {
             _updateBatteryDisplay();
         }
         
-        // Update GPS status every 60 seconds
-        if (_secondsCounter % GPS_STATUS_INTERVAL == 0) {
-            if (_dataManager != null) {
-                _dataManager.updateGPSStatus();
-            }
-        }
         
         // Update battery monitoring every 60 seconds
         if (_secondsCounter % BATTERY_MONITOR_INTERVAL == 0) {
@@ -95,24 +88,6 @@ class basicActiveView extends WatchUi.View {
         
         WatchUi.requestUpdate();
     }
-
-    // function updateUI() as Void {
-
-    //     _timerCounter++;
-        
-    //     // Update time every time
-    //     _updateTimeDisplay();
-        
-    //     // Update battery display less frequently to optimize performance
-    //     if (_timerCounter >= BATTERY_DISPLAY_INTERVAL) {
-    //         _timerCounter = 0;
-    //         _updateBatteryDisplay();
-            
-    //     }
-        
-    //     // Request UI refresh
-    //     WatchUi.requestUpdate();
-    // }
 
     private function _updateTimeDisplay() {
         if (_timeField != null) {
