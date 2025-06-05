@@ -14,13 +14,11 @@ class DataCollectionManager {
     private var _session = null;
     private var _isRecording = false;
 
-    private var _gpsManager = null;
     private var _batteryManager = null;
 
     private const PREFIX = "BASIC_RECORDER_";
 
     function initialize() {
-        _gpsManager = new GPSManager();
         _batteryManager = new BatteryManager();
     }
 
@@ -93,7 +91,6 @@ class DataCollectionManager {
         // Enable battery monitoring
         _batteryManager.enable(_session);
         // Enable gps monitoring
-        _gpsManager.disable();
         
 
         System.println("Data collection started successfully");
@@ -112,7 +109,6 @@ class DataCollectionManager {
             _batteryManager.disable();
             
             // Turn off the GPS
-            _gpsManager.disable();
 
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
@@ -134,9 +130,6 @@ class DataCollectionManager {
             _batteryManager.cleanup();
         }
         
-        if (_gpsManager != null) {
-            _gpsManager.cleanup();
-        }
 
         // Make sure we stop data collection
         stopDataCollection();
@@ -154,9 +147,6 @@ class DataCollectionManager {
         // Make sure managers are cleaned up
         if (_batteryManager != null) {
             _batteryManager.cleanup();
-        }
-        if (_gpsManager != null) {
-            _gpsManager.cleanup();
         }
     }
 
@@ -177,9 +167,6 @@ class DataCollectionManager {
     /**
      * Get current GPS status
      */
-    function getGPSStatus() {
-        return _gpsManager != null ? _gpsManager.getStatus() : "GPS disabled";
-    }
     
     /**
      * Get battery monitoring status

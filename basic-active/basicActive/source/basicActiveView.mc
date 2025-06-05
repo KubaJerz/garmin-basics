@@ -111,8 +111,7 @@ class basicActiveView extends WatchUi.View {
             return;
         }
 
-        var gpsStatus = _dataManager.getGPSStatus();
-        var dotColor = _getGPSColor(gpsStatus);
+        var dotColor = Graphics.COLOR_BLACK;
         var centerX = dc.getWidth() / GPS_DOT_X_RATIO;
         var centerY = dc.getHeight() / GPS_DOT_Y_RATIO;
         
@@ -122,20 +121,5 @@ class basicActiveView extends WatchUi.View {
 
 
 
-    private function _getGPSColor(gpsStatus) {
-        if (gpsStatus.find("Good") != null) {
-            return Graphics.COLOR_GREEN;      // Good signal
-        } else if (gpsStatus.find("Usable") != null) {
-            return Graphics.COLOR_YELLOW;     // Usable signal  
-        } else if (gpsStatus.find("Poor") != null) {
-            return Graphics.COLOR_YELLOW;     // Poor signal
-        } else if (gpsStatus.find("Searching") != null) {
-            return Graphics.COLOR_ORANGE;     // Searching (orange-ish)
-        } else if (gpsStatus.find("disabled") != null) {
-            return Graphics.COLOR_DK_BLUE;     // Searching (orange-ish)
-        } else {
-            return Graphics.COLOR_RED;        // No GPS/Error
-        }
-    }
 
 }
