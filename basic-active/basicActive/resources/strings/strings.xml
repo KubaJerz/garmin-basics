@@ -6,12 +6,30 @@
     <string id="BatteryLabel">Battery</string>
     <string id="BatteryUnits">%</string>
     
+    <!-- Accelerometer fields -->
+    <string id="AccelXChart">Accelerometer X (50Hz Avg)</string>
+    <string id="AccelXLabel">Accel X</string>
+    <string id="AccelYChart">Accelerometer Y (50Hz Avg)</string>
+    <string id="AccelYLabel">Accel Y</string>
+    <string id="AccelZChart">Accelerometer Z (50Hz Avg)</string>
+    <string id="AccelZLabel">Accel Z</string>
+    <string id="AccelUnits">mg</string>
+    
+    <!-- Gyroscope fields -->
+    <string id="GyroXChart">Gyroscope X (50Hz Avg)</string>
+    <string id="GyroXLabel">Gyro X</string>
+    <string id="GyroYChart">Gyroscope Y (50Hz Avg)</string>
+    <string id="GyroYLabel">Gyro Y</string>
+    <string id="GyroZChart">Gyroscope Z (50Hz Avg)</string>
+    <string id="GyroZLabel">Gyro Z</string>
+    <string id="GyroUnits">deg/s</string>
+    
+    <!-- Sample count -->
+    <string id="SampleCountChart">Sample Count per Second</string>
+    <string id="SampleCountLabel">Samples/sec</string>
+    <string id="SampleCountUnits">count</string>
+    
     <string id="prompt">Click the menu button</string>
-
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>
-
-    <!-- UI strings -->
-    <!-- <string id="StartRecording">Start Recording</string>
-    <string id="StopRecording">Stop Recording</string> -->
 </strings>

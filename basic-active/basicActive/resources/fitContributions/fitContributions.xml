@@ -1,3 +1,52 @@
 <fitContributions>
-    <fitField id="0" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.BatteryLevelChart" dataLabel="@Strings.BatteryLabel" unitLabel="@Strings.BatteryUnits" fillColor="#00FF00" />
+    <fitField id="0" displayInChart="true" sortOrder="0" precision="1" 
+              chartTitle="@Strings.BatteryLevelChart" 
+              dataLabel="@Strings.BatteryLabel" 
+              unitLabel="@Strings.BatteryUnits" 
+              fillColor="#00FF00" />
+    
+    <!-- Accelerometer fields -->
+    <fitField id="1" displayInChart="true" sortOrder="1" precision="2"
+              chartTitle="@Strings.AccelXChart"
+              dataLabel="@Strings.AccelXLabel" 
+              unitLabel="@Strings.AccelUnits" 
+              fillColor="#FF0000" />
+              
+    <fitField id="2" displayInChart="true" sortOrder="2" precision="2"
+              chartTitle="@Strings.AccelYChart"
+              dataLabel="@Strings.AccelYLabel" 
+              unitLabel="@Strings.AccelUnits" 
+              fillColor="#FF4444" />
+              
+    <fitField id="3" displayInChart="true" sortOrder="3" precision="2"
+              chartTitle="@Strings.AccelZChart"
+              dataLabel="@Strings.AccelZLabel" 
+              unitLabel="@Strings.AccelUnits" 
+              fillColor="#FF8888" />
+              
+    <!-- Gyroscope fields -->
+    <fitField id="4" displayInChart="true" sortOrder="4" precision="2"
+              chartTitle="@Strings.GyroXChart"
+              dataLabel="@Strings.GyroXLabel" 
+              unitLabel="@Strings.GyroUnits" 
+              fillColor="#0000FF" />
+              
+    <fitField id="5" displayInChart="true" sortOrder="5" precision="2"
+              chartTitle="@Strings.GyroYChart"
+              dataLabel="@Strings.GyroYLabel" 
+              unitLabel="@Strings.GyroUnits" 
+              fillColor="#4444FF" />
+              
+    <fitField id="6" displayInChart="true" sortOrder="6" precision="2"
+              chartTitle="@Strings.GyroZChart"
+              dataLabel="@Strings.GyroZLabel" 
+              unitLabel="@Strings.GyroUnits" 
+              fillColor="#8888FF" />
+              
+    <!-- Sample count field -->
+    <fitField id="7" displayInChart="true" sortOrder="7" precision="0"
+              chartTitle="@Strings.SampleCountChart"
+              dataLabel="@Strings.SampleCountLabel" 
+              unitLabel="@Strings.SampleCountUnits" 
+              fillColor="#888888" />
 </fitContributions>

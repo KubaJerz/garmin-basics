@@ -30,13 +30,30 @@ module Rez {
     } // Menus
 
     module Strings {
+        (:initialized) var AccelYLabel as ResourceId;
+        (:initialized) var SampleCountUnits as ResourceId;
+        (:initialized) var GyroYChart as ResourceId;
+        (:initialized) var GyroYLabel as ResourceId;
+        (:initialized) var GyroZLabel as ResourceId;
+        (:initialized) var AccelXLabel as ResourceId;
+        (:initialized) var SampleCountLabel as ResourceId;
+        (:initialized) var AccelYChart as ResourceId;
+        (:initialized) var GyroXChart as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var SampleCountChart as ResourceId;
         (:initialized) var BatteryUnits as ResourceId;
+        (:initialized) var AccelUnits as ResourceId;
+        (:initialized) var AccelZLabel as ResourceId;
         (:initialized) var BatteryLabel as ResourceId;
+        (:initialized) var GyroZChart as ResourceId;
+        (:initialized) var AccelZChart as ResourceId;
         (:initialized) var menu_label_1 as ResourceId;
         (:initialized) var menu_label_2 as ResourceId;
+        (:initialized) var GyroUnits as ResourceId;
         (:initialized) var BatteryLevelChart as ResourceId;
+        (:initialized) var AccelXChart as ResourceId;
+        (:initialized) var GyroXLabel as ResourceId;
         (:initialized) var prompt as ResourceId;
-        (:initialized) var AppName as ResourceId;
     } // Strings
 
     module Styles {

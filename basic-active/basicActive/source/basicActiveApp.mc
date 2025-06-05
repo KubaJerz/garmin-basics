@@ -62,7 +62,7 @@ class basicActiveApp extends Application.AppBase {
         // Schedule rotation after SESSION_DURATION_MS
         _rotationTimer.start(method(:_performSessionRotation), SESSION_DURATION_MS, false);
         
-        System.println("Next session rotation scheduled in 12 hours");
+        System.println("Next session rotation scheduled in" + (SESSION_DURATION_MS / 60 /60 / 1000) + "hours");
     }
 
     /**

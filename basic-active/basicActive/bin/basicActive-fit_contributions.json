@@ -10,12 +10,106 @@
     "sort-order" : 0,
     "precision" : 1,
     "fill-color" : "rgba(0, 255, 0, 1.0)"
+  }, {
+    "id" : 1,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "AccelXChart",
+    "label-key" : "AccelXLabel",
+    "unit-label-key" : "AccelUnits",
+    "sort-order" : 1,
+    "precision" : 2,
+    "fill-color" : "rgba(255, 0, 0, 1.0)"
+  }, {
+    "id" : 2,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "AccelYChart",
+    "label-key" : "AccelYLabel",
+    "unit-label-key" : "AccelUnits",
+    "sort-order" : 2,
+    "precision" : 2,
+    "fill-color" : "rgba(255, 68, 68, 1.0)"
+  }, {
+    "id" : 3,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "AccelZChart",
+    "label-key" : "AccelZLabel",
+    "unit-label-key" : "AccelUnits",
+    "sort-order" : 3,
+    "precision" : 2,
+    "fill-color" : "rgba(255, 136, 136, 1.0)"
+  }, {
+    "id" : 4,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "GyroXChart",
+    "label-key" : "GyroXLabel",
+    "unit-label-key" : "GyroUnits",
+    "sort-order" : 4,
+    "precision" : 2,
+    "fill-color" : "rgba(0, 0, 255, 1.0)"
+  }, {
+    "id" : 5,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "GyroYChart",
+    "label-key" : "GyroYLabel",
+    "unit-label-key" : "GyroUnits",
+    "sort-order" : 5,
+    "precision" : 2,
+    "fill-color" : "rgba(68, 68, 255, 1.0)"
+  }, {
+    "id" : 6,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "GyroZChart",
+    "label-key" : "GyroZLabel",
+    "unit-label-key" : "GyroUnits",
+    "sort-order" : 6,
+    "precision" : 2,
+    "fill-color" : "rgba(136, 136, 255, 1.0)"
+  }, {
+    "id" : 7,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "SampleCountChart",
+    "label-key" : "SampleCountLabel",
+    "unit-label-key" : "SampleCountUnits",
+    "sort-order" : 7,
+    "precision" : 0,
+    "fill-color" : "rgba(136, 136, 136, 1.0)"
   } ],
   "strings" : {
     "default" : {
       "BatteryLevelChart" : "Battery Level",
       "BatteryLabel" : "Battery",
-      "BatteryUnits" : "%"
+      "BatteryUnits" : "%",
+      "AccelXChart" : "Accelerometer X (50Hz Avg)",
+      "AccelXLabel" : "Accel X",
+      "AccelUnits" : "mg",
+      "AccelYChart" : "Accelerometer Y (50Hz Avg)",
+      "AccelYLabel" : "Accel Y",
+      "AccelZChart" : "Accelerometer Z (50Hz Avg)",
+      "AccelZLabel" : "Accel Z",
+      "GyroXChart" : "Gyroscope X (50Hz Avg)",
+      "GyroXLabel" : "Gyro X",
+      "GyroUnits" : "deg/s",
+      "GyroYChart" : "Gyroscope Y (50Hz Avg)",
+      "GyroYLabel" : "Gyro Y",
+      "GyroZChart" : "Gyroscope Z (50Hz Avg)",
+      "GyroZLabel" : "Gyro Z",
+      "SampleCountChart" : "Sample Count per Second",
+      "SampleCountLabel" : "Samples/sec",
+      "SampleCountUnits" : "count"
     }
   }
 }
