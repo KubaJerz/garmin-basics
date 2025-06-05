@@ -39,6 +39,7 @@ class DataCollectionManager {
         } catch (ex) {
             System.println("Error starting data collection: " + ex.getErrorMessage());
             _handleStartupError(ex);
+            throw ex; // Re-throw so app knows startup failed
         }
     }
 
@@ -93,7 +94,7 @@ class DataCollectionManager {
         // Enable gps monitoring
         
 
-        System.println("Data collection started successfully");
+        System.println("Data collection started name is: " + _generateSessionName());
     }
 
     /**
@@ -147,6 +148,24 @@ class DataCollectionManager {
         // Make sure managers are cleaned up
         if (_batteryManager != null) {
             _batteryManager.cleanup();
+        }
+    }
+
+    /**
+    * Update GPS status (called by view timer)
+    */
+    function updateGPSStatus() {
+        if (_gpsManager != null) {
+            _gpsManager.updateStatus();
+        }
+    }
+
+    /**
+    * Update battery monitoring (called by view timer)
+    */
+    function updateBatteryMonitoring() {
+        if (_batteryManager != null) {
+            _batteryManager.updateLevel();
         }
     }
 

@@ -2,22 +2,16 @@
 // import Toybox.Timer;
 // import Toybox.System;
 
-// /**
-//  * Handles all GPS-related functionality including status monitoring
-//  * and configuration management.
-//  */
-// class GPSManager {
-//     private var _enabled = false;
-//     private var _userWantsGPS = false;  // Track user preference
-//     private var _status = "GPS disabled";
-//     private var _statusTimer = null;
-    
-//     private const GPS_STATUS_CHECK_INTERVAL = 60000;
-    
-//     public function initialize() {
-//         // Don't start monitoring by default
-//         _status = "GPS disabled for battery saving";
-//     }
+/**
+ * Handles all GPS-related functionality including status monitoring
+ * and configuration management.
+ */
+class GPSManager {
+    private var _enabled = false;
+    private var _status = "No GPS data";
+        
+    public function initialize() {
+    }
     
 //     public function enable() {
 //         if (_enabled) {
@@ -90,15 +84,23 @@
 //         }
 //     }
     
-//     /**
-//      * Start monitoring GPS status with periodic checks
-//      */
-//     private function _startStatusMonitoring() {
-//         if (_statusTimer == null) {
-//             _statusTimer = new Timer.Timer();
-//             _statusTimer.start(method(:checkStatus), GPS_STATUS_CHECK_INTERVAL, true);
-//         }
-//     }
+    public function updateStatus() as Void {
+        if (_enabled) {
+            checkStatus();
+        }
+    }
+    // /**
+    //  * Check GPS status by getting current location info
+    //  * This method is called every GPS_STATUS_CHECK_INTERVAL to update color of the dot
+    //  */
+    public function checkStatus() as Void {
+        var locationInfo = Position.getInfo();
+        if (locationInfo != null) {
+            onGPSUpdate(locationInfo);
+        } else {
+            _status = "GPS: No signal";
+        }
+    }
     
 //     /**
 //      * Stop monitoring GPS status
@@ -110,12 +112,12 @@
 //         }
 //     }
     
-//     public function cleanup() {
-//         _stopStatusMonitoring();
-//         disable();
-//     }
-    
-//     // ... rest of your methods stay the same
+    /**
+     * Clean up GPS resources and timers
+     */
+    public function cleanup() {
+        disable();
+    }
 
 //     /**
 //      * Handle GPS location updates and update status
