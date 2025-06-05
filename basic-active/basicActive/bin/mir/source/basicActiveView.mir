@@ -582,20 +582,20 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicAc
         symbol [ gpsStatus %tmp.33 134 19 28 ];
         symbol [ find %tmp.34 134 29 33 ];
         %tmp.34 = getv function %tmp.33 :find;
-        %tmp.35 = "not initialized";
+        %tmp.35 = "disabled";
         %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
         %tmp.37 = null;
         %tmp.38 = ne %tmp.36 %tmp.37;
         bf %tmp.38 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_15_138_8_if_else_false;
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_15_138_8_if_true:
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_62_136_8_start:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_55_136_8_start:
 [ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 135 12 ]
         symbol [ Graphics %tmp.39 135 19 27 ];
         %tmp.39 = getm $.Toybox.Graphics;
         symbol [ COLOR_DK_BLUE %tmp.40 135 28 41 ];
         %tmp.40 = getv %tmp.39 :COLOR_DK_BLUE;
         ret %tmp.40;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_62_136_8_stop:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_55_136_8_stop:
         goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_15_138_8_if_end;
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_134_15_138_8_if_else_false:
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_136_15_138_8_start:

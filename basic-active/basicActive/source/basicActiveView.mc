@@ -131,7 +131,7 @@ class basicActiveView extends WatchUi.View {
             return Graphics.COLOR_YELLOW;     // Poor signal
         } else if (gpsStatus.find("Searching") != null) {
             return Graphics.COLOR_ORANGE;     // Searching (orange-ish)
-        } else if (gpsStatus.find("not initialized") != null) {
+        } else if (gpsStatus.find("disabled") != null) {
             return Graphics.COLOR_DK_BLUE;     // Searching (orange-ish)
         } else {
             return Graphics.COLOR_RED;        // No GPS/Error

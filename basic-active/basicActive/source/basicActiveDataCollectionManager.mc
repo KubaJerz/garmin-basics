@@ -62,7 +62,7 @@ class DataCollectionManager {
         
         _session = ActivityRecording.createSession({
             :name => sessionName,
-            :sport => Activity.SPORT_GENERIC,
+            :sport => Activity.SPORT_MEDITATION,
             :sensorLogger => _logger
         });
     }
@@ -93,7 +93,7 @@ class DataCollectionManager {
         // Enable battery monitoring
         _batteryManager.enable(_session);
         // Enable gps monitoring
-        // _gpsManager.enable();
+        _gpsManager.disable();
         
 
         System.println("Data collection started successfully");
@@ -112,7 +112,7 @@ class DataCollectionManager {
             _batteryManager.disable();
             
             // Turn off the GPS
-            // _gpsManager.disable();
+            _gpsManager.disable();
 
             _session.stop(); // stop the session "pause"
             _session.save(); // end the session and save FIT file
@@ -178,7 +178,7 @@ class DataCollectionManager {
      * Get current GPS status
      */
     function getGPSStatus() {
-        return _gpsManager != null ? _gpsManager.getStatus() : "GPS Manager not initialized";
+        return _gpsManager != null ? _gpsManager.getStatus() : "GPS disabled";
     }
     
     /**
