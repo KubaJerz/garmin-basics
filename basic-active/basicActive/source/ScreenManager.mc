@@ -1,8 +1,5 @@
 import Toybox.WatchUi;
 
-// ScreenManager.mc - Handles screen navigation logic
-using Toybox.WatchUi;
-
 class ScreenManager {
     enum ScreenType {
         MAIN,
@@ -27,9 +24,10 @@ class ScreenManager {
         if (_mainView == null) {
             _mainView = new basicActiveView(_dataManager);
         }
-        
-        _pushView(_mainView, new SwipeInputDelegate(self));
         _currentScreen = MAIN;
+        // WatchUi.pushView(_mainView, new SwipeInputDelegate(self), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.popView(WatchUi.SLIDE_UP);
+
     }
     
     // Shows the secondary screen (settings, stats, etc.)
@@ -37,9 +35,8 @@ class ScreenManager {
         if (_secondaryView == null) {
             _secondaryView = new SecondaryView();
         }
-        
-        _pushView(_secondaryView, new SwipeInputDelegate(self));
         _currentScreen = SECONDARY;
+        WatchUi.pushView(_secondaryView, new SwipeInputDelegate(self), WatchUi.SLIDE_IMMEDIATE);
     }
     
     // Handles swipe navigation between screens
@@ -54,13 +51,25 @@ class ScreenManager {
             showMainScreen();
         }
     }
+
+    function handleBackButton() {
+        if (_currentScreen == SECONDARY) {
+            showMainScreen();
+            return true;
+        } else if (_currentScreen == MAIN) {
+            exit();
+            return true;
+        }
+        return false;
+    }
     
     function getCurrentScreen() {
         return _currentScreen;
     }
-    
-    // Private helper to avoid code duplication
-    private function _pushView(view, delegate) {
-        WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);
+
+    function exit() {
+        _dataManager.onStop();
+
+        System.exit();
     }
 }
