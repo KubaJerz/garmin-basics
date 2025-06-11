@@ -25,6 +25,22 @@ class SwipeInputDelegate extends WatchUi.InputDelegate {
         
         return false;  // Event not handled
     }
+
+    function onKey(keyEvent) {
+        var key = keyEvent.getKey();
+        
+        switch (key) {
+            case WatchUi.KEY_UP:
+                _screenManager.handleSwipeDown(); // seems counter intuative but if the bottom button "key up" is pressed we want to go to the bottom
+                return true;
+                
+            case WatchUi.KEY_DOWN:
+                _screenManager.handleSwipeUp(); // seems counter intuative but if the middle button "key down" is pressed we want to go to the top
+                return true;
+        }
+        
+        return false;
+    }
     
     // Allow back button to work normally
     function onBack() {
