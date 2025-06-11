@@ -11,13 +11,15 @@ import Toybox.System;
 class basicActiveApp extends Application.AppBase {
     private var _dataManager = null;
     private var _rotationTimer = null;
-    
+    private var _screenManager;
+
     // 3 hours in milliseconds
     private const SESSION_DURATION_MS = 3 * 60 * 60 * 1000;
 
     function initialize() {
         AppBase.initialize();
         _dataManager = new DataCollectionManager();
+        _screenManager = new ScreenManager(_dataManager);
     }
 
     /**
@@ -25,6 +27,7 @@ class basicActiveApp extends Application.AppBase {
      * Starts data collection and schedules automatic rotation
      */
     function onStart(state as Dictionary?) as Void {
+        _screenManager.showMainScreen();
         if (_dataManager != null) {
             // Start initial data collection
             _dataManager.startDataCollection();
@@ -106,7 +109,7 @@ class basicActiveApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new basicActiveView(_dataManager), new basicActiveDelegate() ];
+        return [ new basicActiveView(_dataManager), new SwipeInputDelegate(_screenManager) ];
     }
 }
 

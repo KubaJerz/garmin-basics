@@ -1,0 +1,582 @@
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Time,3,14,18]; ]
+import Toybox.Time;
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Timer,4,14,19]; ]
+import Toybox.Timer;
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 6; @symbol_classdef = [basicActiveView,6,6,21]; @symbol_extends<0> = [WatchUi,6,30,37]; @symbol_extends<1> = [View,6,38,42]; ]
+class basicActiveView extends WatchUi.View {
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 8; @position = 18; @symbol_constdef = [GPS_DOT_X_RATIO,8,18,33]; ]
+    private
+    const GPS_DOT_X_RATIO = 5;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 9; @position = 18; @symbol_constdef = [GPS_DOT_Y_RATIO,9,18,33]; ]
+    private
+    const GPS_DOT_Y_RATIO = 5;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 10; @position = 18; @symbol_constdef = [GPS_DOT_SIZE,10,18,30]; ]
+    private
+    const GPS_DOT_SIZE = 6;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 11; @position = 18; @symbol_constdef = [TIMER_INTERVAL,11,18,32]; ]
+    private
+    const TIMER_INTERVAL = 1000;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 14; @position = 18; @symbol_constdef = [BATTERY_DISPLAY_INTERVAL,14,18,42]; ]
+    private
+    const BATTERY_DISPLAY_INTERVAL = 10;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 15; @position = 18; @symbol_constdef = [BATTERY_MONITOR_INTERVAL,15,18,42]; ]
+    private
+    const BATTERY_MONITOR_INTERVAL = 60;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 18; @position = 16; @symbol_vardef = [_timeField,18,16,26]; ]
+    private
+    var _timeField = null;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 19; @position = 16; @symbol_vardef = [_batteryField,19,16,29]; ]
+    private
+    var _batteryField = null;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 20; @position = 16; @symbol_vardef = [_timer,20,16,22]; ]
+    private
+    var _timer = null;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 21; @position = 16; @symbol_vardef = [_dataManager,21,16,28]; ]
+    private
+    var _dataManager = null;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 22; @position = 16; @symbol_vardef = [_secondsCounter,22,16,31]; ]
+    private
+    var _secondsCounter = 0;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 23; @position = 16; @symbol_vardef = [_isActive,23,16,25]; ]
+    private
+    var _isActive = false;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 25; @symbol_functiondef = [initialize,25,13,23]; @symbol_param<0> = [dataManager,25,24,35]; ]
+    function initialize(dataManager) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_25_37_29_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 26 8 ]
+        symbol [ View %tmp.2 26 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 26 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 27 8 ]
+        %tmp.4 = lgetv %dataManager;
+        symbol [ dataManager %tmp.4 27 23 34 ];
+        symbol [ _dataManager ? 27 8 20 ];
+        putv self :_dataManager %tmp.4;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 28 8 ]
+        %tmp.5 = false;
+        symbol [ _isActive ? 28 8 17 ];
+        putv self :_isActive %tmp.5;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_25_37_29_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 31; @symbol_functiondef = [onLayout,31,13,21]; @symbol_param<0> = [dc,31,22,24]; @symbol_param<0>_type<0> = [Dc,31,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_31_40_33_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 32 8 ]
+        %tmp.1 = self;
+        symbol [ setLayout %tmp.2 32 8 17 ];
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        symbol [ Rez %tmp.4 32 18 21 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Layouts %tmp.5 32 22 29 ];
+        %tmp.5 = getv %tmp.4 :Layouts;
+        symbol [ MainLayout %tmp.6 32 30 40 ];
+        %tmp.6 = getv function %tmp.5 :MainLayout;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 32 41 43 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_31_40_33_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 35; @symbol_functiondef = [onShow,35,13,19]; ]
+    function onShow() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_35_30_49_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 37 8 ]
+        %tmp.1 = true;
+        symbol [ _isActive ? 37 8 17 ];
+        putv self :_isActive %tmp.1;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 40 8 ]
+        symbol [ View %tmp.3 40 21 25 ];
+        %tmp.3 = getv ? :View;
+        symbol [ findDrawableById %tmp.4 40 26 42 ];
+        %tmp.4 = getv function %tmp.3 :findDrawableById;
+        %tmp.5 = "timeText";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        symbol [ _timeField ? 40 8 18 ];
+        putv self :_timeField %tmp.6;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 41 8 ]
+        symbol [ View %tmp.8 41 24 28 ];
+        %tmp.8 = getv ? :View;
+        symbol [ findDrawableById %tmp.9 41 29 45 ];
+        %tmp.9 = getv function %tmp.8 :findDrawableById;
+        %tmp.10 = "batteryText";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        symbol [ _batteryField ? 41 8 21 ];
+        putv self :_batteryField %tmp.11;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 44 8 ]
+        %tmp.12 = self;
+        symbol [ _startTimer %tmp.13 44 8 19 ];
+        %tmp.13 = getv function %tmp.12 :_startTimer;
+        invoke %tmp.12 %tmp.13();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 47 8 ]
+        %tmp.14 = self;
+        symbol [ _updateBatteryDisplay %tmp.15 47 8 29 ];
+        %tmp.15 = getv function %tmp.14 :_updateBatteryDisplay;
+        invoke %tmp.14 %tmp.15();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 48 8 ]
+        %tmp.16 = self;
+        symbol [ updateAll %tmp.17 48 8 17 ];
+        %tmp.17 = getv function %tmp.16 :updateAll;
+        invoke %tmp.16 %tmp.17();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_35_30_49_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 51; @symbol_functiondef = [onUpdate,51,13,21]; @symbol_param<0> = [dc,51,22,24]; @symbol_param<0>_type<0> = [Dc,51,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_51_40_54_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 52 8 ]
+        symbol [ View %tmp.2 52 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ onUpdate %tmp.3 52 13 21 ];
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 52 22 24 ];
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 53 8 ]
+        %tmp.5 = self;
+        symbol [ _drawGPSStatusDot %tmp.6 53 8 25 ];
+        %tmp.6 = getv function %tmp.5 :_drawGPSStatusDot;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 53 26 28 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_51_40_54_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 56; @symbol_functiondef = [onHide,56,13,19]; ]
+    function onHide() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_56_30_60_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 58 8 ]
+        %tmp.1 = false;
+        symbol [ _isActive ? 58 8 17 ];
+        putv self :_isActive %tmp.1;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 59 8 ]
+        %tmp.2 = self;
+        symbol [ _stopTimer %tmp.3 59 8 18 ];
+        %tmp.3 = getv function %tmp.2 :_stopTimer;
+        invoke %tmp.2 %tmp.3();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_56_30_60_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 65; @symbol_functiondef = [_startTimer,65,21,32]; ]
+    private
+    function _startTimer() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_65_43_72_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 67 8 ]
+        %tmp.1 = self;
+        symbol [ _stopTimer %tmp.2 67 8 18 ];
+        %tmp.2 = getv function %tmp.1 :_stopTimer;
+        invoke %tmp.1 %tmp.2();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 70 8 ]
+        symbol [ Timer %tmp.5 70 21 26 ];
+        %tmp.5 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.6 70 27 32 ];
+        %tmp.6 = getv function ? %tmp.5 :Timer;
+        %tmp.3 = newc %tmp.6 ();
+        symbol [ _timer ? 70 8 14 ];
+        putv self :_timer %tmp.3;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 71 8 ]
+        symbol [ _timer %tmp.8 71 8 14 ];
+        %tmp.8 = getv ? :_timer;
+        symbol [ start %tmp.9 71 15 20 ];
+        %tmp.9 = getv function %tmp.8 :start;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 71 21 27 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :updateAll;
+        symbol [ updateAll %tmp.13 71 29 38 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        symbol [ TIMER_INTERVAL %tmp.16 71 41 55 ];
+        %tmp.16 = getv ? :TIMER_INTERVAL;
+        %tmp.17 = true;
+        invoke %tmp.8 %tmp.9(%tmp.14, %tmp.16, %tmp.17);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_65_43_72_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 77; @symbol_functiondef = [_stopTimer,77,21,31]; ]
+    private
+    function _stopTimer() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_77_42_82_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 78 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_8_81_8_if_stmt:
+        symbol [ _timer %tmp.2 78 12 18 ];
+        %tmp.2 = getv ? :_timer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_8_81_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_8_81_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_28_81_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 79 12 ]
+        symbol [ _timer %tmp.6 79 12 18 ];
+        %tmp.6 = getv ? :_timer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ stop %tmp.8 79 19 23 ];
+        %tmp.8 = getv function %tmp.7 :stop;
+        invoke %tmp.7 %tmp.8();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 80 12 ]
+        %tmp.9 = null;
+        symbol [ _timer ? 80 12 18 ];
+        putv self :_timer %tmp.9;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_28_81_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_8_81_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_78_8_81_8_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_77_42_82_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 88; @symbol_functiondef = [updateAll,88,20,29]; ]
+    public
+    function updateAll() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_88_40_120_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 90 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_8_92_8_if_stmt:
+        symbol [ _isActive %tmp.2 90 13 22 ];
+        %tmp.2 = getv ? :_isActive;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_8_92_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_8_92_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_24_92_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 91 12 ]
+        ret ?;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_24_92_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_8_92_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_90_8_92_8_if_end:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 94 8 ]
+        symbol [ _secondsCounter %tmp.6 94 8 23 ];
+        %tmp.6 = getv ? :_secondsCounter;
+        %tmp.7 = add %tmp.6 1;
+        symbol [ _secondsCounter ? 94 8 23 ];
+        putv self :_secondsCounter dup %tmp.7;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 97 8 ]
+        %tmp.8 = self;
+        symbol [ _updateTimeDisplay %tmp.9 97 8 26 ];
+        %tmp.9 = getv function %tmp.8 :_updateTimeDisplay;
+        invoke %tmp.8 %tmp.9();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 100 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_8_102_8_if_stmt:
+        symbol [ _secondsCounter %tmp.11 100 12 27 ];
+        %tmp.11 = getv ? :_secondsCounter;
+        symbol [ BATTERY_DISPLAY_INTERVAL %tmp.13 100 30 54 ];
+        %tmp.13 = getv ? :BATTERY_DISPLAY_INTERVAL;
+        %tmp.14 = mod %tmp.11 %tmp.13;
+        %tmp.15 = 0;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        bf %tmp.16 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_8_102_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_8_102_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_61_102_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 101 12 ]
+        %tmp.17 = self;
+        symbol [ _updateBatteryDisplay %tmp.18 101 12 33 ];
+        %tmp.18 = getv function %tmp.17 :_updateBatteryDisplay;
+        invoke %tmp.17 %tmp.18();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_61_102_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_8_102_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_100_8_102_8_if_end:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 105 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_8_109_8_if_stmt:
+        symbol [ _secondsCounter %tmp.20 105 12 27 ];
+        %tmp.20 = getv ? :_secondsCounter;
+        symbol [ BATTERY_MONITOR_INTERVAL %tmp.22 105 30 54 ];
+        %tmp.22 = getv ? :BATTERY_MONITOR_INTERVAL;
+        %tmp.23 = mod %tmp.20 %tmp.22;
+        %tmp.24 = 0;
+        %tmp.25 = eq %tmp.23 %tmp.24;
+        bf %tmp.25 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_8_109_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_8_109_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_61_109_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 106 12 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_12_108_12_if_stmt:
+        symbol [ _dataManager %tmp.27 106 16 28 ];
+        %tmp.27 = getv ? :_dataManager;
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        bf %tmp.29 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_12_108_12_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_12_108_12_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_38_108_12_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 107 16 ]
+        symbol [ _dataManager %tmp.31 107 16 28 ];
+        %tmp.31 = getv ? :_dataManager;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ updateBatteryMonitoring %tmp.33 107 29 52 ];
+        %tmp.33 = getv function %tmp.32 :updateBatteryMonitoring;
+        invoke %tmp.32 %tmp.33();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_38_108_12_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_12_108_12_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_106_12_108_12_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_61_109_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_8_109_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_105_8_109_8_if_end:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 112 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_8_114_8_if_stmt:
+        symbol [ _secondsCounter %tmp.35 112 12 27 ];
+        %tmp.35 = getv ? :_secondsCounter;
+        %tmp.36 = 43200;
+        %tmp.37 = gte %tmp.35 %tmp.36;
+        bf %tmp.37 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_8_114_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_8_114_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_38_114_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 113 12 ]
+        %tmp.38 = 0;
+        symbol [ _secondsCounter ? 113 12 27 ];
+        putv self :_secondsCounter %tmp.38;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_38_114_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_8_114_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_112_8_114_8_if_end:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 117 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_8_119_8_if_stmt:
+        symbol [ _isActive %tmp.40 117 12 21 ];
+        %tmp.40 = getv ? :_isActive;
+        bf %tmp.40 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_8_119_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_8_119_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_23_119_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 118 12 ]
+        symbol [ WatchUi %tmp.41 118 12 19 ];
+        %tmp.41 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.42 118 20 33 ];
+        %tmp.42 = getv function %tmp.41 :requestUpdate;
+        invoke %tmp.41 %tmp.42();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_23_119_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_8_119_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_117_8_119_8_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_88_40_120_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 122; @symbol_functiondef = [_updateTimeDisplay,122,21,39]; ]
+    private
+    function _updateTimeDisplay() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_122_50_134_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 123 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_8_133_8_if_stmt:
+        symbol [ _timeField %tmp.2 123 12 22 ];
+        %tmp.2 = getv ? :_timeField;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_8_133_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_8_133_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 124 12 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_stop" ]
+        %dateInfo.1 = local;
+        symbol [ dateInfo %dateInfo.1 124 16 24 ];
+        symbol [ Time %tmp.5 124 27 31 ];
+        %tmp.5 = getm $.Toybox.Time;
+        symbol [ Gregorian %tmp.6 124 32 41 ];
+        %tmp.6 = getv %tmp.5 :Gregorian;
+        symbol [ info %tmp.7 124 42 46 ];
+        %tmp.7 = getv function %tmp.6 :info;
+        symbol [ Time %tmp.8 124 47 51 ];
+        %tmp.8 = getm $.Toybox.Time;
+        symbol [ now %tmp.9 124 52 55 ];
+        %tmp.9 = getv function %tmp.8 :now;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        symbol [ Time %tmp.11 124 59 63 ];
+        %tmp.11 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.12 124 64 76 ];
+        %tmp.12 = getv %tmp.11 :FORMAT_SHORT;
+        %tmp.13 = invoke %tmp.6 %tmp.7(%tmp.10, %tmp.12);
+        lputv %dateInfo.1 %tmp.13;
+        symbol [ dateInfo %dateInfo.1 124 16 24 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 125 12 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_stop" ]
+        %timeString.2 = local;
+        symbol [ timeString %timeString.2 125 16 26 ];
+        symbol [ Lang %tmp.15 125 29 33 ];
+        %tmp.15 = getv ? :Lang;
+        symbol [ format %tmp.16 125 34 40 ];
+        %tmp.16 = getv function %tmp.15 :format;
+        %tmp.17 = "$1$:$2$ $3$/$4$/$5$";
+        %tmp.18 = newa 5;
+        %tmp.19 = lgetv %dateInfo.1;
+        symbol [ dateInfo %tmp.19 126 16 24 ];
+        symbol [ hour %tmp.20 126 25 29 ];
+        %tmp.20 = getv %tmp.19 :hour;
+        %tmp.21 = dup %tmp.18;
+        %tmp.22 = aputv %tmp.21 0 %tmp.20;
+        %tmp.23 = lgetv %dateInfo.1;
+        symbol [ dateInfo %tmp.23 127 16 24 ];
+        symbol [ min %tmp.24 127 25 28 ];
+        %tmp.24 = getv %tmp.23 :min;
+        symbol [ format %tmp.25 127 29 35 ];
+        %tmp.25 = getv function %tmp.24 :format;
+        %tmp.26 = "%02d";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = dup %tmp.22;
+        %tmp.29 = aputv %tmp.28 1 %tmp.27;
+        %tmp.30 = lgetv %dateInfo.1;
+        symbol [ dateInfo %tmp.30 128 16 24 ];
+        symbol [ month %tmp.31 128 25 30 ];
+        %tmp.31 = getv %tmp.30 :month;
+        %tmp.32 = dup %tmp.29;
+        %tmp.33 = aputv %tmp.32 2 %tmp.31;
+        %tmp.34 = lgetv %dateInfo.1;
+        symbol [ dateInfo %tmp.34 129 16 24 ];
+        symbol [ day %tmp.35 129 25 28 ];
+        %tmp.35 = getv %tmp.34 :day;
+        %tmp.36 = dup %tmp.33;
+        %tmp.37 = aputv %tmp.36 3 %tmp.35;
+        %tmp.38 = lgetv %dateInfo.1;
+        symbol [ dateInfo %tmp.38 130 16 24 ];
+        symbol [ year %tmp.39 130 25 29 ];
+        %tmp.39 = getv %tmp.38 :year;
+        %tmp.40 = dup %tmp.37;
+        %tmp.41 = aputv %tmp.40 4 %tmp.39;
+        %tmp.42 = invoke %tmp.15 %tmp.16(%tmp.17, %tmp.41);
+        lputv %timeString.2 %tmp.42;
+        symbol [ timeString %timeString.2 125 16 26 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 132 12 ]
+        symbol [ _timeField %tmp.44 132 12 22 ];
+        %tmp.44 = getv ? :_timeField;
+        symbol [ setText %tmp.45 132 23 30 ];
+        %tmp.45 = getv function %tmp.44 :setText;
+        %tmp.46 = lgetv %timeString.2;
+        symbol [ timeString %tmp.46 132 31 41 ];
+        invoke %tmp.44 %tmp.45(%tmp.46);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_32_133_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_8_133_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_123_8_133_8_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_122_50_134_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 136; @symbol_functiondef = [_updateBatteryDisplay,136,21,42]; ]
+    private
+    function _updateBatteryDisplay() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_136_53_142_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 137 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_stmt:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_12_137_53_begin:
+        symbol [ _dataManager %tmp.2 137 12 24 ];
+        %tmp.2 = getv ? :_dataManager;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_36_137_53_true:
+        symbol [ _batteryField %tmp.6 137 36 49 ];
+        %tmp.6 = getv ? :_batteryField;
+        %tmp.7 = null;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        push %tmp.8;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_36_137_53_end:
+        %tmp.9 = phi [%tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_12_137_53_begin] [%tmp.8 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_36_137_53_true] [%tmp.9 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_36_137_53_end];
+        bf %tmp.9 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_59_141_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 139 12 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_59_141_8_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_59_141_8_stop" ]
+        %batteryLevel.1 = local;
+        symbol [ batteryLevel %batteryLevel.1 139 16 28 ];
+        symbol [ _dataManager %tmp.11 139 31 43 ];
+        %tmp.11 = getv ? :_dataManager;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        symbol [ getBatteryLevel %tmp.13 139 44 59 ];
+        %tmp.13 = getv function %tmp.12 :getBatteryLevel;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        lputv %batteryLevel.1 %tmp.14;
+        symbol [ batteryLevel %batteryLevel.1 139 16 28 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 140 12 ]
+        symbol [ _batteryField %tmp.16 140 12 25 ];
+        %tmp.16 = getv ? :_batteryField;
+        symbol [ setText %tmp.17 140 26 33 ];
+        %tmp.17 = getv function %tmp.16 :setText;
+        %tmp.18 = lgetv %batteryLevel.1;
+        symbol [ batteryLevel %tmp.18 140 34 46 ];
+        symbol [ format %tmp.19 140 47 53 ];
+        %tmp.19 = getv function %tmp.18 :format;
+        %tmp.20 = "%d";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        %tmp.22 = "%";
+        %tmp.23 = add %tmp.21 %tmp.22;
+        invoke %tmp.16 %tmp.17(%tmp.23);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_59_141_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_137_8_141_8_if_end:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_136_53_142_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 144; @symbol_functiondef = [_drawGPSStatusDot,144,21,38]; @symbol_param<0> = [dc,144,39,41]; ]
+    private
+    function _drawGPSStatusDot(dc) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 145 8 ]
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_8_147_8_if_stmt:
+        symbol [ _dataManager %tmp.2 145 12 24 ];
+        %tmp.2 = getv ? :_dataManager;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_8_147_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_8_147_8_if_true:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_34_147_8_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 146 12 ]
+        ret ?;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_34_147_8_stop:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_8_147_8_if_end;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_145_8_147_8_if_end:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 149 8 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_stop" ]
+        %dotColor.1 = local;
+        symbol [ dotColor %dotColor.1 149 12 20 ];
+        symbol [ Graphics %tmp.5 149 23 31 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 149 32 43 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        lputv %dotColor.1 %tmp.6;
+        symbol [ dotColor %dotColor.1 149 12 20 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 150 8 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_stop" ]
+        %centerX.2 = local;
+        symbol [ centerX %centerX.2 150 12 19 ];
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 150 22 24 ];
+        symbol [ getWidth %tmp.8 150 25 33 ];
+        %tmp.8 = getv function %tmp.7 :getWidth;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ GPS_DOT_X_RATIO %tmp.11 150 38 53 ];
+        %tmp.11 = getv ? :GPS_DOT_X_RATIO;
+        %tmp.12 = div %tmp.9 %tmp.11;
+        lputv %centerX.2 %tmp.12;
+        symbol [ centerX %centerX.2 150 12 19 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 151 8 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_stop" ]
+        %centerY.3 = local;
+        symbol [ centerY %centerY.3 151 12 19 ];
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 151 22 24 ];
+        symbol [ getHeight %tmp.14 151 25 34 ];
+        %tmp.14 = getv function %tmp.13 :getHeight;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        symbol [ GPS_DOT_Y_RATIO %tmp.17 151 39 54 ];
+        %tmp.17 = getv ? :GPS_DOT_Y_RATIO;
+        %tmp.18 = div %tmp.15 %tmp.17;
+        lputv %centerY.3 %tmp.18;
+        symbol [ centerY %centerY.3 151 12 19 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 153 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 153 8 10 ];
+        symbol [ setColor %tmp.20 153 11 19 ];
+        %tmp.20 = getv function %tmp.19 :setColor;
+        %tmp.21 = lgetv %dotColor.1;
+        symbol [ dotColor %tmp.21 153 20 28 ];
+        symbol [ Graphics %tmp.22 153 30 38 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.23 153 39 56 ];
+        %tmp.23 = getv %tmp.22 :COLOR_TRANSPARENT;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.23);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 154 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 154 8 10 ];
+        symbol [ fillCircle %tmp.25 154 11 21 ];
+        %tmp.25 = getv function %tmp.24 :fillCircle;
+        %tmp.26 = lgetv %centerX.2;
+        symbol [ centerX %tmp.26 154 22 29 ];
+        %tmp.27 = lgetv %centerY.3;
+        symbol [ centerY %tmp.27 154 31 38 ];
+        symbol [ GPS_DOT_SIZE %tmp.29 154 40 52 ];
+        %tmp.29 = getv ? :GPS_DOT_SIZE;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.29);
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_144_51_155_4_stop:
+    }
+}
+[ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 1; ]
+<init> {
+}
