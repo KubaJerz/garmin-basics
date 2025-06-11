@@ -28,8 +28,6 @@ class SwipeInputDelegate extends WatchUi.InputDelegate {
     
     // Allow back button to work normally
     function onBack() {
-        // var result = _screenManager.handleBackButton();
-        // return result;
         return false;
     }
 }

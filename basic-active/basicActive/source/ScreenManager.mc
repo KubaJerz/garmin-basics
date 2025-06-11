@@ -25,9 +25,7 @@ class ScreenManager {
             _mainView = new basicActiveView(_dataManager);
         }
         _currentScreen = MAIN;
-        // WatchUi.pushView(_mainView, new SwipeInputDelegate(self), WatchUi.SLIDE_IMMEDIATE);
         WatchUi.popView(WatchUi.SLIDE_UP);
-
     }
     
     // Shows the secondary screen (settings, stats, etc.)
@@ -51,25 +49,9 @@ class ScreenManager {
             showMainScreen();
         }
     }
-
-    function handleBackButton() {
-        if (_currentScreen == SECONDARY) {
-            showMainScreen();
-            return true;
-        } else if (_currentScreen == MAIN) {
-            exit();
-            return true;
-        }
-        return false;
-    }
     
     function getCurrentScreen() {
         return _currentScreen;
     }
 
-    function exit() {
-        _dataManager.onStop();
-
-        System.exit();
-    }
 }
