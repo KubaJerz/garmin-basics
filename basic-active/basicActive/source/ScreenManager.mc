@@ -34,7 +34,7 @@ class ScreenManager {
             _secondaryView = new SecondaryView();
         }
         _currentScreen = SECONDARY;
-        WatchUi.pushView(_secondaryView, new basicActiveDelegate(self), WatchUi.SLIDE_DOWN);
+        WatchUi.pushView(_secondaryView, new SecondaryViewDelegate(self), WatchUi.SLIDE_DOWN);
     }
     
     // Handles swipe navigation between screens
@@ -53,7 +53,7 @@ class ScreenManager {
     function requestExit() {
         var dialog = new WatchUi.Confirmation("Exit app and stop data collection?");
         var delegate = new ExitConfirmationDelegate(self);
-        WatchUi.pushView(dialog, delegate, WatchUi.SLIDE_UP);
+        WatchUi.pushView(dialog, delegate, WatchUi.SLIDE_LEFT);
     }
 
     function confirmExit() {
