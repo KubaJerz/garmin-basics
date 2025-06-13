@@ -1,11 +1,7 @@
-// RecordingConfirmationDelegate.mc - Handles "Start Recording?" confirmation
+// RecordingConfirmationDelegate.mc - FIXED VERSION
 import Toybox.WatchUi;
 import Toybox.System;
 
-/**
- * Handles the confirmation dialog for starting activity recording
- * Follows Single Responsibility Principle - only handles recording confirmation
- */
 class RecordingConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     private var _screenManager;
     private var _activityType;
@@ -20,23 +16,21 @@ class RecordingConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     function onResponse(response) {
         System.println("=== Recording confirmation response: " + response + " ===");
         
-        if (response == WatchUi.CONFIRM_YES) {
-            System.println("User confirmed - starting " + _activityType + " recording");
-            _startActivityRecording();
-            return true;
-        } else {
+        if (response == WatchUi.CONFIRM_NO) {
             System.println("User cancelled - returning to activity selection");
-            // Just return true - confirmation dialog closes automatically
+            return false; // Let the confirmation dialog handle the dismissal
+        } 
+        else {
+            System.println("User confirmed - starting " + _activityType + " recording");
+            
+            // FIXED: Use switchToView instead of pushView
+            var recordingView = new RecordingView(_activityType);
+            var recordingDelegate = new RecordingViewDelegate(_screenManager, _activityType, recordingView);
+            
+            WatchUi.switchToView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
+            WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
+            
             return true;
         }
-    }
-    
-    /**
-     * Start the activity recording and show the recording screen
-     */
-    private function _startActivityRecording() {
-        // Show the recording screen with red stop button
-        // _screenManager.showRecordingScreen(_activityType);
-        
     }
 }

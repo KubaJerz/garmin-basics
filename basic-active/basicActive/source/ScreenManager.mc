@@ -1,4 +1,5 @@
 import Toybox.WatchUi;
+import Toybox.System;
 
 class ScreenManager {
     enum ScreenType {
@@ -35,6 +36,13 @@ class ScreenManager {
         }
         _currentScreen = SECONDARY;
         WatchUi.pushView(_secondaryView, new SecondaryViewDelegate(self), WatchUi.SLIDE_DOWN);
+    }
+
+    function showRecordingScreen(activityType) {
+        var recordingView = new RecordingView(activityType);
+        var recordingDelegate = new RecordingViewDelegate(self, activityType, recordingView);
+        System.println("we are about to put the activyt view");
+        WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
     }
     
     // Handles swipe navigation between screens
