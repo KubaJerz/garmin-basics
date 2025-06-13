@@ -29,7 +29,7 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
         
         var buttonWidth = width * 0.7;
         var buttonHeight = height * 0.12;
-        var buttonSpacing = height * 0.05;
+        var buttonSpacing = height * 0.15;
         var buttonX = (width - buttonWidth) / 2;
         
         // Cig button area
@@ -55,13 +55,13 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
         
         // Check cig button
         if (_isPointInButton(x, y, _cigButtonX, _cigButtonY, _cigButtonWidth, _cigButtonHeight)) {
-            _handleCigButtonPress();
+            _showRecordingConfirmation("cigarette");
             return true;
         }
         
         // Check vape button
         if (_isPointInButton(x, y, _vapeButtonX, _vapeButtonY, _vapeButtonWidth, _vapeButtonHeight)) {
-            _handleVapeButtonPress();
+            _showRecordingConfirmation("vape");
             return true;
         }
         
@@ -77,18 +77,15 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
                y >= buttonY && 
                y <= buttonY + buttonHeight;
     }
-    
-    /**
-     * Handle button presses
-     */
-    private function _handleCigButtonPress() {
-        System.println("Cigarette button pressed");
-        // Add your logic here
-    }
-    
-    private function _handleVapeButtonPress() {
-        System.println("Vape button pressed");
-        // Add your logic here
+
+    private function _showRecordingConfirmation(activityType) {
+        System.println("Showing recording confirmation for: " + activityType);
+        
+        var message = "Start recording " + activityType + " activity?";
+        var confirmation = new WatchUi.Confirmation(message);
+        var delegate = new RecordingConfirmationDelegate(_screenManager, activityType);
+        
+        WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
     }
     
     /**
@@ -110,5 +107,20 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
         System.println("Back button - returning to main screen");
         _screenManager.handleSwipeUp();
         return true;
+    }
+
+    function onKey(keyEvent) {
+        var key = keyEvent.getKey();
+        System.println("Key pressed: " + key);
+        
+        switch (key) {
+                
+            case WatchUi.KEY_DOWN:
+                _screenManager.handleSwipeUp();
+                return true;
+            
+        }
+        
+        return false;
     }
 }

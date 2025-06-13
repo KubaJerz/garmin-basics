@@ -35,8 +35,8 @@ class SecondaryView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             width / 2, 
-            height / 5, 
-            Graphics.FONT_MEDIUM, 
+            height / 6, 
+            Graphics.FONT_SMALL, 
             "Activity Type", 
             Graphics.TEXT_JUSTIFY_CENTER
         );
