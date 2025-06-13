@@ -1,26 +1,30 @@
-// ExitConfirmationDelegate.mc - Handles confirmation dialog responses
+// ExitConfirmationDelegate.mc - FIXED version
 import Toybox.WatchUi;
+import Toybox.System;
 
 class ExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
-    private var _screenManager;
+    private var _screenManager = null;
     
     function initialize(screenManager) {
-        ConfirmationDelegate.initialize();
         _screenManager = screenManager;
+        ConfirmationDelegate.initialize();
+        System.println("=== ExitConfirmationDelegate initialized ===");
     }
-    
-    /**
-     * Called when user confirms (selects "Yes")
-     */
-    function onResponse(response) {
+
+
+    function onResponse(response){
+        System.println("=== Confirmation response: " + response + " ===");
+        
         if (response == WatchUi.CONFIRM_YES) {
-            // User confirmed exit
+            System.println("User confirmed exit - shutting down");
             _screenManager.confirmExit();
-            return true;
+            return true; // FIXED: Return true when handled
         } else {
-            // User cancelled exit (selected "No")
+            System.println("User cancelled exit - staying in app");
             _screenManager.cancelExit();
-            return true;
+
+            // The confirmation dialog will automatically close
+            return true; // FIXED: Return true when handled
         }
     }
 }
