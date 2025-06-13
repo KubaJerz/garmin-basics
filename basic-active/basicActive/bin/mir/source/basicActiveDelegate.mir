@@ -11,44 +11,231 @@ class basicActiveDelegate extends WatchUi.BehaviorDelegate {
     static
     <init> {
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
-    function initialize() as Void {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_6_26_8_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 7 8 ]
-        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 6; @position = 16; @symbol_vardef = [_screenManager,6,16,30]; ]
+    private
+    var _screenManager;
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; @symbol_param<0> = [screenManager,8,24,37]; ]
+    function initialize(screenManager) as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_8_39_11_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 9 8 ]
+        symbol [ BehaviorDelegate %tmp.2 9 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 7 25 35 ];
+        symbol [ initialize %tmp.3 9 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_6_26_8_4_stop:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 10 8 ]
+        %tmp.4 = lgetv %screenManager;
+        symbol [ screenManager %tmp.4 10 25 38 ];
+        symbol [ _screenManager ? 10 8 22 ];
+        putv self :_screenManager %tmp.4;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_8_39_11_4_stop:
     }
-    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 10; @symbol_functiondef = [onMenu,10,13,19]; @symbol_return<0> = [Boolean,10,25,32]; ]
-    function onMenu() as Boolean {
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_10_33_13_4_start:
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 11 8 ]
-        symbol [ WatchUi %tmp.1 11 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.2 11 16 24 ];
-        %tmp.2 = getv function %tmp.1 :pushView;
-        symbol [ Rez %tmp.6 11 29 32 ];
-        %tmp.6 = getv ? :Rez;
-        symbol [ Menus %tmp.7 11 33 38 ];
-        %tmp.7 = getv %tmp.6 :Menus;
-        symbol [ MainMenu %tmp.8 11 39 47 ];
-        %tmp.8 = getv function ? %tmp.7 :MainMenu;
-        %tmp.3 = newc %tmp.8 ();
-        symbol [ basicActiveMenuDelegate %tmp.12 11 55 78 ];
-        %tmp.12 = getv ? :basicActiveMenuDelegate;
-        %tmp.9 = newc %tmp.12 ();
-        symbol [ WatchUi %tmp.13 11 82 89 ];
-        %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 11 90 98 ];
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
-[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 12 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_10_33_13_4_stop:
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 14; @symbol_functiondef = [onBack,14,13,19]; ]
+    function onBack() {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_14_22_18_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 15 8 ]
+        symbol [ System %tmp.2 15 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 15 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "Back button pressed - requesting exit confirmation";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 16 8 ]
+        symbol [ _screenManager %tmp.6 16 8 22 ];
+        %tmp.6 = getv ? :_screenManager;
+        symbol [ requestExit %tmp.7 16 23 34 ];
+        %tmp.7 = getv function %tmp.6 :requestExit;
+        invoke %tmp.6 %tmp.7();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 17 8 ]
+        %tmp.8 = true;
+        ret %tmp.8;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_14_22_18_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 21; @symbol_functiondef = [onSwipe,21,13,20]; @symbol_param<0> = [swipeEvent,21,21,31]; ]
+    function onSwipe(swipeEvent) {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_21_33_37_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 22 8 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_21_33_37_4_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_21_33_37_4_stop" ]
+        %direction.1 = local;
+        symbol [ direction %direction.1 22 12 21 ];
+        %tmp.1 = lgetv %swipeEvent;
+        symbol [ swipeEvent %tmp.1 22 24 34 ];
+        symbol [ getDirection %tmp.2 22 35 47 ];
+        %tmp.2 = getv function %tmp.1 :getDirection;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %direction.1 %tmp.3;
+        symbol [ direction %direction.1 22 12 21 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 24 8 ]
+        %tmp.4 = lgetv %direction.1;
+        symbol [ direction %tmp.4 24 16 25 ];
+        push %tmp.4;
+        switch %tmp.4 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_switchStmtEnd;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_switchStmtBegin:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 25 12 ]
+        %tmp.5 = dup %tmp.4;
+        symbol [ WatchUi %tmp.6 25 17 24 ];
+        %tmp.6 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_DOWN %tmp.7 25 25 35 ];
+        %tmp.7 = getv %tmp.6 :SWIPE_DOWN;
+        %tmp.8 = getv function %tmp.5 :equals;
+        %tmp.9 = invoke %tmp.5 %tmp.8 (%tmp.7);
+        bt %tmp.9 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_25_12_28_27_switchCase;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 30 12 ]
+        %tmp.10 = dup %tmp.4;
+        symbol [ WatchUi %tmp.11 30 17 24 ];
+        %tmp.11 = getm $.Toybox.WatchUi;
+        symbol [ SWIPE_UP %tmp.12 30 25 33 ];
+        %tmp.12 = getv %tmp.11 :SWIPE_UP;
+        %tmp.13 = getv function %tmp.10 :equals;
+        %tmp.14 = invoke %tmp.10 %tmp.13 (%tmp.12);
+        bt %tmp.14 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_30_12_33_27_switchCase;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_switchStmtDefault:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_defaultCodeBegin;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_25_12_28_27_switchCase:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 26 16 ]
+        symbol [ System %tmp.16 26 16 22 ];
+        %tmp.16 = getv ? :System;
+        symbol [ println %tmp.17 26 23 30 ];
+        %tmp.17 = getv function %tmp.16 :println;
+        %tmp.18 = "Swipe down detected";
+        invoke %tmp.16 %tmp.17(%tmp.18);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 27 16 ]
+        symbol [ _screenManager %tmp.20 27 16 30 ];
+        %tmp.20 = getv ? :_screenManager;
+        symbol [ handleSwipeDown %tmp.21 27 31 46 ];
+        %tmp.21 = getv function %tmp.20 :handleSwipeDown;
+        invoke %tmp.20 %tmp.21();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 28 16 ]
+        %tmp.22 = true;
+        ret %tmp.22;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_30_12_33_27_switchCase:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 31 16 ]
+        symbol [ System %tmp.24 31 16 22 ];
+        %tmp.24 = getv ? :System;
+        symbol [ println %tmp.25 31 23 30 ];
+        %tmp.25 = getv function %tmp.24 :println;
+        %tmp.26 = "Swipe up detected";
+        invoke %tmp.24 %tmp.25(%tmp.26);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 32 16 ]
+        symbol [ _screenManager %tmp.28 32 16 30 ];
+        %tmp.28 = getv ? :_screenManager;
+        symbol [ handleSwipeUp %tmp.29 32 31 44 ];
+        %tmp.29 = getv function %tmp.28 :handleSwipeUp;
+        invoke %tmp.28 %tmp.29();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 33 16 ]
+        %tmp.30 = true;
+        ret %tmp.30;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_defaultCodeBegin:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_24_8_34_8_switchStmtEnd:
+        pop;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 36 8 ]
+        %tmp.31 = false;
+        ret %tmp.31;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_21_33_37_4_stop:
+    }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 39; @symbol_functiondef = [onKey,39,13,18]; @symbol_param<0> = [keyEvent,39,19,27]; ]
+    function onKey(keyEvent) {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_39_29_59_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 40 8 ]
+        [ "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_39_29_59_4_start" "_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_39_29_59_4_stop" ]
+        %key.1 = local;
+        symbol [ key %key.1 40 12 15 ];
+        %tmp.1 = lgetv %keyEvent;
+        symbol [ keyEvent %tmp.1 40 18 26 ];
+        symbol [ getKey %tmp.2 40 27 33 ];
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %key.1 %tmp.3;
+        symbol [ key %key.1 40 12 15 ];
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 41 8 ]
+        symbol [ System %tmp.5 41 8 14 ];
+        %tmp.5 = getv ? :System;
+        symbol [ println %tmp.6 41 15 22 ];
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.7 = "Key pressed: ";
+        %tmp.8 = lgetv %key.1;
+        symbol [ key %tmp.8 41 41 44 ];
+        %tmp.9 = add %tmp.7 %tmp.8;
+        invoke %tmp.5 %tmp.6(%tmp.9);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 43 8 ]
+        %tmp.10 = lgetv %key.1;
+        symbol [ key %tmp.10 43 16 19 ];
+        push %tmp.10;
+        switch %tmp.10 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_switchStmtEnd;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_switchStmtBegin:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 44 12 ]
+        %tmp.11 = dup %tmp.10;
+        symbol [ WatchUi %tmp.12 44 17 24 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ KEY_UP %tmp.13 44 25 31 ];
+        %tmp.13 = getv %tmp.12 :KEY_UP;
+        %tmp.14 = getv function %tmp.11 :equals;
+        %tmp.15 = invoke %tmp.11 %tmp.14 (%tmp.13);
+        bt %tmp.15 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_44_12_46_27_switchCase;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 48 12 ]
+        %tmp.16 = dup %tmp.10;
+        symbol [ WatchUi %tmp.17 48 17 24 ];
+        %tmp.17 = getm $.Toybox.WatchUi;
+        symbol [ KEY_DOWN %tmp.18 48 25 33 ];
+        %tmp.18 = getv %tmp.17 :KEY_DOWN;
+        %tmp.19 = getv function %tmp.16 :equals;
+        %tmp.20 = invoke %tmp.16 %tmp.19 (%tmp.18);
+        bt %tmp.20 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_48_12_50_27_switchCase;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 52 12 ]
+        %tmp.21 = dup %tmp.10;
+        symbol [ WatchUi %tmp.22 52 17 24 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ KEY_ESC %tmp.23 52 25 32 ];
+        %tmp.23 = getv %tmp.22 :KEY_ESC;
+        %tmp.24 = getv function %tmp.21 :equals;
+        %tmp.25 = invoke %tmp.21 %tmp.24 (%tmp.23);
+        bt %tmp.25 @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_52_12_55_27_switchCase;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_switchStmtDefault:
+        goto @_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_defaultCodeBegin;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_44_12_46_27_switchCase:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 45 16 ]
+        symbol [ _screenManager %tmp.27 45 16 30 ];
+        %tmp.27 = getv ? :_screenManager;
+        symbol [ handleSwipeDown %tmp.28 45 31 46 ];
+        %tmp.28 = getv function %tmp.27 :handleSwipeDown;
+        invoke %tmp.27 %tmp.28();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 46 16 ]
+        %tmp.29 = true;
+        ret %tmp.29;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_48_12_50_27_switchCase:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 49 16 ]
+        symbol [ _screenManager %tmp.31 49 16 30 ];
+        %tmp.31 = getv ? :_screenManager;
+        symbol [ handleSwipeUp %tmp.32 49 31 44 ];
+        %tmp.32 = getv function %tmp.31 :handleSwipeUp;
+        invoke %tmp.31 %tmp.32();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 50 16 ]
+        %tmp.33 = true;
+        ret %tmp.33;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_52_12_55_27_switchCase:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 53 16 ]
+        symbol [ System %tmp.35 53 16 22 ];
+        %tmp.35 = getv ? :System;
+        symbol [ println %tmp.36 53 23 30 ];
+        %tmp.36 = getv function %tmp.35 :println;
+        %tmp.37 = "ESC key (back button) pressed";
+        invoke %tmp.35 %tmp.36(%tmp.37);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 54 16 ]
+        symbol [ _screenManager %tmp.39 54 16 30 ];
+        %tmp.39 = getv ? :_screenManager;
+        symbol [ requestExit %tmp.40 54 31 42 ];
+        %tmp.40 = getv function %tmp.39 :requestExit;
+        invoke %tmp.39 %tmp.40();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 55 16 ]
+        %tmp.41 = true;
+        ret %tmp.41;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_defaultCodeBegin:
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_43_8_56_8_switchStmtEnd:
+        pop;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc" 58 8 ]
+        %tmp.42 = false;
+        ret %tmp.42;
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveDelegate_mc_39_29_59_4_stop:
     }
 }
 [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveDelegate.mc"; @line = 1; ]

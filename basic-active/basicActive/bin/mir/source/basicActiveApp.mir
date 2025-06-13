@@ -388,9 +388,9 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicAc
         %tmp.2 = newc %tmp.5 (%tmp.7);
         %tmp.8 = dup %tmp.1;
         %tmp.9 = aputv %tmp.8 0 %tmp.2;
-        symbol [ SwipeInputDelegate %tmp.13 112 56 74 ];
-        %tmp.13 = getv ? :SwipeInputDelegate;
-        symbol [ _screenManager %tmp.15 112 75 89 ];
+        symbol [ basicActiveDelegate %tmp.13 112 56 75 ];
+        %tmp.13 = getv ? :basicActiveDelegate;
+        symbol [ _screenManager %tmp.15 112 76 90 ];
         %tmp.15 = getv ? :_screenManager;
         %tmp.10 = newc %tmp.13 (%tmp.15);
         %tmp.16 = dup %tmp.9;

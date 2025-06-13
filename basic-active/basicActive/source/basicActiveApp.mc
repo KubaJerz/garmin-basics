@@ -109,7 +109,7 @@ class basicActiveApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new basicActiveView(_dataManager), new SwipeInputDelegate(_screenManager) ];
+        return [ new basicActiveView(_dataManager), new basicActiveDelegate(_screenManager) ];
     }
 }
 

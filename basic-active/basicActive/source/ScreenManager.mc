@@ -34,7 +34,7 @@ class ScreenManager {
             _secondaryView = new SecondaryView();
         }
         _currentScreen = SECONDARY;
-        WatchUi.pushView(_secondaryView, new SwipeInputDelegate(self), WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.pushView(_secondaryView, new basicActiveDelegate(self), WatchUi.SLIDE_DOWN);
     }
     
     // Handles swipe navigation between screens
@@ -49,6 +49,23 @@ class ScreenManager {
             showMainScreen();
         }
     }
+
+    function requestExit() {
+        var dialog = new WatchUi.Confirmation("Exit app and stop data collection?");
+        var delegate = new ExitConfirmationDelegate(self);
+        WatchUi.pushView(dialog, delegate, WatchUi.SLIDE_UP);
+    }
+
+    function confirmExit() {
+        System.println("User confirmed exit");
+        System.exit();
+    }
+
+    function cancelExit() {
+        System.println("User cancelled exit");
+        // WatchUi.popView(WatchUi.SLIDE_DOWN);
+    }
+    
     
     function getCurrentScreen() {
         return _currentScreen;
