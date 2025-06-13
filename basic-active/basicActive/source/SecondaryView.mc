@@ -60,7 +60,7 @@ class SecondaryView extends WatchUi.View {
         // Button dimensions
         var buttonWidth = width * 0.7;
         var buttonHeight = height * 0.12;
-        var buttonSpacing = height * 0.05;
+        var buttonSpacing = height * 0.15;
         
         // Cig button
         var cigButtonY = height * 0.35;

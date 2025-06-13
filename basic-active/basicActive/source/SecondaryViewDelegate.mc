@@ -1,123 +1,94 @@
-// SecondaryViewDelegate.mc
+/**
+ * SecondaryViewDelegate.mc - Simplified version without complex containers
+ */
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.System;
 
-/**
- * Handles input for the secondary screen with button detection
- * Follows Single Responsibility Principle - only handles secondary screen input
- */
 class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
     private var _screenManager;
-    private var _buttonAreas; // Store button coordinates for touch detection
+    
+    // Button area coordinates - calculated once
+    private var _cigButtonX, _cigButtonY, _cigButtonWidth, _cigButtonHeight;
+    private var _vapeButtonX, _vapeButtonY, _vapeButtonWidth, _vapeButtonHeight;
     
     function initialize(screenManager) {
         BehaviorDelegate.initialize();
         _screenManager = screenManager;
-        _initializeButtonAreas();
+        _calculateButtonAreas();
     }
     
     /**
-     * Define button areas for touch detection
-     * Should match the button positions in SecondaryView
+     * Calculate button positions (matches SecondaryView layout)
+     * Simple approach - no complex data structures
      */
-    private function _initializeButtonAreas() {
+    private function _calculateButtonAreas() {
         var deviceSettings = System.getDeviceSettings();
         var width = deviceSettings.screenWidth;
         var height = deviceSettings.screenHeight;
         
         var buttonWidth = width * 0.7;
         var buttonHeight = height * 0.12;
-        var buttonSpacing = height * 0.15;
+        var buttonSpacing = height * 0.05;
         var buttonX = (width - buttonWidth) / 2;
         
-        // Calculate button areas (same as in SecondaryView)
-        var cigButtonY = height * 0.35;
-        var vapeButtonY = cigButtonY + buttonHeight + buttonSpacing;
+        // Cig button area
+        _cigButtonX = buttonX;
+        _cigButtonY = height * 0.35;
+        _cigButtonWidth = buttonWidth;
+        _cigButtonHeight = buttonHeight;
         
-        _buttonAreas = {
-            "cig" => {
-                :x => buttonX,
-                :y => cigButtonY,
-                :width => buttonWidth,
-                :height => buttonHeight
-            },
-            "vape" => {
-                :x => buttonX,
-                :y => vapeButtonY,
-                :width => buttonWidth,
-                :height => buttonHeight
-            }
-        };
+        // Vape button area
+        _vapeButtonX = buttonX;
+        _vapeButtonY = _cigButtonY + buttonHeight + buttonSpacing;
+        _vapeButtonWidth = buttonWidth;
+        _vapeButtonHeight = buttonHeight;
     }
     
     /**
-     * Handle touch/tap events
+     * Handle touch/tap events - CLEAN & SIMPLE
      */
     function onTap(clickEvent) {
         var coords = clickEvent.getCoordinates();
-        var button = _getButtonFromCoordinates(coords[0], coords[1]);
+        var x = coords[0];
+        var y = coords[1];
         
-        if (button != null) {
-            _handleButtonPress(button);
-            return true; // Event handled
+        // Check cig button
+        if (_isPointInButton(x, y, _cigButtonX, _cigButtonY, _cigButtonWidth, _cigButtonHeight)) {
+            _handleCigButtonPress();
+            return true;
         }
         
-        return false; // Event not handled
-    }
-    
-    
-    /**
-     * Determine which button was pressed based on coordinates
-     */
-    private function _getButtonFromCoordinates(x, y) {
-        // FIXED: Correct Monkey C foreach syntax
-        var buttonNames = _buttonAreas.keys();
-        for (var i = 0; i < buttonNames.size(); i++) {
-            var buttonName = buttonNames[i];
-            var area = _buttonAreas[buttonName];
-            
-            if (_isPointInArea(x, y, area)) {
-                return buttonName;
-            }
+        // Check vape button
+        if (_isPointInButton(x, y, _vapeButtonX, _vapeButtonY, _vapeButtonWidth, _vapeButtonHeight)) {
+            _handleVapeButtonPress();
+            return true;
         }
-        return null; // No button hit
-    }
-    /**
-     * Check if a point is within a rectangular area
-     */
-    private function _isPointInArea(x, y, area) {
-        return x >= area[:x] && 
-               x <= area[:x] + area[:width] &&
-               y >= area[:y] && 
-               y <= area[:y] + area[:height];
+        
+        return false; // No button hit
     }
     
     /**
-     * Handle the actual button press action
+     * Simple point-in-rectangle check
      */
-    private function _handleButtonPress(buttonName) {
-        System.println("Button pressed: " + buttonName);
-        
-        switch (buttonName) {
-            case "cig":
-                _handleCigButtonPress();
-                break;
-            case "vape":
-                _handleVapeButtonPress();
-                break;
-        }
+    private function _isPointInButton(x, y, buttonX, buttonY, buttonWidth, buttonHeight) {
+        return x >= buttonX && 
+               x <= buttonX + buttonWidth &&
+               y >= buttonY && 
+               y <= buttonY + buttonHeight;
     }
     
+    /**
+     * Handle button presses
+     */
     private function _handleCigButtonPress() {
-        System.println("Cigarette tracking selected");
-        // Add your cigarette tracking logic here
-        // For example: _dataManager.setActivityType("cigarette");
+        System.println("Cigarette button pressed");
+        // Add your logic here
     }
     
     private function _handleVapeButtonPress() {
-        System.println("Vape tracking selected");
-        // Add your vape tracking logic here  
-        // For example: _dataManager.setActivityType("vape");
+        System.println("Vape button pressed");
+        // Add your logic here
     }
     
     /**
@@ -125,6 +96,7 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
      */
     function onSwipe(swipeEvent) {
         if (swipeEvent.getDirection() == WatchUi.SWIPE_UP) {
+            System.println("Swipe up - returning to main screen");
             _screenManager.handleSwipeUp();
             return true;
         }
@@ -135,21 +107,8 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
      * Handle back button
      */
     function onBack() {
-        _screenManager.handleSwipeUp(); // Return to main screen
+        System.println("Back button - returning to main screen");
+        _screenManager.handleSwipeUp();
         return true;
-    }
-
-
-    function onKey(keyEvent) {
-        var key = keyEvent.getKey();
-        
-        switch (key) {
-                
-            case WatchUi.KEY_DOWN:
-                _screenManager.handleSwipeUp();
-                return true;
-        }
-        
-        return false;
     }
 }
