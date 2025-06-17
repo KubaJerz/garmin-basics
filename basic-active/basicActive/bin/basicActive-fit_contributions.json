@@ -4,18 +4,45 @@
     "chart-visible" : true,
     "activity-visible" : false,
     "lap-visible" : false,
-    "chart-title-key" : "BatteryLevelChart",
-    "label-key" : "BatteryLabel",
-    "unit-label-key" : "BatteryUnits",
+    "chart-title-key" : "battery_graph_label",
+    "label-key" : "battery_label",
+    "unit-label-key" : "battery_units",
     "sort-order" : 0,
-    "precision" : 1,
+    "precision" : 2,
+    "fill-color" : "rgba(255, 0, 0, 1.0)"
+  }, {
+    "id" : 1,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "event_chart_title",
+    "label-key" : "event_time_label",
+    "unit-label-key" : "event_time_units",
+    "sort-order" : 1,
+    "precision" : 0,
     "fill-color" : "rgba(0, 255, 0, 1.0)"
+  }, {
+    "id" : 2,
+    "chart-visible" : false,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "event_type_label",
+    "unit-label-key" : "event_type_units",
+    "sort-order" : 2,
+    "precision" : 0,
+    "fill-color" : null
   } ],
   "strings" : {
     "default" : {
-      "BatteryLevelChart" : "Battery Level",
-      "BatteryLabel" : "Battery",
-      "BatteryUnits" : "%"
+      "battery_graph_label" : "Battery Level",
+      "battery_label" : "Battery",
+      "battery_units" : "%",
+      "event_chart_title" : "Activity Events",
+      "event_time_label" : "Event Time",
+      "event_time_units" : "seconds",
+      "event_type_label" : "Event Type",
+      "event_type_units" : ""
     }
   }
 }

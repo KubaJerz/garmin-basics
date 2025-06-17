@@ -1,3 +1,19 @@
 <fitContributions>
-    <fitField id="0" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.BatteryLevelChart" dataLabel="@Strings.BatteryLabel" unitLabel="@Strings.BatteryUnits" fillColor="#00FF00" />
+    <fitField id="0" displayInChart="true" sortOrder="0" precision="2"
+              chartTitle="@Strings.battery_graph_label" 
+              dataLabel="@Strings.battery_label"
+              unitLabel="@Strings.battery_units" 
+              fillColor="#FF0000" />
+    
+    <!-- Activity event timestamp field -->
+    <fitField id="1" displayInChart="true" sortOrder="1" precision="0"
+              chartTitle="@Strings.event_chart_title" 
+              dataLabel="@Strings.event_time_label"
+              unitLabel="@Strings.event_time_units" 
+              fillColor="#00FF00" />
+              
+    <!-- Activity event type field -->
+    <fitField id="2" displayInChart="false" sortOrder="2" precision="0"
+              dataLabel="@Strings.event_type_label" 
+              unitLabel="@Strings.event_type_units" />
 </fitContributions>

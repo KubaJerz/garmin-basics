@@ -32,10 +32,10 @@ class ScreenManager {
     // Shows the secondary screen (settings, stats, etc.)
     function showSecondaryScreen() {
         if (_secondaryView == null) {
-            _secondaryView = new SecondaryView();
+            _secondaryView = new activityTypeView();
         }
         _currentScreen = SECONDARY;
-        WatchUi.pushView(_secondaryView, new SecondaryViewDelegate(self), WatchUi.SLIDE_DOWN);
+        WatchUi.pushView(_secondaryView, new activityTypeViewDelegate(self), WatchUi.SLIDE_DOWN);
     }
 
     function showRecordingScreen(activityType) {
@@ -43,6 +43,11 @@ class ScreenManager {
         var recordingDelegate = new RecordingViewDelegate(self, activityType, recordingView);
         System.println("we are about to put the activyt view");
         WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
+    }
+
+    // records timestamp when a user starts or stops a Smoking or Vape event
+    function handleActivityTimestampEvent(activityType){
+        _dataManager.logActivityTimestampEvent(activityType);
     }
     
     // Handles swipe navigation between screens
@@ -60,7 +65,7 @@ class ScreenManager {
 
     function requestExit() {
         var dialog = new WatchUi.Confirmation("Exit app and stop data collection?");
-        var delegate = new ExitConfirmationDelegate(self);
+        var delegate = new AppExitConfirmationDelegate(self);
         WatchUi.pushView(dialog, delegate, WatchUi.SLIDE_LEFT);
     }
 

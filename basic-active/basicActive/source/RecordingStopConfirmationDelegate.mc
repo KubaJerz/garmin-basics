@@ -6,7 +6,7 @@ import Toybox.System;
  * Handles the confirmation dialog for stopping activity recording
  * Follows Single Responsibility Principle - only handles stop confirmation
  */
-class StopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
+class RecordingStopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     private var _screenManager;
     private var _activityType;
     
@@ -22,6 +22,10 @@ class StopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
         
         if (response == WatchUi.CONFIRM_YES) {
             System.println("User confirmed - stopping " + _activityType + " recording");
+
+            // Record time stamp in file
+            _screenManager.handleActivityTimestampEvent(_activityType);
+
             _stopActivityRecording();
             return true;
         } else {

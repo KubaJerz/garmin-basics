@@ -2,7 +2,7 @@
 import Toybox.WatchUi;
 import Toybox.System;
 
-class ExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
+class AppExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     private var _screenManager = null;
     
     function initialize(screenManager) {

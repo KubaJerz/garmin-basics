@@ -15,11 +15,13 @@ class DataCollectionManager {
     private var _isRecording = false;
 
     private var _batteryManager = null;
+    private var _eventManager =  null;
 
     private const PREFIX = "BASIC_RECORDER_";
 
     function initialize() {
         _batteryManager = new BatteryManager();
+        _eventManager = new ActivityEventManager();
     }
 
     /**
@@ -91,11 +93,14 @@ class DataCollectionManager {
         
         // Enable battery monitoring
         _batteryManager.enable(_session);
-        // Enable gps monitoring
+        // Enable timestamp monitoring for events
+        _eventManager.enable(_session);
         
 
         System.println("Data collection started name is: " + _generateSessionName());
     }
+
+    
 
     /**
      * Stop data collection and save the session
@@ -108,6 +113,7 @@ class DataCollectionManager {
         try {
             // Disable battery monitoring (records final level)
             _batteryManager.disable();
+            _eventManager.disable();
             
 
             _session.stop(); // stop the session "pause"
@@ -158,6 +164,16 @@ class DataCollectionManager {
             _batteryManager.updateLevel();
         }
     }
+
+    function logActivityTimestampEvent(activityType as Lang.String) as Void {
+        if (activityType.equals("cigarette")) {
+            _eventManager.recordCigaretteEvent();
+        } else if (activityType.equals("vape")) {
+            _eventManager.recordVapeEvent();
+        } else {
+            System.println("ERROR: Can't write timestamp for unknown activity type: " + activityType);
+        }
+}
 
     /**
      * Get current battery level

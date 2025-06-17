@@ -19,24 +19,16 @@ module Rez {
         }
     } // Layouts
 
-    module Menus {
-        class MainMenu extends WatchUi.Menu {
-            function initialize() {
-                Menu.initialize();
-                addItem((WatchUi.loadResource($.Rez.Strings.menu_label_1) as String), :item_1);
-                addItem((WatchUi.loadResource($.Rez.Strings.menu_label_2) as String), :item_2);
-            }
-        }
-    } // Menus
-
     module Strings {
-        (:initialized) var BatteryUnits as ResourceId;
-        (:initialized) var BatteryLabel as ResourceId;
-        (:initialized) var menu_label_1 as ResourceId;
-        (:initialized) var menu_label_2 as ResourceId;
-        (:initialized) var BatteryLevelChart as ResourceId;
-        (:initialized) var prompt as ResourceId;
+        (:initialized) var event_time_label as ResourceId;
+        (:initialized) var battery_units as ResourceId;
+        (:initialized) var battery_label as ResourceId;
+        (:initialized) var event_chart_title as ResourceId;
+        (:initialized) var event_type_label as ResourceId;
+        (:initialized) var event_time_units as ResourceId;
+        (:initialized) var event_type_units as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var battery_graph_label as ResourceId;
     } // Strings
 
     module Styles {

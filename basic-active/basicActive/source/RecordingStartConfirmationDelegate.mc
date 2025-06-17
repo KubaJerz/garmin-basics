@@ -2,7 +2,7 @@
 import Toybox.WatchUi;
 import Toybox.System;
 
-class RecordingConfirmationDelegate extends WatchUi.ConfirmationDelegate {
+class RecordingStartConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     private var _screenManager;
     private var _activityType;
     
@@ -23,10 +23,13 @@ class RecordingConfirmationDelegate extends WatchUi.ConfirmationDelegate {
         else {
             System.println("User confirmed - starting " + _activityType + " recording");
             
-            // FIXED: Use switchToView instead of pushView
+            //  Use switchToView instead of pushView fix from dev fourms
             var recordingView = new RecordingView(_activityType);
             var recordingDelegate = new RecordingViewDelegate(_screenManager, _activityType, recordingView);
             
+            //record the timestamp of sart
+            _screenManager.handleActivityTimestampEvent(_activityType);
+
             WatchUi.switchToView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
             WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
             

@@ -2,7 +2,7 @@
 using Toybox.WatchUi;
 using Toybox.Graphics;
 
-class SecondaryView extends WatchUi.View {
+class activityTypeView extends WatchUi.View {
     
     function initialize() {
         View.initialize();

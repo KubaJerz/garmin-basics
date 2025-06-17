@@ -8,12 +8,11 @@ import Toybox.Time;
  * Shows activity type, timer, and red stop button
  */
 class RecordingView extends WatchUi.View {
-    private var _activityType;
-    private var _startTime;
+    // private var _activityType;
     
     function initialize(activityType) {
         View.initialize();
-        _activityType = activityType;
+        // _activityType = activityType;
     }
     
     function onLayout(dc) {

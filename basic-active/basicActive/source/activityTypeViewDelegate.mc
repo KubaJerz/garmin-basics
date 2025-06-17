@@ -5,7 +5,7 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.System;
 
-class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
+class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
     private var _screenManager;
     
     // Button area coordinates - calculated once
@@ -83,7 +83,7 @@ class SecondaryViewDelegate extends WatchUi.BehaviorDelegate {
         
         var message = "Start recording " + activityType + " activity?";
         var confirmation = new WatchUi.Confirmation(message);
-        var delegate = new RecordingConfirmationDelegate(_screenManager, activityType);
+        var delegate = new RecordingStartConfirmationDelegate(_screenManager, activityType);
         
         WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
     }

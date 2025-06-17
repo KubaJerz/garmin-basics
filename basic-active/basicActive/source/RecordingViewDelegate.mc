@@ -56,7 +56,7 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
         
         var message = "Stop " + _activityType + " recording?";
         var confirmation = new WatchUi.Confirmation(message);
-        var delegate = new StopConfirmationDelegate(_screenManager, _activityType);
+        var delegate = new RecordingStopConfirmationDelegate(_screenManager, _activityType);
         
         WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
     }
