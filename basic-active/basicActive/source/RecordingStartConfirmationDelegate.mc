@@ -28,7 +28,7 @@ class RecordingStartConfirmationDelegate extends WatchUi.ConfirmationDelegate {
             var recordingDelegate = new RecordingViewDelegate(_screenManager, _activityType, recordingView);
             
             //record the timestamp of sart
-            _screenManager.handleActivityTimestampEvent(_activityType);
+            _screenManager.handleActivityStartEvent(_activityType);
 
             WatchUi.switchToView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
             WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);

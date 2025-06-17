@@ -40,7 +40,7 @@
       "battery_units" : "%",
       "event_chart_title" : "Activity Events",
       "event_time_label" : "Event Time",
-      "event_time_units" : "seconds",
+      "event_time_units" : "Unix timestamp",
       "event_type_label" : "Event Type",
       "event_type_units" : ""
     }

@@ -24,7 +24,7 @@ class RecordingStopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
             System.println("User confirmed - stopping " + _activityType + " recording");
 
             // Record time stamp in file
-            _screenManager.handleActivityTimestampEvent(_activityType);
+            _screenManager.handleActivityStopEvent(_activityType);
 
             _stopActivityRecording();
             return true;

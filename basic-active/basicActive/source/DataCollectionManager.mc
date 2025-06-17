@@ -165,15 +165,26 @@ class DataCollectionManager {
         }
     }
 
-    function logActivityTimestampEvent(activityType as Lang.String) as Void {
+    function logActivityStartEvent(activityType as Lang.String) as Void {
         if (activityType.equals("cigarette")) {
-            _eventManager.recordCigaretteEvent();
+            _eventManager.startCigaretteEvent();
         } else if (activityType.equals("vape")) {
-            _eventManager.recordVapeEvent();
+            _eventManager.startVapeEvent();
         } else {
             System.println("ERROR: Can't write timestamp for unknown activity type: " + activityType);
         }
-}
+    }
+
+
+    function logActivityStopEvent(activityType as Lang.String) as Void {
+        if (activityType.equals("cigarette")) {
+            _eventManager.endCigaretteEvent();
+        } else if (activityType.equals("vape")) {
+            _eventManager.endVapeEvent();
+        } else {
+            System.println("ERROR: Can't write timestamp for unknown activity type: " + activityType);
+        }
+    }
 
     /**
      * Get current battery level

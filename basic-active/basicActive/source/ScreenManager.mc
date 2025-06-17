@@ -46,8 +46,12 @@ class ScreenManager {
     }
 
     // records timestamp when a user starts or stops a Smoking or Vape event
-    function handleActivityTimestampEvent(activityType){
-        _dataManager.logActivityTimestampEvent(activityType);
+    function handleActivityStartEvent(activityType){
+        _dataManager.logActivityStartEvent(activityType);
+    }
+
+    function handleActivityStopEvent(activityType){
+        _dataManager.logActivityStopEvent(activityType);
     }
     
     // Handles swipe navigation between screens

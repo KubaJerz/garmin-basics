@@ -9,7 +9,7 @@ import Toybox.Lang;
  * Follows Single Responsibility Principle - only manages activity events.
  */
 class ActivityEventManager {
-    private var _eventField = null;
+    private var _eventIsActiveField = null;
     private var _eventTypeField = null;
     private var _isEnabled = false;
     
@@ -18,8 +18,10 @@ class ActivityEventManager {
     private const EVENT_TYPE_FIELD_ID = 2;
     
     // Event type constants for consistency
+    private const EVENT_TYPE_NONE = 0;
     private const EVENT_TYPE_CIGARETTE = 1;
     private const EVENT_TYPE_VAPE = 2;
+
     
     /**
      * Initialize the event manager
@@ -43,13 +45,13 @@ class ActivityEventManager {
         
         try {
             // Create FIT field for event timestamp
-            _eventField = session.createField(
-                "activity_event_time", 
+            _eventIsActiveField = session.createField(
+                "activity_event_is_active", 
                 EVENT_FIELD_ID, 
                 FitContributor.DATA_TYPE_UINT32, 
                 {
                     :mesgType => FitContributor.MESG_TYPE_RECORD, 
-                    :units => "UnixTimestamp"
+                    :units => ""
                 }
             );
             
@@ -63,6 +65,10 @@ class ActivityEventManager {
                     :units => ""
                 }
             );
+
+            _eventIsActiveField.setData(0); // Defualt NOT active 
+            _eventTypeField.setData(EVENT_TYPE_NONE); // defult NONE TYPE 
+
             
             _isEnabled = true;
             System.println("Activity event recording enabled");
@@ -81,7 +87,7 @@ class ActivityEventManager {
             return; // Already disabled
         }
         
-        _eventField = null;
+        _eventIsActiveField = null;
         _eventTypeField = null;
         _isEnabled = false;
         
@@ -91,15 +97,26 @@ class ActivityEventManager {
     /**
      * Record a cigarette event
      */
-    public function recordCigaretteEvent() {
-        _recordEvent(EVENT_TYPE_CIGARETTE, "cigarette");
+    public function startCigaretteEvent() {
+        _recordEvent(EVENT_TYPE_CIGARETTE, 1, "cigarette");
     }
     
     /**
      * Record a vape event
      */
-    public function recordVapeEvent() {
-        _recordEvent(EVENT_TYPE_VAPE, "vape");
+    public function startVapeEvent() {
+        _recordEvent(EVENT_TYPE_VAPE, 1, "vape");
+    }
+
+    public function endCigaretteEvent() {
+        _recordEvent(EVENT_TYPE_CIGARETTE, 0, "cigarette");
+    }
+    
+    /**
+     * Record a vape event
+     */
+    public function endVapeEvent() {
+        _recordEvent(EVENT_TYPE_VAPE, 0, "vape");
     }
     
     /**
@@ -121,21 +138,17 @@ class ActivityEventManager {
      * @param eventType The type of event (cigarette or vape)
      * @param eventName Human-readable name for logging
      */
-    private function _recordEvent(eventType, eventName) {
-        if (!_isEnabled || _eventField == null || _eventTypeField == null) {
+    private function _recordEvent(eventType, eventIsActive, eventName) {
+        if (!_isEnabled || _eventIsActiveField == null || _eventTypeField == null) {
             System.println("Cannot record " + eventName + " event - not enabled");
             return;
         }
         
-        try {
-            var currentTime = Time.now().value(); // Unix timestamp
-            
-            // Record the event timestamp and type to FIT file
-            _eventField.setData(currentTime);
+        try {            
+            // Record if event is start ot stop and type to FIT file
+            _eventIsActiveField.setData(eventIsActive);
             _eventTypeField.setData(eventType);
-            
-            System.println("Recorded " + eventName + " event at " + currentTime);
-            
+                        
         } catch (ex) {
             System.println("Error recording " + eventName + " event: " + ex.getErrorMessage());
         }
