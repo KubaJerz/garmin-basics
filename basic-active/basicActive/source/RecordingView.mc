@@ -14,7 +14,6 @@ class RecordingView extends WatchUi.View {
     function initialize(activityType) {
         View.initialize();
         _activityType = activityType;
-        _startTime = Time.now();
     }
     
     function onLayout(dc) {
@@ -50,36 +49,12 @@ class RecordingView extends WatchUi.View {
         //     Graphics.TEXT_JUSTIFY_CENTER
         // );
         
-        // Timer
-        _drawTimer(dc, width, height);
         
         // Red stop button
         _drawStopButton(dc, width, height);
         
     }
     
-    /**
-     * Draw elapsed time timer
-     */
-    private function _drawTimer(dc, width, height) {
-        var elapsed = Time.now().subtract(_startTime);
-        var minutes = elapsed.value() / 60;
-        var seconds = elapsed.value() % 60;
-        
-        var timeString = Lang.format("$1$:$2$", [
-            minutes.format("%02d"),
-            seconds.format("%02d")
-        ]);
-        
-        dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(
-            width / 2, 
-            height * 0.15, 
-            Graphics.FONT_NUMBER_HOT, 
-            timeString, 
-            Graphics.TEXT_JUSTIFY_CENTER
-        );
-    }
     
     /**
      * Draw the red stop button
@@ -90,7 +65,7 @@ class RecordingView extends WatchUi.View {
         var buttonY = height * 0.65;
         
         // Red circle button
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_RED);
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_RED);
         dc.fillCircle(buttonX, buttonY, buttonRadius);
         
         // White border
