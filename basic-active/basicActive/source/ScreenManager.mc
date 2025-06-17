@@ -67,25 +67,35 @@ class ScreenManager {
         }
     }
 
+    /**
+     * MODIFIED: Now shows password input instead of direct confirmation
+     */
     function requestExit() {
-        var dialog = new WatchUi.Confirmation("Exit app and stop data collection?");
-        var delegate = new AppExitConfirmationDelegate(self);
-        WatchUi.pushView(dialog, delegate, WatchUi.SLIDE_LEFT);
+        System.println("Exit requested - showing password input");
+        
+        var passwordView = new PasswordInputView();
+        var passwordDelegate = new PasswordInputDelegate(self, passwordView);
+        
+        WatchUi.pushView(passwordView, passwordDelegate, WatchUi.SLIDE_LEFT);
     }
 
+    /**
+     * Called by password delegate when password is correct
+     */
     function confirmExit() {
-        System.println("User confirmed exit");
+        System.println("Password verified - exiting app");
         System.exit();
     }
 
+    /**
+     * Called when user cancels exit (back button on password or confirmation)
+     */
     function cancelExit() {
-        System.println("User cancelled exit");
-        // WatchUi.popView(WatchUi.SLIDE_DOWN);
+        System.println("Exit cancelled");
+        // Views are automatically popped by their delegates
     }
-    
     
     function getCurrentScreen() {
         return _currentScreen;
     }
-
 }
