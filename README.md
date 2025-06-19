@@ -1,5 +1,5 @@
 # garmin-basics
-Connect IQ (garmin) in Monkey C for recording sensors data
+Connect IQ App (garmin) in Monkey C for recording sensors data
 
 ## Steps to prep watch for deployment
 
@@ -46,7 +46,7 @@ Connect IQ (garmin) in Monkey C for recording sensors data
 
 6. Unplug watch
 
-7. Navigate to `Activites > basicActive` 
+7. Via the UI on the watch navigate to `Activites > basicActive` 
 
 8. Press on `basicActive` to start the recoding
 
@@ -55,7 +55,7 @@ Connect IQ (garmin) in Monkey C for recording sensors data
 
 1. Connect the watch via USB-C cable
 
-2. Navigate to `/GARMIN/ACTIVITY/`
+2. In the file explorer navigate to `/GARMIN/ACTIVITY/`
 
 3. Select all `.fit` files
 
