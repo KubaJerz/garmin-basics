@@ -17,6 +17,7 @@ class basicActiveView extends WatchUi.View {
     // Instance variables
     private var _timeField = null;
     private var _batteryField = null;
+    private var _dateField = null;
     private var _timer = null;
     private var _dataManager = null;
     private var _secondsCounter = 0;
@@ -38,11 +39,13 @@ class basicActiveView extends WatchUi.View {
         
         // Get UI elements
         _timeField = View.findDrawableById("timeText");
+        _dateField = View.findDrawableById("dateText");
         _batteryField = View.findDrawableById("batteryText");
-        
+
+
         // Start timer only if not already running
         _startTimer();
-        
+
         // Initial updates
         _updateBatteryDisplay();
         updateAll();
@@ -70,7 +73,7 @@ class basicActiveView extends WatchUi.View {
         _timer = new Timer.Timer();
         _timer.start(method(:updateAll), TIMER_INTERVAL, true);
     }
-
+    
     /**
      * Safely stop and cleanup timer
      */
@@ -90,11 +93,12 @@ class basicActiveView extends WatchUi.View {
         if (!_isActive) {
             return;
         }
-
+        
         _secondsCounter++;
 
-        // Always update time (every second)
+        // Always update time and date (every second)
         _updateTimeDisplay();
+        _updateDateDisplay();
 
         // Update battery display every 10 seconds
         if (_secondsCounter % BATTERY_DISPLAY_INTERVAL == 0) {
@@ -121,15 +125,24 @@ class basicActiveView extends WatchUi.View {
 
     private function _updateTimeDisplay() as Void {
         if (_timeField != null) {
-            var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-            var timeString = Lang.format("$1$:$2$ $3$/$4$/$5$", [
-                dateInfo.hour,
-                dateInfo.min.format("%02d"),
-                dateInfo.month,
-                dateInfo.day,
-                dateInfo.year
+            var timeInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+            var hour = (timeInfo.hour % 12 == 0) ? 12 : (timeInfo.hour % 12);
+            var timeString = Lang.format("$1$:$2$", [
+                hour,
+                timeInfo.min.format("%02d"),
             ]);
+            
             _timeField.setText(timeString);
+        }
+    }
+
+    private function _updateDateDisplay() as Void {
+        if (_dateField != null) {
+            var dateInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+            var dayString =  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dateInfo.day_of_week - 1];
+            var monthString = ["Jan", "Feb", "Mar", "Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"][dateInfo.month - 1];
+            var dateString = dayString + ", " + monthString + " " + dateInfo.day.format("%02d");
+            _dateField.setText(dateString);
         }
     }
 

@@ -1,4 +1,5 @@
 <layout id="MainLayout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
-    <label id="timeText" x="center" y="center" color="Graphics.COLOR_WHITE" text="TIME" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_TINY"/>
-    <label id="batteryText" x="center" y="80%" font="Graphics.FONT_TINY" text="Battery" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
+    <label id="timeText" x="center" y="20%" color="Graphics.COLOR_WHITE" text="TIME" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_NUMBER_MEDIUM"/>
+    <label id="dateText" x="center" y="47%" color="Graphics.COLOR_WHITE" text="DATE" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_TINY"/>
+    <label id="batteryText" x="center" y="65%"  color="Graphics.COLOR_WHITE" text="Battery" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_TINY"/> 
 </layout>
