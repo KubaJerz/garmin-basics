@@ -48,7 +48,8 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
         if (isComplete) {
             _checkPassword();
         } else {
-            _currentDigit = 0; // Reset for next digit
+            _currentDigit = 0; 
+            _passwordView.setCurrentDigit(_currentDigit);
         }
         return true;
     }
