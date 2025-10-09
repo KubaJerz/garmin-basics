@@ -27,8 +27,8 @@
             <iq:uses-permission id="FitContributor"/>
             <iq:uses-permission id="PersistedLocations"/>
             <iq:uses-permission id="PersistedLocations"/>
-            <iq:uses-permission id="Positioning"/>
-            <iq:uses-permission id="Positioning"/>
+            <!-- <iq:uses-permission id="Positioning"/>
+            <iq:uses-permission id="Positioning"/> -->
             <iq:uses-permission id="Sensor"/>
             <iq:uses-permission id="Sensor"/>
             <iq:uses-permission id="SensorLogging"/>
