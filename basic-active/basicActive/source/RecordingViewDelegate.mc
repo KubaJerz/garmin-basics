@@ -17,6 +17,7 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
         _screenManager = screenManager;
         _activityType = activityType;
         _recordingView = recordingView;
+        System.println("DELEGATE: RecordingViewDelegate initialized for: " + activityType);
     }
     
     /**
@@ -27,8 +28,11 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
         var x = coords[0];
         var y = coords[1];
         
+        System.println("INPUT: Tap detected on recording view at (" + x + ", " + y + ")");
+        
         // Check if red stop button was tapped
         if (_isStopButtonTapped(x, y)) {
+            System.println("INPUT: Stop button tapped for " + _activityType);
             _showStopConfirmation();
             return true;
         }
@@ -52,12 +56,13 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
      * Show confirmation dialog for stopping the recording
      */
     private function _showStopConfirmation() {
-        System.println("Showing stop confirmation for: " + _activityType);
+        System.println("VIEW STACK: Showing stop confirmation for: " + _activityType);
         
         var message = "Stop " + _activityType + " recording?";
         var confirmation = new WatchUi.Confirmation(message);
         var delegate = new RecordingStopConfirmationDelegate(_screenManager, _activityType);
         
+        System.println("VIEW STACK: Pushing Confirmation dialog with SLIDE_UP transition");
         WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
     }
     
@@ -65,6 +70,7 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
      * Handle back button - show stop confirmation
      */
     function onBack() {
+        System.println("INPUT: Back button pressed on recording view");
         _showStopConfirmation();
         return true;
     }

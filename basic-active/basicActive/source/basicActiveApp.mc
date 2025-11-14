@@ -101,7 +101,7 @@ class basicActiveApp extends Application.AppBase {
             // Schedule next rotation
             _scheduleNextRotation();
             
-            System.println("Session rotation completed successfully");
+            System.println("Session rotation completed successfully: " + System.getClockTime().hour + ":" + System.getClockTime().min + ":" + System.getClockTime().sec);
         } catch (ex) {
             System.println("Failed to start new session after rotation: " + ex.getErrorMessage());
         }

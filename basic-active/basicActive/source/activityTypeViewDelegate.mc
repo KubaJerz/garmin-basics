@@ -15,6 +15,7 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
     function initialize(screenManager) {
         BehaviorDelegate.initialize();
         _screenManager = screenManager;
+        System.println("DELEGATE: activityTypeViewDelegate initialized for secondary view");
         _calculateButtonAreas();
     }
     
@@ -53,14 +54,18 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
         var x = coords[0];
         var y = coords[1];
         
+        System.println("INPUT: Tap detected on secondary view at (" + x + ", " + y + ")");
+        
         // Check cig button
         if (_isPointInButton(x, y, _cigButtonX, _cigButtonY, _cigButtonWidth, _cigButtonHeight)) {
+            System.println("INPUT: Cigarette button tapped");
             _showRecordingConfirmation("cigarette");
             return true;
         }
         
         // Check vape button
         if (_isPointInButton(x, y, _vapeButtonX, _vapeButtonY, _vapeButtonWidth, _vapeButtonHeight)) {
+            System.println("INPUT: Vape button tapped");
             _showRecordingConfirmation("vape");
             return true;
         }
@@ -79,12 +84,13 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
     }
 
     private function _showRecordingConfirmation(activityType) {
-        System.println("Showing recording confirmation for: " + activityType);
+        System.println("VIEW STACK: Showing recording confirmation for: " + activityType);
         
         var message = "Start recording " + activityType + " activity?";
         var confirmation = new WatchUi.Confirmation(message);
         var delegate = new RecordingStartConfirmationDelegate(_screenManager, activityType);
         
+        System.println("VIEW STACK: Pushing Confirmation dialog with SLIDE_UP transition");
         WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
     }
     
@@ -93,7 +99,7 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
      */
     function onSwipe(swipeEvent) {
         if (swipeEvent.getDirection() == WatchUi.SWIPE_UP) {
-            System.println("Swipe up - returning to main screen");
+            System.println("INPUT: Swipe up detected on secondary view - returning to main");
             _screenManager.handleSwipeUp();
             return true;
         }
@@ -104,18 +110,19 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
      * Handle back button
      */
     function onBack() {
-        System.println("Back button - returning to main screen");
+        System.println("INPUT: Back button pressed on secondary view - returning to main");
         _screenManager.handleSwipeUp();
         return true;
     }
 
     function onKey(keyEvent) {
         var key = keyEvent.getKey();
-        System.println("Key pressed: " + key);
+        System.println("INPUT: Key pressed on secondary view: " + key);
         
         switch (key) {
                 
             case WatchUi.KEY_DOWN:
+                System.println("INPUT: KEY_DOWN - returning to main screen");
                 _screenManager.handleSwipeUp();
                 return true;
             

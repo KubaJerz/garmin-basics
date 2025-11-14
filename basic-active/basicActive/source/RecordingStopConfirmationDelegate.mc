@@ -14,14 +14,14 @@ class RecordingStopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
         ConfirmationDelegate.initialize();
         _screenManager = screenManager;
         _activityType = activityType;
-        System.println("=== StopConfirmationDelegate initialized for: " + activityType + " ===");
+        System.println("DELEGATE: RecordingStopConfirmationDelegate initialized for: " + activityType);
     }
     
     function onResponse(response) {
-        System.println("=== Stop confirmation response: " + response + " ===");
+        System.println("INPUT: Stop confirmation response: " + response);
         
         if (response == WatchUi.CONFIRM_YES) {
-            System.println("User confirmed - stopping " + _activityType + " recording");
+            System.println("EVENT: User confirmed - stopping " + _activityType + " recording");
 
             // Record time stamp in file
             _screenManager.handleActivityStopEvent(_activityType);
@@ -29,7 +29,7 @@ class RecordingStopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
             _stopActivityRecording();
             return true;
         } else {
-            System.println("User cancelled - continuing recording");
+            System.println("INPUT: User cancelled - continuing recording");
             // Just return true - confirmation dialog closes, recording continues
             return true;
         }
@@ -39,10 +39,11 @@ class RecordingStopConfirmationDelegate extends WatchUi.ConfirmationDelegate {
      * Stop the activity recording and return to previous screen
      */
     private function _stopActivityRecording() {
+        System.println("VIEW STACK: Popping RecordingView with SLIDE_DOWN transition");
         // Pop the recording view to return to activity selection
         WatchUi.popView(WatchUi.SLIDE_DOWN);
         
         // Here you could also save recording data, etc.
-        System.println("Recording stopped and saved");
+        System.println("EVENT: Recording stopped and saved");
     }
 }

@@ -8,19 +8,19 @@ class AppExitConfirmationDelegate extends WatchUi.ConfirmationDelegate {
     function initialize(screenManager) {
         _screenManager = screenManager;
         ConfirmationDelegate.initialize();
-        System.println("=== ExitConfirmationDelegate initialized ===");
+        System.println("DELEGATE: AppExitConfirmationDelegate initialized");
     }
 
 
     function onResponse(response){
-        System.println("=== Confirmation response: " + response + " ===");
+        System.println("INPUT: Exit confirmation response: " + response);
         
         if (response == WatchUi.CONFIRM_YES) {
-            System.println("User confirmed exit - shutting down");
+            System.println("EVENT: User confirmed exit - shutting down");
             _screenManager.confirmExit();
             return true; // FIXED: Return true when handled
         } else {
-            System.println("User cancelled exit - staying in app");
+            System.println("INPUT: User cancelled exit - staying in app");
             _screenManager.cancelExit();
 
             // The confirmation dialog will automatically close

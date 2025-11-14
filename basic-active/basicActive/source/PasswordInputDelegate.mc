@@ -19,12 +19,14 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
         _screenManager = screenManager;
         _passwordView = passwordView;
         _currentDigit = 0;
+        System.println("DELEGATE: PasswordInputDelegate initialized");
     }
     
     /**
      * Handle up button - increment current digit
      */
     function onNextPage() {
+        System.println("INPUT: Next page button - incrementing digit");
         _currentDigit = (_currentDigit + 1) % 10; // Cycle 0-9
         _passwordView.setCurrentDigit(_currentDigit);
         return true;
@@ -34,6 +36,7 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
      * Handle down button - decrement current digit  
      */
     function onPreviousPage() {
+        System.println("INPUT: Previous page button - decrementing digit");
         _currentDigit = (_currentDigit - 1 + 10) % 10; // Cycle 0-9 backwards
         _passwordView.setCurrentDigit(_currentDigit);
         return true;
@@ -43,9 +46,11 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
      * Handle select button - add current digit to password
      */
     function onSelect() {
+        System.println("INPUT: Select button - adding digit " + _currentDigit);
         var isComplete = _passwordView.addDigit(_currentDigit);
         
         if (isComplete) {
+            System.println("EVENT: Password complete - checking password");
             _checkPassword();
         } else {
             _currentDigit = 0; 
@@ -59,11 +64,13 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
      */
     function onBack() {
         if (_passwordView.isPasswordComplete() || _passwordView.getEnteredPassword().length() > 0) {
+            System.println("INPUT: Back button - removing last digit");
             _passwordView.removeLastDigit();
             return true;
         } else {
             // Cancel password entry
-            System.println("Password entry cancelled");
+            System.println("INPUT: Back button - cancelling password entry");
+            System.println("VIEW STACK: Popping PasswordInputView with SLIDE_DOWN transition");
             WatchUi.popView(WatchUi.SLIDE_DOWN);
             return true;
         }
@@ -83,15 +90,16 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
         var enteredPassword = _passwordView.getEnteredPassword();
         
         if (enteredPassword.equals(CORRECT_PASSWORD)) {
-            System.println("Password correct - allowing app exit");
+            System.println("EVENT: Password correct - allowing app exit");
             
             // Pop password view first
+            System.println("VIEW STACK: Popping PasswordInputView with SLIDE_DOWN transition");
             WatchUi.popView(WatchUi.SLIDE_DOWN);
             
             // Then confirm exit
             _screenManager.confirmExit();
         } else {
-            System.println("Incorrect password entered");
+            System.println("EVENT: Incorrect password entered");
             _showIncorrectPasswordMessage();
         }
     }
@@ -100,6 +108,7 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
      * Show incorrect password message and reset
      */
     private function _showIncorrectPasswordMessage() {
+        System.println("EVENT: Clearing password after incorrect attempt");
         // Clear the password
         _passwordView.clearPassword();
         _currentDigit = 0;
