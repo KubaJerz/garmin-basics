@@ -5,7 +5,7 @@ import Toybox.System;
 
 /**
  * Handles input for the recording screen
- * Responsible for detecting red button taps and showing stop confirmation
+ * Responsible for detecting red button taps and stopping recording directly
  */
 class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
     private var _screenManager;
@@ -21,7 +21,7 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
     }
     
     /**
-     * Handle touch events on the recording screen
+     * Handle touch events on the recording screen - Direct stop without confirmation
      */
     function onTap(clickEvent) {
         var coords = clickEvent.getCoordinates();
@@ -33,7 +33,7 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
         // Check if red stop button was tapped
         if (_isStopButtonTapped(x, y)) {
             System.println("INPUT: Stop button tapped for " + _activityType);
-            _showStopConfirmation();
+            _stopRecordingDirectly();
             return true;
         }
         
@@ -53,25 +53,25 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
     }
     
     /**
-     * Show confirmation dialog for stopping the recording
+     * Stop recording directly without confirmation
      */
-    private function _showStopConfirmation() {
-        System.println("VIEW STACK: Showing stop confirmation for: " + _activityType);
+    private function _stopRecordingDirectly() {
+        System.println("EVENT: Stopping " + _activityType + " recording directly");
         
-        var message = "Stop " + _activityType + " recording?";
-        var confirmation = new WatchUi.Confirmation(message);
-        var delegate = new RecordingStopConfirmationDelegate(_screenManager, _activityType);
+        // Record stop timestamp
+        _screenManager.handleActivityStopEvent(_activityType);
         
-        System.println("VIEW STACK: Pushing Confirmation dialog with SLIDE_UP transition");
-        WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
+        // Pop back to previous screen
+        System.println("VIEW STACK: Popping RecordingView with SLIDE_DOWN transition");
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
     }
     
     /**
-     * Handle back button - show stop confirmation
+     * Handle back button - Direct stop without confirmation
      */
     function onBack() {
         System.println("INPUT: Back button pressed on recording view");
-        _showStopConfirmation();
+        _stopRecordingDirectly();
         return true;
     }
 }

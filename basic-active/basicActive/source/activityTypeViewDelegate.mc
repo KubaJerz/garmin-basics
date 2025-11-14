@@ -47,7 +47,7 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
     }
     
     /**
-     * Handle touch/tap events - CLEAN & SIMPLE
+     * Handle touch/tap events - Direct start without confirmation
      */
     function onTap(clickEvent) {
         var coords = clickEvent.getCoordinates();
@@ -59,14 +59,14 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
         // Check cig button
         if (_isPointInButton(x, y, _cigButtonX, _cigButtonY, _cigButtonWidth, _cigButtonHeight)) {
             System.println("INPUT: Cigarette button tapped");
-            _showRecordingConfirmation("cigarette");
+            _startRecordingDirectly("cigarette");
             return true;
         }
         
         // Check vape button
         if (_isPointInButton(x, y, _vapeButtonX, _vapeButtonY, _vapeButtonWidth, _vapeButtonHeight)) {
             System.println("INPUT: Vape button tapped");
-            _showRecordingConfirmation("vape");
+            _startRecordingDirectly("vape");
             return true;
         }
         
@@ -83,15 +83,17 @@ class activityTypeViewDelegate extends WatchUi.BehaviorDelegate {
                y <= buttonY + buttonHeight;
     }
 
-    private function _showRecordingConfirmation(activityType) {
-        System.println("VIEW STACK: Showing recording confirmation for: " + activityType);
+    /**
+     * Start recording directly without confirmation
+     */
+    private function _startRecordingDirectly(activityType) {
+        System.println("EVENT: Starting " + activityType + " recording directly");
         
-        var message = "Start recording " + activityType + " activity?";
-        var confirmation = new WatchUi.Confirmation(message);
-        var delegate = new RecordingStartConfirmationDelegate(_screenManager, activityType);
+        // Record the timestamp of start
+        _screenManager.handleActivityStartEvent(activityType);
         
-        System.println("VIEW STACK: Pushing Confirmation dialog with SLIDE_UP transition");
-        WatchUi.pushView(confirmation, delegate, WatchUi.SLIDE_UP);
+        // Show recording screen directly
+        _screenManager.showRecordingScreen(activityType);
     }
     
     /**

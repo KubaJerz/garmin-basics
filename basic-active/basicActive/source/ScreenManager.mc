@@ -13,9 +13,9 @@ class ScreenManager {
     private var _dataManager = null;
 
     
-    function initialize(dataManager) {
+    function initialize(dataManager, initialMainView) {
         _currentScreen = MAIN;
-        _mainView = null;
+        _mainView = initialMainView;  // Use the existing view passed from app
         _secondaryView = null;
         _dataManager = dataManager;
     }
@@ -23,10 +23,13 @@ class ScreenManager {
     // Shows the main data collection screen
     function showMainScreen() {
         System.println("VIEW STACK: Showing main screen - popping to main view");
-        if (_mainView == null) {
-            _mainView = new basicActiveView(_dataManager);
-        }
         _currentScreen = MAIN;
+        
+        // Refresh the main view when returning to it
+        if (_mainView != null) {
+            _mainView.refresh();
+        }
+        
         System.println("VIEW STACK: Popping view with SLIDE_UP transition");
         WatchUi.popView(WatchUi.SLIDE_UP);
     }
@@ -44,8 +47,12 @@ class ScreenManager {
 
     function showRecordingScreen(activityType) {
         System.println("VIEW STACK: Showing recording screen for activity: " + activityType);
+        
+        // Create recording view and delegate
         var recordingView = new RecordingView(activityType);
         var recordingDelegate = new RecordingViewDelegate(self, activityType, recordingView);
+        
+        // Use pushView for consistent navigation (goes deeper in hierarchy)
         System.println("VIEW STACK: Pushing RecordingView with SLIDE_UP transition");
         WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
     }

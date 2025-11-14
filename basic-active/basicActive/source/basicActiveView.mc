@@ -166,4 +166,23 @@ class basicActiveView extends WatchUi.View {
         dc.setColor(dotColor, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(centerX, centerY, GPS_DOT_SIZE);
     }
+
+    /**
+     * Refresh the view - reset internal state and update display
+     * Useful when returning to the main view
+     */
+    public function refresh() as Void {
+        System.println("VIEW: Refreshing main view");
+        
+        // Reset counter to prevent stale data
+        _secondsCounter = 0;
+        
+        // Update all UI elements
+        _updateTimeDisplay();
+        _updateDateDisplay();
+        _updateBatteryDisplay();
+        
+        // Request an update
+        WatchUi.requestUpdate();
+    }
 }
