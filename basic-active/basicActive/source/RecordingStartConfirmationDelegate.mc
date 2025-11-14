@@ -32,8 +32,9 @@ class RecordingStartConfirmationDelegate extends WatchUi.ConfirmationDelegate {
 
             System.println("VIEW STACK: Switching to RecordingView with SLIDE_UP transition");
             WatchUi.switchToView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
-            System.println("VIEW STACK: Pushing RecordingView with SLIDE_UP transition");
-            WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
+            // this is the old code but it causes view stack issues
+            // System.println("VIEW STACK: Pushing RecordingView with SLIDE_UP transition");
+            // WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
             
             return true;
         }
