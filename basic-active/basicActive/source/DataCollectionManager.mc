@@ -135,8 +135,11 @@ class DataCollectionManager {
         if (_batteryManager != null) {
             _batteryManager.cleanup();
         }
-        
 
+        if (_eventManager != null) {
+            _eventManager.cleanup();
+        }
+        
         // Make sure we stop data collection
         stopDataCollection();
     }
