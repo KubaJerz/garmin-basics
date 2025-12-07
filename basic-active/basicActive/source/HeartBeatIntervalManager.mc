@@ -82,12 +82,7 @@ class HeartBeatIntervalManager {
             _hbiCountField.setData(0);
             
             // Register for heart beat interval data
-            var options = {
-                :period => 1,
-                :heartBeatIntervals => {
-                    :enabled => true
-                }
-            };
+            var options = {:period => 1,:enabledheartBeatIntervals => true};
             
             Sensor.registerSensorDataListener(method(:onSensorData), options);
             
