@@ -37,6 +37,7 @@ class HeartBeatIntervalManager {
     public function initialize() {
         _hbiFields = new [MAX_INTERVALS];
         _lastIntervals = [];
+        Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
     }
     
     /**
@@ -82,9 +83,12 @@ class HeartBeatIntervalManager {
             _hbiCountField.setData(0);
             
             // Register for heart beat interval data
-            var options = {:period => 1,:enabledheartBeatIntervals => true};
+            var options = {
+                :period => 1,
+                :heartBeatIntervals => { :enabled => true }
+		    };
             
-            Sensor.registerSensorDataListener(method(:onSensorData), options);
+            Sensor.registerSensorDataListener(self.method(:onSensorData), options);
             
             _isEnabled = true;
             System.println("HBI: Enabled with " + MAX_INTERVALS + " interval fields");
@@ -102,21 +106,26 @@ class HeartBeatIntervalManager {
      */
     public function onSensorData(sensorData as Sensor.SensorData) as Void {
         if (!_isEnabled || sensorData == null) {
+            System.println("HBI: onSensorData called when disabled or with null data");
             return;
         }
+        System.println("HBI: onSensorData received");
         
         var hrData = sensorData.heartRateData;
         if (hrData == null) {
+            System.println("HBI: No heart rate data available");
             _writeEmptyRecord();
             return;
         }
+
         
         var intervals = hrData.heartBeatIntervals;
         if (intervals == null || intervals.size() == 0) {
+            System.println("HBI: No heart beat intervals available");
             _writeEmptyRecord();
             return;
         }
-        
+        System.println("HBI: Received intervals: " + intervals.toString());
         // Store for external access
         _lastIntervals = intervals;
         
