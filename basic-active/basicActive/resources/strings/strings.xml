@@ -4,6 +4,16 @@
    <string id="battery_graph_label">Battery Level</string>
     <string id="battery_label">Battery</string>
     <string id="battery_units">%</string>
+
+    <string id="hbi_0_label">R-R Interval 1</string>
+    <string id="hbi_1_label">R-R Interval 2</string>
+    <string id="hbi_2_label">R-R Interval 3</string>
+    <string id="hbi_3_label">R-R Interval 4</string>
+    <string id="hbi_4_label">R-R Interval 5</string>
+    <string id="hbi_count_label">Interval Count</string>
+    <string id="hbi_units">ms</string>
+    <string id="hbi_count_units"></string>
+
     
     <!-- New event strings -->
     <string id="event_chart_title">Activity Events</string>

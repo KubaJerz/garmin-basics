@@ -16,12 +16,14 @@ class DataCollectionManager {
 
     private var _batteryManager = null;
     private var _eventManager =  null;
+    private var _hbiManager = null;
 
     private const PREFIX = "BASIC_RECORDER_";
 
     function initialize() {
         _batteryManager = new BatteryManager();
         _eventManager = new ActivityEventManager();
+        _hbiManager = new HeartBeatIntervalManager();
     }
 
     /**
@@ -95,7 +97,8 @@ class DataCollectionManager {
         _batteryManager.enable(_session);
         // Enable timestamp monitoring for events
         _eventManager.enable(_session);
-        
+        // Enable heart beat interval monitoring
+        _hbiManager.enable(_session);
 
         System.println("Data collection started name is: " + _generateSessionName());
     }
@@ -114,6 +117,7 @@ class DataCollectionManager {
             // Disable battery monitoring (records final level)
             _batteryManager.disable();
             _eventManager.disable();
+            _hbiManager.disable();
             
 
             _session.stop(); // stop the session "pause"
@@ -134,6 +138,14 @@ class DataCollectionManager {
         // Cleanup managers
         if (_batteryManager != null) {
             _batteryManager.cleanup();
+        }
+
+        if (_eventManager != null) {
+            _eventManager.cleanup();
+        }
+
+        if (_hbiManager != null) {
+            _hbiManager.cleanup();
         }
         
 
