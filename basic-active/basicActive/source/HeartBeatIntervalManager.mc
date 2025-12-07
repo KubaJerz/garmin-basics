@@ -106,14 +106,11 @@ class HeartBeatIntervalManager {
      */
     public function onSensorData(sensorData as Sensor.SensorData) as Void {
         if (!_isEnabled || sensorData == null) {
-            System.println("HBI: onSensorData called when disabled or with null data");
             return;
         }
-        System.println("HBI: onSensorData received");
         
         var hrData = sensorData.heartRateData;
         if (hrData == null) {
-            System.println("HBI: No heart rate data available");
             _writeEmptyRecord();
             return;
         }
@@ -121,11 +118,9 @@ class HeartBeatIntervalManager {
         
         var intervals = hrData.heartBeatIntervals;
         if (intervals == null || intervals.size() == 0) {
-            System.println("HBI: No heart beat intervals available");
             _writeEmptyRecord();
             return;
         }
-        System.println("HBI: Received intervals: " + intervals.toString());
         // Store for external access
         _lastIntervals = intervals;
         
@@ -133,11 +128,10 @@ class HeartBeatIntervalManager {
         var count = intervals.size();
         if (count > MAX_INTERVALS) {
             count = MAX_INTERVALS;
-            System.println("HBI: Warning - received " + intervals.size() + 
-                          " intervals, only storing " + MAX_INTERVALS);
+            System.println("HBI: Warning - received " + intervals.size() + " intervals, only storing " + MAX_INTERVALS);
         }
 
-        System.println("HBI: Writing " + intervals.toString());
+        // System.println("HBI: Writing " + intervals.toString());
         
         // Write intervals to fields
         for (var i = 0; i < MAX_INTERVALS; i++) {
