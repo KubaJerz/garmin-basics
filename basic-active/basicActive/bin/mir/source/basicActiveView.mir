@@ -760,6 +760,44 @@ _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicAc
         invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.29);
 _home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_157_51_168_4_stop:
     }
+    [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 174; @symbol_functiondef = [refresh,174,20,27]; ]
+    public
+    function refresh() as Void {
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_174_38_187_4_start:
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 175 8 ]
+        symbol [ System %tmp.2 175 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 175 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "VIEW: Refreshing main view";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 178 8 ]
+        %tmp.5 = 0;
+        symbol [ _secondsCounter ? 178 8 23 ];
+        putv self :_secondsCounter %tmp.5;
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 181 8 ]
+        %tmp.6 = self;
+        symbol [ _updateTimeDisplay %tmp.7 181 8 26 ];
+        %tmp.7 = getv function %tmp.6 :_updateTimeDisplay;
+        invoke %tmp.6 %tmp.7();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 182 8 ]
+        %tmp.8 = self;
+        symbol [ _updateDateDisplay %tmp.9 182 8 26 ];
+        %tmp.9 = getv function %tmp.8 :_updateDateDisplay;
+        invoke %tmp.8 %tmp.9();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 183 8 ]
+        %tmp.10 = self;
+        symbol [ _updateBatteryDisplay %tmp.11 183 8 29 ];
+        %tmp.11 = getv function %tmp.10 :_updateBatteryDisplay;
+        invoke %tmp.10 %tmp.11();
+[ "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc" 186 8 ]
+        symbol [ WatchUi %tmp.12 186 8 15 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.13 186 16 29 ];
+        %tmp.13 = getv function %tmp.12 :requestUpdate;
+        invoke %tmp.12 %tmp.13();
+_home_kuba_projects_garmin_garmin_basics_basic_active_basicActive_source_basicActiveView_mc_174_38_187_4_stop:
+    }
 }
 [ @file = "/home/kuba/projects/garmin/garmin-basics/basic-active/basicActive/source/basicActiveView.mc"; @line = 1; ]
 <init> {

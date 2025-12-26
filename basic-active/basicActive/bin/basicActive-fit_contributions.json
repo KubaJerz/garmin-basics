@@ -32,6 +32,72 @@
     "sort-order" : 2,
     "precision" : 0,
     "fill-color" : null
+  }, {
+    "id" : 3,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "hbi_0_label",
+    "label-key" : "hbi_0_label",
+    "unit-label-key" : "hbi_units",
+    "sort-order" : 3,
+    "precision" : 0,
+    "fill-color" : "rgba(255, 85, 85, 1.0)"
+  }, {
+    "id" : 4,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "hbi_1_label",
+    "label-key" : "hbi_1_label",
+    "unit-label-key" : "hbi_units",
+    "sort-order" : 4,
+    "precision" : 0,
+    "fill-color" : "rgba(255, 119, 119, 1.0)"
+  }, {
+    "id" : 5,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "hbi_2_label",
+    "label-key" : "hbi_2_label",
+    "unit-label-key" : "hbi_units",
+    "sort-order" : 5,
+    "precision" : 0,
+    "fill-color" : "rgba(255, 153, 153, 1.0)"
+  }, {
+    "id" : 6,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "hbi_3_label",
+    "label-key" : "hbi_3_label",
+    "unit-label-key" : "hbi_units",
+    "sort-order" : 6,
+    "precision" : 0,
+    "fill-color" : "rgba(255, 187, 187, 1.0)"
+  }, {
+    "id" : 7,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "hbi_4_label",
+    "label-key" : "hbi_4_label",
+    "unit-label-key" : "hbi_units",
+    "sort-order" : 7,
+    "precision" : 0,
+    "fill-color" : "rgba(255, 221, 221, 1.0)"
+  }, {
+    "id" : 8,
+    "chart-visible" : false,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "hbi_count_label",
+    "unit-label-key" : "hbi_count_units",
+    "sort-order" : 8,
+    "precision" : 0,
+    "fill-color" : null
   } ],
   "strings" : {
     "default" : {
@@ -42,7 +108,15 @@
       "event_time_label" : "Event Time",
       "event_time_units" : "Unix timestamp",
       "event_type_label" : "Event Type",
-      "event_type_units" : ""
+      "event_type_units" : "",
+      "hbi_0_label" : "R-R Interval 1",
+      "hbi_units" : "ms",
+      "hbi_1_label" : "R-R Interval 2",
+      "hbi_2_label" : "R-R Interval 3",
+      "hbi_3_label" : "R-R Interval 4",
+      "hbi_4_label" : "R-R Interval 5",
+      "hbi_count_label" : "Interval Count",
+      "hbi_count_units" : ""
     }
   }
 }

@@ -16,4 +16,39 @@
     <fitField id="2" displayInChart="false" sortOrder="2" precision="0"
               dataLabel="@Strings.event_type_label" 
               unitLabel="@Strings.event_type_units" />
+
+    <!-- Heart Beat Interval fields -->
+  <fitField id="3" displayInChart="true" sortOrder="3" precision="0"
+              chartTitle="@Strings.hbi_0_label" 
+              dataLabel="@Strings.hbi_0_label"
+              unitLabel="@Strings.hbi_units" 
+              fillColor="#FF5555" />
+              
+    <fitField id="4" displayInChart="true" sortOrder="4" precision="0"
+              chartTitle="@Strings.hbi_1_label" 
+              dataLabel="@Strings.hbi_1_label"
+              unitLabel="@Strings.hbi_units" 
+              fillColor="#FF7777" />
+              
+    <fitField id="5" displayInChart="true" sortOrder="5" precision="0"
+              chartTitle="@Strings.hbi_2_label" 
+              dataLabel="@Strings.hbi_2_label"
+              unitLabel="@Strings.hbi_units" 
+              fillColor="#FF9999" />
+              
+    <fitField id="6" displayInChart="true" sortOrder="6" precision="0"
+              chartTitle="@Strings.hbi_3_label" 
+              dataLabel="@Strings.hbi_3_label"
+              unitLabel="@Strings.hbi_units" 
+              fillColor="#FFBBBB" />
+              
+    <fitField id="7" displayInChart="true" sortOrder="7" precision="0"
+              chartTitle="@Strings.hbi_4_label" 
+              dataLabel="@Strings.hbi_4_label"
+              unitLabel="@Strings.hbi_units" 
+              fillColor="#FFDDDD" />
+              
+    <fitField id="8" displayInChart="false" sortOrder="8" precision="0"
+              dataLabel="@Strings.hbi_count_label"
+              unitLabel="@Strings.hbi_count_units" />
 </fitContributions>

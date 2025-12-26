@@ -22,14 +22,22 @@ module Rez {
     } // Layouts
 
     module Strings {
+        (:initialized) var hbi_count_label as ResourceId;
+        (:initialized) var hbi_1_label as ResourceId;
         (:initialized) var event_time_label as ResourceId;
         (:initialized) var battery_units as ResourceId;
+        (:initialized) var event_time_units as ResourceId;
+        (:initialized) var hbi_2_label as ResourceId;
+        (:initialized) var AppName as ResourceId;
+        (:initialized) var hbi_units as ResourceId;
         (:initialized) var battery_label as ResourceId;
+        (:initialized) var hbi_count_units as ResourceId;
+        (:initialized) var hbi_3_label as ResourceId;
         (:initialized) var event_chart_title as ResourceId;
         (:initialized) var event_type_label as ResourceId;
-        (:initialized) var event_time_units as ResourceId;
+        (:initialized) var hbi_0_label as ResourceId;
         (:initialized) var event_type_units as ResourceId;
-        (:initialized) var AppName as ResourceId;
+        (:initialized) var hbi_4_label as ResourceId;
         (:initialized) var battery_graph_label as ResourceId;
     } // Strings
 
