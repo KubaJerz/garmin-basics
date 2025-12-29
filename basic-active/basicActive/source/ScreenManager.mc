@@ -4,55 +4,52 @@ import Toybox.System;
 class ScreenManager {
     enum ScreenType {
         MAIN,
-        SECONDARY
+        ACTIVITY_SELECTION,
+        RECORDING,
+        PASSWORD
     }
     
     private var _currentScreen;
-    private var _mainView;
-    private var _secondaryView;
     private var _dataManager = null;
 
     
-    function initialize(dataManager, initialMainView) {
+    function initialize(dataManager) {
         _currentScreen = MAIN;
-        _mainView = initialMainView;  // Use the existing view passed from app
-        _secondaryView = null;
         _dataManager = dataManager;
     }
     
     // Shows the main data collection screen
     function showMainScreen() {
         System.println("VIEW STACK: Showing main screen - popping to main view");
-        _currentScreen = MAIN;
         
-        // Refresh the main view when returning to it
-        if (_mainView != null) {
-            _mainView.refresh();
+        if (_currentScreen != MAIN) {
+            System.println("VIEW STACK: Popping view with SLIDE_UP transition");
+            WatchUi.popView(WatchUi.SLIDE_UP);
+            _currentScreen = MAIN;
+        } else {
+            System.println("VIEW STACK: Already on main screen, not popping");
         }
-        
-        System.println("VIEW STACK: Popping view with SLIDE_UP transition");
-        WatchUi.popView(WatchUi.SLIDE_UP);
     }
     
     // Shows the secondary screen (settings, stats, etc.)
     function showSecondaryScreen() {
         System.println("VIEW STACK: Showing secondary screen (activity type selection)");
-        if (_secondaryView == null) {
-            _secondaryView = new activityTypeView();
-        }
-        _currentScreen = SECONDARY;
+        
+        var activityView = new activityTypeView();
+        var activityDelegate = new activityTypeViewDelegate(self);
+        
+        _currentScreen = ACTIVITY_SELECTION;
         System.println("VIEW STACK: Pushing activityTypeView with SLIDE_DOWN transition");
-        WatchUi.pushView(_secondaryView, new activityTypeViewDelegate(self), WatchUi.SLIDE_DOWN);
+        WatchUi.pushView(activityView, activityDelegate, WatchUi.SLIDE_DOWN);
     }
 
     function showRecordingScreen(activityType) {
         System.println("VIEW STACK: Showing recording screen for activity: " + activityType);
         
-        // Create recording view and delegate
         var recordingView = new RecordingView(activityType);
         var recordingDelegate = new RecordingViewDelegate(self, activityType, recordingView);
         
-        // Use pushView for consistent navigation (goes deeper in hierarchy)
+        _currentScreen = RECORDING;
         System.println("VIEW STACK: Pushing RecordingView with SLIDE_UP transition");
         WatchUi.pushView(recordingView, recordingDelegate, WatchUi.SLIDE_UP);
     }
@@ -70,16 +67,21 @@ class ScreenManager {
     
     // Handles swipe navigation between screens
     function handleSwipeDown() {
-        System.println("INPUT: Swipe down detected on main screen");
+        System.println("INPUT: Swipe down detected");
         if (_currentScreen == MAIN) {
             showSecondaryScreen();
         }
     }
     
     function handleSwipeUp() {
-        System.println("INPUT: Swipe up detected on secondary screen");
-        if (_currentScreen == SECONDARY) {
+        System.println("INPUT: Swipe up detected");
+        if (_currentScreen == ACTIVITY_SELECTION) {
             showMainScreen();
+        } else if (_currentScreen == RECORDING) {
+            // Pop back to activity selection
+            System.println("VIEW STACK: Popping from recording to activity selection");
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            _currentScreen = ACTIVITY_SELECTION;
         }
     }
 
@@ -92,6 +94,7 @@ class ScreenManager {
         var passwordView = new PasswordInputView();
         var passwordDelegate = new PasswordInputDelegate(self, passwordView);
         
+        _currentScreen = PASSWORD;
         System.println("VIEW STACK: Pushing PasswordInputView with SLIDE_LEFT transition");
         WatchUi.pushView(passwordView, passwordDelegate, WatchUi.SLIDE_LEFT);
     }
@@ -110,6 +113,8 @@ class ScreenManager {
     function cancelExit() {
         System.println("EVENT: Exit cancelled - returning to app");
         // Views are automatically popped by their delegates
+        // Reset to previous screen state (password is always shown from main)
+        _currentScreen = MAIN;
     }
     
     function getCurrentScreen() {

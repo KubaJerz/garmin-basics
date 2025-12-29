@@ -11,8 +11,8 @@ import Toybox.System;
 class basicActiveApp extends Application.AppBase {
     private var _dataManager = null;
     private var _rotationTimer = null;
+    private var _delayTimer = null;
     private var _screenManager;
-    private var _mainView = null;  // Store reference to the main view
 
     // 3 hours in milliseconds
     private const SESSION_DURATION_MS = 3 * 60 * 60 * 1000;
@@ -21,11 +21,8 @@ class basicActiveApp extends Application.AppBase {
         AppBase.initialize();
         _dataManager = new DataCollectionManager();
         
-        // Create the main view first
-        _mainView = new basicActiveView(_dataManager);
-        
-        // Pass the main view to the screen manager
-        _screenManager = new ScreenManager(_dataManager, _mainView);
+        // Initialize screen manager (no longer needs main view reference)
+        _screenManager = new ScreenManager(_dataManager);
     }
 
     /**
@@ -54,6 +51,12 @@ class basicActiveApp extends Application.AppBase {
         if (_rotationTimer != null) {
             _rotationTimer.stop();
             _rotationTimer = null;
+        }
+
+        // Stop delay timer if running
+        if (_delayTimer != null) {
+            _delayTimer.stop();
+            _delayTimer = null;
         }
         
         // Stop and save current data collection
@@ -88,8 +91,9 @@ class basicActiveApp extends Application.AppBase {
                 _dataManager.stopDataCollection();
                 
                 // Small delay to ensure file is written
-                var delayTimer = new Timer.Timer();
-                delayTimer.start(method(:_startNewSessionAfterDelay), 1000, false);
+                // Use instance variable to prevent garbage collection before timer fires
+                _delayTimer = new Timer.Timer();
+                _delayTimer.start(method(:_startNewSessionAfterDelay), 1000, false);
             }
         } catch (ex) {
             System.println("Error during session rotation: " + ex.getErrorMessage());
@@ -117,7 +121,7 @@ class basicActiveApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ _mainView, new basicActiveDelegate(_screenManager) ];
+        return [ new basicActiveView(_dataManager), new basicActiveDelegate(_screenManager) ];
     }
 }
 
