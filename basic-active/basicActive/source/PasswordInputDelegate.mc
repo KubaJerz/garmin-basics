@@ -70,8 +70,7 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
         } else {
             // Cancel password entry
             System.println("INPUT: Back button - cancelling password entry");
-            System.println("VIEW STACK: Popping PasswordInputView with SLIDE_DOWN transition");
-            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            _screenManager.handlePasswordCancel();
             return true;
         }
     }
@@ -91,12 +90,9 @@ class PasswordInputDelegate extends WatchUi.BehaviorDelegate {
         
         if (enteredPassword.equals(CORRECT_PASSWORD)) {
             System.println("EVENT: Password correct - allowing app exit");
-            
-            // Pop password view first
-            System.println("VIEW STACK: Popping PasswordInputView with SLIDE_DOWN transition");
-            WatchUi.popView(WatchUi.SLIDE_DOWN);
-            
-            // Then confirm exit
+
+            // Pop password view via ScreenManager and exit
+            _screenManager.handlePasswordSuccess();
             _screenManager.confirmExit();
         } else {
             System.println("EVENT: Incorrect password entered");

@@ -1,5 +1,6 @@
 import Toybox.WatchUi;
 import Toybox.System;
+import Toybox.Time;
 
 class ScreenManager {
     enum ScreenType {
@@ -20,6 +21,8 @@ class ScreenManager {
     
     // Shows the main data collection screen
     function showMainScreen() {
+        var timeInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        System.println("SCREEN SWITCH: Returning to main screen at " + timeInfo.hour + ":" + timeInfo.min.format("%02d") + ":" + timeInfo.sec.format("%02d"));
         System.println("VIEW STACK: Showing main screen - popping to main view");
         
         if (_currentScreen != MAIN) {
@@ -33,6 +36,8 @@ class ScreenManager {
     
     // Shows the secondary screen (settings, stats, etc.)
     function showSecondaryScreen() {
+        var timeInfo = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        System.println("SCREEN SWITCH: Entering secondary screen at " + timeInfo.hour + ":" + timeInfo.min.format("%02d") + ":" + timeInfo.sec.format("%02d"));
         System.println("VIEW STACK: Showing secondary screen (activity type selection)");
         
         var activityView = new activityTypeView();
@@ -116,7 +121,46 @@ class ScreenManager {
         // Reset to previous screen state (password is always shown from main)
         _currentScreen = MAIN;
     }
-    
+
+    /**
+     * Called by RecordingViewDelegate when stop button is tapped
+     * Handles transition from RECORDING back to ACTIVITY_SELECTION
+     */
+    function handleRecordingStop() {
+        System.println("EVENT: Recording stopped - returning to activity selection");
+        if (_currentScreen == RECORDING) {
+            System.println("VIEW STACK: Popping from recording to activity selection");
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            _currentScreen = ACTIVITY_SELECTION;
+        }
+    }
+
+    /**
+     * Called by PasswordInputDelegate when user presses back with empty password
+     * Cancels password entry and returns to MAIN screen
+     */
+    function handlePasswordCancel() {
+        System.println("EVENT: Password entry cancelled");
+        if (_currentScreen == PASSWORD) {
+            System.println("VIEW STACK: Popping PasswordInputView");
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            _currentScreen = MAIN;
+        }
+    }
+
+    /**
+     * Called by PasswordInputDelegate when password is correct
+     * Pops password view before app exit
+     */
+    function handlePasswordSuccess() {
+        System.println("EVENT: Password correct - preparing app exit");
+        if (_currentScreen == PASSWORD) {
+            System.println("VIEW STACK: Popping PasswordInputView for app exit");
+            WatchUi.popView(WatchUi.SLIDE_DOWN);
+            _currentScreen = MAIN;
+        }
+    }
+
     function getCurrentScreen() {
         return _currentScreen;
     }

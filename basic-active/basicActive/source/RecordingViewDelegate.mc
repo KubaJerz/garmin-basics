@@ -57,13 +57,12 @@ class RecordingViewDelegate extends WatchUi.BehaviorDelegate {
      */
     private function _stopRecordingDirectly() {
         System.println("EVENT: Stopping " + _activityType + " recording directly");
-        
+
         // Record stop timestamp
         _screenManager.handleActivityStopEvent(_activityType);
-        
-        // Pop back to previous screen
-        System.println("VIEW STACK: Popping RecordingView with SLIDE_DOWN transition");
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
+
+        // Pop back to previous screen via ScreenManager
+        _screenManager.handleRecordingStop();
     }
     
     /**
